@@ -1,11 +1,16 @@
-git clone url  : import forge dans pc
+*=====================================================================================================================================*
+                                                    COMMANDE UTILE POUR GIT :)
+*=====================================================================================================================================*
 
+git clone url : Importe le projet sur le PC ==> A faire qu'une seule fois normalement.
 
-git pull : mise a jours des fichiers sur le pc
+git fetch : Mise à jour des fichiers sur le PC (Sans fusionner les fichiers au cas où vous avez fait des modifications ==> Pour les fusionner, il faut faire suivre
+cette commande de: git merge(plus sécurisé que: git pull qui couple les deux)).
 
+git add : Ajouter un fichier ou un répertoire à git.
+git commit -m "<message>" : Ajoute à git les modifications effectuées(Bien mettre un message qui énonce les changements effectués sur la mise à jour).
+git push : Envoyer la mise à jour sur le serveur distant.
 
-git add : ajouter 
-git commit -m "message" : ajoute dans forge
-git push : derniere etape pour mettre dans forge
+git rm <nom fichier>: Supprime le fichier localement(Bien faire ensuite commit puis push).
 
-git rm nom-fichier: supp fichier sur pc (faire ensuite commit puis push)
+*=====================================================================================================================================*
