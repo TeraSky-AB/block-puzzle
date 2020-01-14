@@ -1,0 +1,11 @@
+git clone url  : import forge dans pc
+
+
+git pull : mise a jours des fichiers sur le pc
+
+
+git add : ajouter 
+git commit -m "message" : ajoute dans forge
+git push : derniere etape pour mettre dans forge
+
+git rm nom-fichier: supp fichier sur pc (faire ensuite commit puis push)
