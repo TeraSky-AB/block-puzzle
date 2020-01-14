@@ -1,0 +1,6 @@
+	Voici les regles pour le Block Puzzle:
+
+-placer des blocks de diff forme dans une grille de taille n 
+-les pieces (ne) peuvent (pas) etre tournée
+-le but du jeu et de faire des ligne ou des colonnes afin de les supprimer puis de gagner des points
+-
