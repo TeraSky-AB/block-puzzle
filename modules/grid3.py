@@ -137,7 +137,7 @@ printGrid()
 draggingToken = False
 tokenx, tokeny = None, None
 
-listeforme = ["ligneH","ligneV","Tg","Td","Ta","Tn"]
+listeforme = ["ligneH","ligneV","Tg","Td","Ta","Tn","simple","blockDouble","blockTriple"]
 def placePiece(grid,x,y,forme):
     if forme == "ligneH":
         if grid[x][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
@@ -195,6 +195,37 @@ def placePiece(grid,x,y,forme):
             grid[x][y-1] = 1
             grid[x][y+1] = 1
         return grid
+    elif forme == "simple":
+        if grid[x][y] == 1:
+            print("il y a deja une piece")
+        else:
+            grid[x][y] = 1
+        return grid
+    elif forme == "blockDouble":
+        if grid[x][y] == 1 or grid[x][y+1] == 1 or grid[x-1][y+1] == 1 or grid[x-1][y] == 1:
+            print("il y a deja une piece  ici")
+        else:
+            grid[x][y] = 1
+            grid[x][y+1] = 1
+            grid[x-1][y+1] = 1
+            grid[x-1][y] = 1
+        return grid
+    elif forme == "blockTriple":
+        if grid[x][y] == 1 or grid[x+1][y+1] == 1 or grid[x+1][y-1] == 1 or grid[x-1][y+1] == 1 or grid[x-1][y-1] == 1 or grid[x+1][y] == 1 or grid[x][y+1] == 1 or grid[x-1][y] == 1 or grid[x][y-1] == 1:
+            print("il y a deja une piece ici")
+        else:
+            grid[x][y] = 1
+            grid[x+1][y+1] = 1
+            grid[x+1][y-1] = 1
+            grid[x-1][y+1] = 1
+            grid[x-1][y-1] = 1
+            grid[x+1][y] = 1
+            grid[x][y+1] = 1
+            grid[x][y-1] = 1
+            grid[x-1][y] = 1
+        return grid
+
+    
 nba = random.randint(0,5)
 print(listeforme[nba])
 
