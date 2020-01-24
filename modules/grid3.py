@@ -1,7 +1,7 @@
 import pygame as pg
 import sys
 from pygame.locals import *     #pygame.locals has the constants like QUIT, MOUSEBUTTON, and K_ESCAPE
-
+import random
 
 # settings
 windowWidth = 450
@@ -124,14 +124,66 @@ printGrid()
 draggingToken = False
 tokenx, tokeny = None, None
 
-def placePieceLigneH(grid,x,y):
-    if grid[x][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
-        print("il y a deja une piece sur une des trois places")
-    else:
-        grid[x][y] = 1
-        grid[x][y-1] = 1
-        grid[x][y+1] = 1
-    return grid
+listeforme = ["ligneH","ligneV","Tg","Td","Ta","Tn"]
+def placePiece(grid,x,y,forme):
+    if forme == "ligneH":
+        if grid[x][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
+            print("il y a deja une piece sur une des trois places")
+        else:
+            grid[x][y] = 1
+            grid[x][y-1] = 1
+            grid[x][y+1] = 1
+        return grid
+    elif forme == "ligneV":
+        if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x+1][y] == 1:
+            print("il y a deja une piece sur une des trois places")
+        else:
+            grid[x][y] = 1
+            grid[x-1][y] = 1
+            grid[x+1][y] = 1
+        return grid
+    elif forme == "Td":
+        if grid[x][y] == 1 or grid[x+1][y] == 1 or grid[x-1][y] == 1 or grid[x][y+1] == 1 or grid[x][y+2] == 1:
+            print("il y a deja une piece sur une de ces cases")
+        else:
+            grid[x][y] = 1
+            grid[x-1][y] = 1
+            grid[x+1][y] = 1
+            grid[x][y+1] = 1
+            grid[x][y+2] = 1
+        return grid
+    elif forme == "Tg":
+        if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x+1][y] == 1 or grid[x][y-1] == 1 or grid[x][y-2] == 1:
+            print("il y a deja une piece sur une de ces cases")
+        else:
+            grid[x][y] = 1
+            grid[x-1][y] = 1
+            grid[x+1][y] = 1
+            grid[x][y-1] = 1
+            grid[x][y-2] = 1
+        return grid
+    elif forme == "Ta":
+        if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x-2][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
+            print("il y a deja une piece sur une de ces cases")
+        else:
+            grid[x][y] = 1
+            grid[x-1][y] = 1
+            grid[x-2][y] = 1
+            grid[x][y-1] = 1
+            grid[x][y+1] = 1
+        return grid
+    elif forme == "Tn":
+        if grid[x][y] == 1 or grid[x+1][y] == 1 or grid[x+2][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
+            print("il y a deja une piece sur une de ces cases")
+        else:
+            grid[x][y] = 1
+            grid[x+1][y] = 1
+            grid[x+2][y] = 1
+            grid[x][y-1] = 1
+            grid[x][y+1] = 1
+        return grid
+nba = random.randint(0,5)
+print(listeforme[nba])
 
 # main program loop
 while True:
@@ -147,8 +199,10 @@ while True:
             column = pos[0] // (gridSize + margin)
             row = pos[1] // (gridSize + margin)
             if clickRange(pos):
-                placePieceLigneH(grid,row,column)
+                placePiece(grid,row,column)
             print("click ", pos, "grid coordinates: ", row, column)
+            nba = random.randint(0,5)
+            print(listeforme[nba])
 
         #     if event.button == 3:
         #         keyList.add(Key(x, y, len(keyList) + 1))
