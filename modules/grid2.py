@@ -28,6 +28,7 @@ class Grid():
     
     def placePiece(self, pieceNb):
         
+        
 
 def convertDcToBn(nb):
     bits = []
@@ -49,3 +50,4 @@ while not stop:
     for event in pg.event.get():
         if event.type == pg.QUIT:
             stop = True
+            pg.display.quit()
