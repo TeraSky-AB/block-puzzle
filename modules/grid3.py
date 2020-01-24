@@ -99,6 +99,15 @@ for row in range (20):
 draggingToken = False
 tokenx, tokeny = None, None
 
+def placePieceLigneH(grid,x,y):
+    if grid[x][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
+        print("il y a deja une piece sur une des trois places")
+    else:
+        grid[x][y] = 1
+        grid[x][y-1] = 1
+        grid[x][y+1] = 1
+    return grid
+
 # main program loop
 while True:
 
@@ -113,7 +122,7 @@ while True:
             column = pos[0] // (gridSize + margin)
             row = pos[1] // (gridSize + margin)
 
-            grid[row][column] = 1
+            placePieceLigneH(grid,row,column)
             print("click ", pos, "grid coordinates: ", row, column)
 
         #     if event.button == 3:
