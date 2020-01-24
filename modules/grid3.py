@@ -2,6 +2,13 @@ import pygame as pg
 import sys
 from pygame.locals import *     #pygame.locals has the constants like QUIT, MOUSEBUTTON, and K_ESCAPE
 import random
+import time
+
+#Pieces class
+
+class Piece():
+    def __init__(self):
+        pass
 
 # settings
 windowWidth = 450
@@ -30,6 +37,25 @@ O = ['000',
 
 shape = [L, O]
 shapeColors = [boxColor1, boxColor2]
+
+# ------
+
+#Blocks 2
+
+pieces = (
+    ('00000','00000','00100','00000','00000'), # 0  : Unity block
+    ('00000','00000','00110','00000','00000'), # 1  : 2 line
+    ('00000','00000','01110','00000','00000'), # 2  : 3 line
+    ('00000','00000','01100','00100','00000'), # 3  : Comma
+    ('00000','00000','01100','01100','00000'), # 9  : 2x2 block
+    ('00000','00000','11110','00000','00000'), # 4  : 4 line
+    ('00000','00000','11111','00000','00000'), # 5  : 5 line
+    ('00000','01110','01110','01110','00000'), # 6  : 3x3 block
+    ('00000','00000','11100','00100','00100'), # 7  : Big comma
+    ('00000','00000','01100','00100','00100'), # 8  : Logical not figure
+    ('00000','00000','01100','00110','00000'), # 10 : Snake look alike
+    ('00000','00000','01110','00100','00000')  # 11 : T figure
+)
 
 # ------
 
@@ -107,13 +133,82 @@ def clickRange(pos):
     else:
         return True
 
+def isAligned():
+    linesCompleted = []
+    for i in range(10):
+        ln = 0
+        clmn = 0
+        for j in range(10):
+            if grid[3+i][2+j]:
+                ln += 1
+            if grid[3+j][2+i]:
+                clmn += 1
+        if ln == 10:
+            print("There is a line at", i)
+            linesCompleted.append(['r', i+3])
+        if clmn == 10:
+            print("There is a column at", i)
+            linesCompleted.append(['c', i+2])
+    eraseAlignements(linesCompleted)
 
+def eraseAlignements(lines):
+    print(lines)
+    for i in lines:
+        if i[0] == 'r':
+            for j in range(10):
+                grid[i[1]][2+j] = 0
 
+        elif i[0] == 'c':
+            for j in range(10):
+                grid[3+j][i[1]] = 0
 
-        
+def nand(a,b):
+    if a == 1 and b == 1:
+        return 0
+    else:
+        return 1
+
+def isPiecePlaceable(x, y, figure, orientation):
+    err = 0
+    xi = x-2
+    yi = y-2
+    for i in range(5):
+        for j in range(5):
+            if orientation == 0:
+                if not nand(grid[xi+i][yi+j],int(pieces[figure][i][j])):
+                    err += 1
+            elif orientation == 1:
+                if  not nand(grid[xi+i][yi+j],int(pieces[figure][j][i])):
+                    err+=1
+            elif orientation == 2:
+                if  not nand(grid[xi+i][yi+j],int(pieces[figure][-i][-j])):
+                    err+=1
+            elif orientation == 3:
+                if not nand(grid[xi+i][yi+j],int(pieces[figure][-j][-i])):
+                    err+=1
+    if err:
+        print("This piece cannot be placed here\terr:",err)
+        return False
+    else:
+        return True
+    
+
+def placePiece(x, y, figure, orientation):
+    xi = x-2
+    yi = y-2
+    for i in range(5):
+        for j in range(5):
+            if orientation == 0:
+                grid[xi+i][yi+j] += int(pieces[figure][i][j])
+            elif orientation == 1:
+                grid[xi+i][yi+j] += int(pieces[figure][j][i])
+            elif orientation == 2:
+                grid[xi+i][yi+j] += int(pieces[figure][-i][-j])
+            elif orientation == 3:
+                grid[xi+i][yi+j] += int(pieces[figure][-j][-i])
 
 grid = []
-for row in range (20):
+for row in range (19):
     grid.append([])
     for column in range (14):
         grid[row].append(0)
@@ -123,67 +218,6 @@ printGrid()
 
 draggingToken = False
 tokenx, tokeny = None, None
-
-listeforme = ["ligneH","ligneV","Tg","Td","Ta","Tn"]
-def placePiece(grid,x,y,forme):
-    if forme == "ligneH":
-        if grid[x][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
-            print("il y a deja une piece sur une des trois places")
-        else:
-            grid[x][y] = 1
-            grid[x][y-1] = 1
-            grid[x][y+1] = 1
-        return grid
-    elif forme == "ligneV":
-        if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x+1][y] == 1:
-            print("il y a deja une piece sur une des trois places")
-        else:
-            grid[x][y] = 1
-            grid[x-1][y] = 1
-            grid[x+1][y] = 1
-        return grid
-    elif forme == "Td":
-        if grid[x][y] == 1 or grid[x+1][y] == 1 or grid[x-1][y] == 1 or grid[x][y+1] == 1 or grid[x][y+2] == 1:
-            print("il y a deja une piece sur une de ces cases")
-        else:
-            grid[x][y] = 1
-            grid[x-1][y] = 1
-            grid[x+1][y] = 1
-            grid[x][y+1] = 1
-            grid[x][y+2] = 1
-        return grid
-    elif forme == "Tg":
-        if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x+1][y] == 1 or grid[x][y-1] == 1 or grid[x][y-2] == 1:
-            print("il y a deja une piece sur une de ces cases")
-        else:
-            grid[x][y] = 1
-            grid[x-1][y] = 1
-            grid[x+1][y] = 1
-            grid[x][y-1] = 1
-            grid[x][y-2] = 1
-        return grid
-    elif forme == "Ta":
-        if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x-2][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
-            print("il y a deja une piece sur une de ces cases")
-        else:
-            grid[x][y] = 1
-            grid[x-1][y] = 1
-            grid[x-2][y] = 1
-            grid[x][y-1] = 1
-            grid[x][y+1] = 1
-        return grid
-    elif forme == "Tn":
-        if grid[x][y] == 1 or grid[x+1][y] == 1 or grid[x+2][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
-            print("il y a deja une piece sur une de ces cases")
-        else:
-            grid[x][y] = 1
-            grid[x+1][y] = 1
-            grid[x+2][y] = 1
-            grid[x][y-1] = 1
-            grid[x][y+1] = 1
-        return grid
-nba = random.randint(0,5)
-print(listeforme[nba])
 
 # main program loop
 while True:
@@ -195,14 +229,16 @@ while True:
             sys.exit()
                     
         if event.type == pg.MOUSEBUTTONDOWN:
+            ran = random.randint(0,11)
             pos = pg.mouse.get_pos()
             column = pos[0] // (gridSize + margin)
             row = pos[1] // (gridSize + margin)
-            if clickRange(pos):
-                placePiece(grid,row,column)
+            if clickRange(pos) and isPiecePlaceable(row,column,ran, ran%4):
+                placePiece(row,column,ran, ran%4)
+                printGrid()
+                isAligned()
             print("click ", pos, "grid coordinates: ", row, column)
-            nba = random.randint(0,5)
-            print(listeforme[nba])
+            
 
         #     if event.button == 3:
         #         keyList.add(Key(x, y, len(keyList) + 1))
@@ -271,7 +307,3 @@ while True:
 
 
     pg.display.flip()
-
-
-
-
