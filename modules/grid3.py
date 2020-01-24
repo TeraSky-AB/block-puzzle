@@ -108,6 +108,19 @@ def clickRange(pos):
         return True
 
 
+pts=0
+def points(pts):
+    white = 255, 255, 255
+    police = pg.font.SysFont('arial', 20)
+    texte = police.render('Score : '+ str(pts), False, white)
+    windowDisplay.blit(texte, (0, 0))
+    """
+    if clickRange(False):
+        pts=pts+50
+    if isAlignement():
+        pts=pts+100"""
+
+
 
 
         
@@ -199,7 +212,7 @@ while True:
             column = pos[0] // (gridSize + margin)
             row = pos[1] // (gridSize + margin)
             if clickRange(pos):
-                placePiece(grid,row,column)
+                placePiece(grid,row,column, listeforme[nba])
             print("click ", pos, "grid coordinates: ", row, column)
             nba = random.randint(0,5)
             print(listeforme[nba])
@@ -249,7 +262,7 @@ while True:
 
     
     windowDisplay.fill(bgColor)
-
+    points(pts)
     for row in range (3, 13):
         for column in range (2, 12):
             color = boardColor
