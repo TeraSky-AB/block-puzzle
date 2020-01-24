@@ -89,12 +89,37 @@ pg.display.set_caption("Block Puzzle")      #window title
 # block = pg.draw.rect(windowDisplay, boxColor1, (10, 10, 30, 30))
 
 # ------
+def printGrid():
+    for i in grid:
+        print(i)
+
+def limits():
+    for i in range(11):
+        grid[2][2+i] = 1
+        grid[2+i][1] = 1
+        grid[13][2+i] = 1
+        grid[2+i][12] = 1
+
+def clickRange(pos):
+    if pos[0] < 65 or pos[0] > 386 or pos[1] < 96 or pos[1] > 416:
+        print("Click is out of range")
+        return False
+    else:
+        return True
+
+
+
+
+        
 
 grid = []
 for row in range (20):
     grid.append([])
     for column in range (14):
         grid[row].append(0)
+limits()
+printGrid()
+
 
 draggingToken = False
 tokenx, tokeny = None, None
@@ -121,8 +146,8 @@ while True:
             pos = pg.mouse.get_pos()
             column = pos[0] // (gridSize + margin)
             row = pos[1] // (gridSize + margin)
-
-            placePieceLigneH(grid,row,column)
+            if clickRange(pos):
+                placePieceLigneH(grid,row,column)
             print("click ", pos, "grid coordinates: ", row, column)
 
         #     if event.button == 3:
