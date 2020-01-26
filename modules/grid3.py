@@ -162,6 +162,7 @@ def eraseAlignements(lines):
             for j in range(10):
                 grid[3+j][i[1]] = 0
 
+
 def nand(a,b):
     if a == 1 and b == 1:
         return 0
@@ -193,7 +194,7 @@ def isPiecePlaceable(x, y, figure, orientation):
         return True
     
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 def placePiece(x, y, figure, orientation):
     xi = x-2
     yi = y-2
@@ -207,24 +208,19 @@ def placePiece(x, y, figure, orientation):
                 grid[xi+i][yi+j] += int(pieces[figure][-i][-j])
             elif orientation == 3:
                 grid[xi+i][yi+j] += int(pieces[figure][-j][-i])
-=======
+#=======
 pts=0
 def points(pts):
     white = 255, 255, 255
     police = pg.font.SysFont('arial', 20)
     texte = police.render('Score : '+ str(pts), False, white)
     windowDisplay.blit(texte, (0, 0))
-    """
-    if clickRange(False):
-        pts=pts+50
-    if isAlignement():
-        pts=pts+100"""
-
+    
 
 
 
         
->>>>>>> 6f01033bf32eff010926e98dd1f1a9ec538679d1
+#>>>>>>> 6f01033bf32eff010926e98dd1f1a9ec538679d1
 
 grid = []
 for row in range (19):
@@ -238,45 +234,56 @@ printGrid()
 draggingToken = False
 tokenx, tokeny = None, None
 
-<<<<<<< HEAD
-=======
+#<<<<<<< HEAD
+#=======
 listeforme = ["ligneH","ligneV","Tg","Td","Ta","Tn","simple","blockDouble","blockTriple"]
 def placePiece(grid,x,y,forme):
+    pts = 0
     if forme == "ligneH":
         if grid[x][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
             print("il y a deja une piece sur une des trois places")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x][y-1] = 1
             grid[x][y+1] = 1
+            pts = pts+50
         return grid
+        return pts
     elif forme == "ligneV":
         if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x+1][y] == 1:
             print("il y a deja une piece sur une des trois places")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x-1][y] = 1
             grid[x+1][y] = 1
+            pts = pts+50
+        return pts
         return grid
     elif forme == "Td":
         if grid[x][y] == 1 or grid[x+1][y] == 1 or grid[x-1][y] == 1 or grid[x][y+1] == 1 or grid[x][y+2] == 1:
             print("il y a deja une piece sur une de ces cases")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x-1][y] = 1
             grid[x+1][y] = 1
             grid[x][y+1] = 1
             grid[x][y+2] = 1
+            pts = pts+50
         return grid
     elif forme == "Tg":
         if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x+1][y] == 1 or grid[x][y-1] == 1 or grid[x][y-2] == 1:
             print("il y a deja une piece sur une de ces cases")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x-1][y] = 1
             grid[x+1][y] = 1
             grid[x][y-1] = 1
             grid[x][y-2] = 1
+            pts = pts+50
         return grid
     elif forme == "Ta":
         if grid[x][y] == 1 or grid[x-1][y] == 1 or grid[x-2][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
@@ -287,35 +294,46 @@ def placePiece(grid,x,y,forme):
             grid[x-2][y] = 1
             grid[x][y-1] = 1
             grid[x][y+1] = 1
+            pts = pts+50
         return grid
+        return pts
     elif forme == "Tn":
         if grid[x][y] == 1 or grid[x+1][y] == 1 or grid[x+2][y] == 1 or grid[x][y-1] == 1 or grid[x][y+1] == 1:
             print("il y a deja une piece sur une de ces cases")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x+1][y] = 1
             grid[x+2][y] = 1
             grid[x][y-1] = 1
             grid[x][y+1] = 1
+            pts = pts+50
         return grid
+        return pts
     elif forme == "simple":
         if grid[x][y] == 1:
             print("il y a deja une piece")
+            pts = pts
         else:
             grid[x][y] = 1
+        return pts
         return grid
     elif forme == "blockDouble":
         if grid[x][y] == 1 or grid[x][y+1] == 1 or grid[x-1][y+1] == 1 or grid[x-1][y] == 1:
             print("il y a deja une piece  ici")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x][y+1] = 1
             grid[x-1][y+1] = 1
             grid[x-1][y] = 1
+            pts = pts+50
+        return pts
         return grid
     elif forme == "blockTriple":
         if grid[x][y] == 1 or grid[x+1][y+1] == 1 or grid[x+1][y-1] == 1 or grid[x-1][y+1] == 1 or grid[x-1][y-1] == 1 or grid[x+1][y] == 1 or grid[x][y+1] == 1 or grid[x-1][y] == 1 or grid[x][y-1] == 1:
             print("il y a deja une piece ici")
+            pts = pts
         else:
             grid[x][y] = 1
             grid[x+1][y+1] = 1
@@ -326,13 +344,15 @@ def placePiece(grid,x,y,forme):
             grid[x][y+1] = 1
             grid[x][y-1] = 1
             grid[x-1][y] = 1
+            pts = pts+50
+        return pts
         return grid
 
     
 nba = random.randint(0,5)
 print(listeforme[nba])
 
->>>>>>> 6f01033bf32eff010926e98dd1f1a9ec538679d1
+#>>>>>>> 6f01033bf32eff010926e98dd1f1a9ec538679d1
 # main program loop
 while True:
 
@@ -342,20 +362,24 @@ while True:
             pg.quit()
             sys.exit()
                     
-        if event.type == pg.MOUSEBUTTONDOWN:
+        if event.type == pg.MOUSEBUTTONDOWN:        
             ran = random.randint(0,11)
             pos = pg.mouse.get_pos()
             column = pos[0] // (gridSize + margin)
             row = pos[1] // (gridSize + margin)
-<<<<<<< HEAD
+#<<<<<<< HEAD
             if clickRange(pos) and isPiecePlaceable(row,column,ran, ran%4):
+                pts = pts+50
                 placePiece(row,column,ran, ran%4)
                 printGrid()
                 isAligned()
-=======
+                
+#=======
             if clickRange(pos):
                 placePiece(grid,row,column, listeforme[nba])
->>>>>>> 6f01033bf32eff010926e98dd1f1a9ec538679d1
+                
+#>>>>>>> 6f01033bf32eff010926e98dd1f1a9ec538679d1
+                
             print("click ", pos, "grid coordinates: ", row, column)
             
 
