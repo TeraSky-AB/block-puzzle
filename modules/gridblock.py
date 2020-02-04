@@ -161,14 +161,34 @@ def drawGrid(grid, customColor):
                 color = customColor
             pg.draw.rect(windowDisplay, color, ((margin + boxSize)*column + margin, (margin + boxSize)*row + margin, boxSize, boxSize))
 
-def drawPieces(figure):
+def drawPieces1(figure, x, y):
+    
     block = pieces[figure]
-    rect = []
+    rect1 = []
     for row in range (5):
         for column in range (5):
             if block[row][column] == '1':
-                rect.append(pg.Rect((margin + boxSize)*column + 34, (margin + boxSize)*row + 385, boxSize, boxSize))
-    return rect
+                rect1.append(pg.Rect((margin + boxSize)*column + 20 + x, (margin + boxSize)*row + 430 + y, boxSize, boxSize))
+    return rect1
+
+def drawPieces2(figure, x, y):
+    block2 = pieces[figure]
+    rect2 = []
+    for row in range (5):
+        for column in range (5):
+            if block2[row][column] == '1':
+                rect2.append(pg.Rect((margin + boxSize)*column + 120 + x, (margin + boxSize)*row +430 + y, boxSize, boxSize)) 
+    return rect2
+
+def drawPieces3(figure, x, y):
+    block3 = pieces[figure]
+    rect3 = []
+    for row in range (5):
+        for column in range (5):
+            if block3[row][column] == '1':
+                rect3.append(pg.Rect((margin + boxSize)*column + 220 + x, (margin + boxSize)*row +430 + y, boxSize, boxSize)) 
+    return rect3
+
 
 def main():
     pg.init()
@@ -180,7 +200,9 @@ def main():
     pg.display.set_caption("Block Puzzle")
 
     grid = blankGrid()
-    rect_list = drawPieces(figure)
+    rect_list1 = drawPieces1(figure, 0, 0)
+    rect_list2 = drawPieces2(figure, 0, 0)
+    rect_list3 = drawPieces3(figure, 0, 0)
     limits(grid)
     printGrid(grid)
     drag = None
@@ -195,11 +217,21 @@ def main():
                     return     #using espace key to exit
 
             elif event.type == MOUSEBUTTONDOWN:
-                for rect in rect_list:
-                    if rect.collidepoint(event.pos):
-                        mouseX, mouseY = event.pos
-                        myX, myY = rect.topleft
-                        drag = mouseX - myX, mouseY - myY
+                for rect1 in rect_list1:
+                    if rect1.collidepoint(event.pos):
+                        mouse1X, mouse1Y = event.pos
+                        my1X, my1Y = rect1.topleft
+                        drag = mouse1X - my1X, mouse1Y - my1Y
+                for rect2 in rect_list2:
+                    if rect2.collidepoint(event.pos):
+                        mouse2X, mouse2Y = event.pos
+                        my2X, my2Y = rect2.topleft
+                        drag = mouse2X - my2X, mouse2Y - my2Y
+                for rect3 in rect_list3:
+                    if rect3.collidepoint(event.pos):
+                        mouse3X, mouse3Y = event.pos
+                        my3X, my3Y = rect3.topleft
+                        drag = mouse3X - my3X, mouse3Y - my3Y
                     
 
             elif event.type == MOUSEBUTTONUP:
@@ -209,31 +241,78 @@ def main():
                     placePiece(grid, row, column, figure, 0)
                     pts = pts + 50
                     isAligned(grid)
-                for rect in rect_list:
-                    rect = pg.Rect(mouseX, mouseY, 0, 0)
-                    rect = drawPieces(figure)
+                for rect1 in rect_list1:
+                    rect1 = pg.Rect(mouse1X, mouse1Y, 0, 0)
+                    rect1 = drawPieces1(figure)
+                    drag = None
+                for rect2 in rect_list2:
+                    rect2 = pg.Rect(mouse2X, mouse2Y, 0, 0)
+                    rect2 = drawPieces2(figure)
+                    drag = None
+                for rect3 in rect_list3:
+                    rect3 = pg.Rect(mouse3X, mouse3Y, 0, 0)
+                    rect3 = drawPieces3(figure)
                     drag = None
 
             elif event.type == MOUSEMOTION:
                 if drag:
-                    for rect in rect_list:
-                        pass
+                    for rect1 in rect_list1:
+                        rect1.x += event.rel[0]
+                        rect1.y += event.rel[1]
 
-        if drag:
-            for rect in rect_list:
-                mouseX, mouseY = pg.mouse.get_pos()
-                offX, offY = drag
-                rect.topleft = mouseX - offX, mouseY - offY
-                print("click ", mouseX, mouseY)
+                    for rect2 in rect_list2:
+                        rect2.x += event.rel[0]
+                        rect2.y += event.rel[1]
 
+                    for rect3 in rect_list3:
+                        rect3.x += event.rel[0]
+                        rect3.y += event.rel[1]
+                    mouse2X, mouse2Y = pg.mouse.get_pos()
+                    off2X, off2Y = drag
+                    rect2.topleft = mouse2X - off2X, mouse2Y - off2Y
+
+                    mouseX, mouseY = pg.mouse.get_pos()
+                    off1X, off1Y = drag
+                    rect1.topleft = mouse1X - off1X, mouse1Y - off1Y
+
+                    mouse3X, mouse3Y = pg.mouse.get_pos()
+                    off3X, off3Y = drag
+                    rect3.topleft = mouse3X - off3X, mouse3Y - off3Y
+                    
+
+       # if drag:
+        #    for rect1 in rect_list1:
+        #        mouseX, mouseY = pg.mouse.get_pos()
+        #        offX, offY = drag
+        #        rect1.topleft = mouseX - offX, mouseY - offY
+        #        print("click ", mouseX, mouseY)
+
+         #   for rect2 in rect_list2:
+         #       mouseX, mouseY = pg.mouse.get_pos()
+        #        offX, offY = drag
+        #        rect2.topleft = mouseX - offX, mouseY - offY
+         #       print("click ", mouseX, mouseY)
+
+        #    for rect3 in rect_list3:
+        #        mouseX, mouseY = pg.mouse.get_pos()
+        #        offX, offY = drag
+        #        rect3.topleft = mouseX - offX, mouseY - offY
+        #        print("click ", mouseX, mouseY)
+
+  
 
         windowDisplay.fill(bgColor)
-        for rect in rect_list:
-            pg.draw.rect(windowDisplay, green, rect)
-
+        for rect1 in rect_list1:
+            pg.draw.rect(windowDisplay, green, rect1)
+        for rect2 in rect_list2:
+            pg.draw.rect(windowDisplay, cream, rect2)
+        for rect3 in rect_list3:
+            pg.draw.rect(windowDisplay, redpink, rect3)
         points(pts)
         drawGrid(grid, green)
-        drawPieces(figure)
+        drawPieces1(figure, 0, 0)
+        drawPieces2(figure, 0, 0)
+        drawPieces3(figure, 0, 0)
 
         pg.display.flip()
 
