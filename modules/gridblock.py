@@ -171,22 +171,22 @@ def drawPieces1(figure, x, y):
                 rect1.append(pg.Rect((margin + boxSize)*column + 20 + x, (margin + boxSize)*row + 430 + y, boxSize, boxSize))
     return rect1
 
-def drawPieces2(figure, x, y):
+def drawPieces2(figure, x2, y2):
     block2 = pieces[figure]
     rect2 = []
     for row in range (5):
         for column in range (5):
             if block2[row][column] == '1':
-                rect2.append(pg.Rect((margin + boxSize)*column + 120 + x, (margin + boxSize)*row +430 + y, boxSize, boxSize)) 
+                rect2.append(pg.Rect((margin + boxSize)*column + 120 + x2, (margin + boxSize)*row +430 + y2, boxSize, boxSize)) 
     return rect2
 
-def drawPieces3(figure, x, y):
+def drawPieces3(figure, x3, y3):
     block3 = pieces[figure]
     rect3 = []
     for row in range (5):
         for column in range (5):
             if block3[row][column] == '1':
-                rect3.append(pg.Rect((margin + boxSize)*column + 220 + x, (margin + boxSize)*row +430 + y, boxSize, boxSize)) 
+                rect3.append(pg.Rect((margin + boxSize)*column + 220 + x3, (margin + boxSize)*row +430 + y3, boxSize, boxSize)) 
     return rect3
 
 
@@ -243,15 +243,15 @@ def main():
                     isAligned(grid)
                 for rect1 in rect_list1:
                     rect1 = pg.Rect(mouse1X, mouse1Y, 0, 0)
-                    rect1 = drawPieces1(figure)
+                    rect1 = drawPieces1(figure, 0, 0)
                     drag = None
                 for rect2 in rect_list2:
                     rect2 = pg.Rect(mouse2X, mouse2Y, 0, 0)
-                    rect2 = drawPieces2(figure)
+                    rect2 = drawPieces2(figure, 0, 0)
                     drag = None
                 for rect3 in rect_list3:
                     rect3 = pg.Rect(mouse3X, mouse3Y, 0, 0)
-                    rect3 = drawPieces3(figure)
+                    rect3 = drawPieces3(figure, 0, 0)
                     drag = None
 
             elif event.type == MOUSEMOTION:
