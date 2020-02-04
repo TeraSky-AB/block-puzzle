@@ -176,7 +176,7 @@ def menu():
                 elif boutonquitter.collidepoint(possour):
                     run = False
                     pg.display.quit()
-        pg.display.flip()                              s
+        pg.display.flip()                              
         
 def main():
     pg.init()
