@@ -10,10 +10,10 @@ BLACK = (0,0,0)
 margin = 2
 
 pg.font.init()
-font = pg.font.Font('resources/BebasNeue-Regular.ttf', 20)
-mediumFont = pg.font.Font('resources/BebasNeue-Regular.ttf', 70)
-bigFont = pg.font.Font('resources/BebasNeue-Regular.ttf', 100)
-bigMediumFont = pg.font.Font('resources/BebasNeue-Regular.ttf', 50)
+font = pg.font.Font('assets/BebasNeue-Regular.ttf', 20)
+mediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 70)
+bigFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 100)
+bigMediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 50)
 
 quit = mediumFont.render("Quit", True, BLACK)
 restart = mediumFont.render("Restart", True, BLACK)
