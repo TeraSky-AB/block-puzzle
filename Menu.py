@@ -5,6 +5,11 @@ x=640
 y=640
 fenetre = pg.display.set_mode((x, y))
 
+BACKGROUNDCOLOR = (150, 211, 255)
+BOARDCOLOR = (102, 174, 232)
+CREAM = (240, 247, 244)
+REDPINK = (255, 143, 137)
+GREEN = (34,199,139)
 
 def menu():
     imageM = pg.image.load(' image ').convert() 

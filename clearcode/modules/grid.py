@@ -1,101 +1,96 @@
-class Grid():
-	def __init__(self, size):
+import modules.logicalgate as lg
+
+class Grid:
+	def __init__(self, size, Pieces): #Vérifier comment faire le lien entre le grille, les pièces et le joueur
 		self.size = size+2
 		self.grid = []
-		self.pieces = (
-			('00000','00000','00100','00000','00000'), # 0  : Unity block
-			('00000','00000','00110','00000','00000'), # 1  : 2 line
-			('00000','00000','01110','00000','00000'), # 2  : 3 line
-			('00000','00000','01100','00100','00000'), # 3  : Comma
-			('00000','00110','00110','00000','00000'), # 4  : 2x2 block
-			('00000','00000','11110','00000','00000'), # 5  : 4 line
-			('00000','00000','11111','00000','00000'), # 6  : 5 line
-			('00000','01110','01110','01110','00000'), # 7  : 3x3 block
-			('00000','00000','11100','00100','00100'), # 8  : Big comma
-			('00000','00000','01100','00100','00100'), # 9  : Logical not figure
-			('00000','00000','01100','00110','00000'), # 10 : Snake look alike
-			('00000','00000','01110','00100','00000'),  # 11 : T figure
-		)
 
+		self.Pieces = Pieces
+		
 		self.linesCompleted = []
 
-	def init(self):
+	def init(self): #Create a new grid
 		for i in range(self.size):
 			self.grid.append([])
 			for j in range(self.size):
 				self.grid[i].append(0)
 
-	def printGridState(self):
+	def printGridState(self): #To check the state of the grid on the console
 		for i in self.grid:
 			print(i)
 
-	def definePhysicalLimits(self):
+	def definePhysicalLimits(self): #Define limits of the board by placing 1s all around the grid
 		for i in range(self.size):
 			self.grid[i][0] = 1
 			self.grid[0][i] = 1
 			self.grid[self.size-1][i] = 1
 			self.grid[i][self.size-1] = 1
 
-	def isPiecePlaceable(self, x, y, piece, orientation):
+	def isPiecePlaceable(self, x, y, figure): #Check if piece is placeable
 		x -= 2
 		y -= 2
 		err = 0
 		for i in range(5):
 			for j in range(5):
-					if orientation == 0 and not lg.nand(self.grid[x+i][y+j],int(self.pieces[figure][i][j])):
+				try:
+					if not lg.nand(self.grid[x+i][y+j],int(self.Pieces.pieces[figure][i][j])):
 						err += 1
-					elif orientation == 1 and not lg.nand(self.grid[x+i][y+j],int(self.pieces[figure][j][i])):
-						err += 1
-					elif orientation == 2 and not lg.nand(self.grid[x+i][y+j],int(self.pieces[figure][-i][-j])):
-						err += 1
-					elif orientation == 3 and not lg.nand(self.grid[x+i][y+j],int(self.pieces[figure][-j][-i])):
-						err += 1
+				except:
+					pass
 		if err:
 			return False
 		else:
 			return True
 
-	def putPiece(self, x, y, piece, orientation):
+	def putPiece(self, x, y, figure): #Place the piece on the grid
 		x -= 2
 		y -= 2
 		for i in range(5):
 			for j in range(5):
-				if orientation == 0:
-					try:
-						self.grid[x+i][y+j] += int(self.pieces[piece][i][j])
-					except:
-						print("Block outside array's range")
-				elif orientation == 1:
-					try:
-						self.grid[x+i][y+j] += int(self.pieces[piece][j][i])
-					except:
-						print("Block outside array's range")
-				elif orientation == 2:
-					try:
-						self.grid[x+i][y+j] += int(self.pieces[piece][-i][-j])
-					except:
-						print("Block outside array's range")
-				elif orientation == 3:
-					try:
-						self.grid[x+i][y+j] += int(self.pieces[piece][-j][-i])
-					except:
-						print("Block outside array's range")
+				try:
+					self.grid[x+i][y+j] += int(self.Pieces.pieces[figure][i][j])
+				except:
+					pass
 
-	def isThereAlignement(self):
-		pass
+	def isThereAlignement(self): #Check if there is an alignement on the grid object
+		for i in range(self.size-2):
+			line = 0
+			column = 0
+			for j in range(self.size-2):
+				if self.grid[1+i][1+j]:
+					line += 1
+				if self.grid[1+j][1+i]:
+					column += 1
+			if line == self.size-2:
+				self.linesCompleted.append(['r', 1+i])
+			if column == self.size-2:
+				self.linesCompleted.append(['c', 1+i])
+
+	def eraseAlignement(self): #Erase the alignements of the grid object
+		for i in self.linesCompleted:
+			if i[0] == 'c':
+				for j in range(self.size-2):
+					self.grid[1+j][i[1]] = 0
+			if i[0] == 'r':
+				for j in range(self.size-2):
+					self.grid[i[1]][1+j] = 0
+			self.linesCompleted.remove(i)
+
+	def isDrawPlaceable(self, Player):
+		err = 0
+		for piece in Player.draw:
+			for x in range(self.size-2):
+				for y in range(self.size-2):
+					if not self.isPiecePlaceable(1+x,1+y,piece.figureNumber):
+						err += 1
+		if err == ((self.size-2)**2)*len(Player.draw):
+			return False
+		else:
+			return True
 
 
 
 
-grid = Grid(10)
-grid.init()
-grid.definePhysicalLimits()
-grid.printGridState()
-for i in range(10):
-	grid.putPiece(i+1,5,0,0)
-grid.printGridState()
-grid.isThereAlignement()
-print(grid.linesCompleted)
 
 
 
