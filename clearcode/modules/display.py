@@ -34,11 +34,7 @@ hostText = mediumFont.render("HOST GAME", True, CREAM)
 joinText = mediumFont.render("JOIN GAME", True, CREAM)
 
 def displayMenu(win):
-	win.fill(BACKGROUNDCOLOR)
-	win.blit(pypuzzle, (65,50))
-	win.blit(soloText, (160,220))
-	win.blit(multiText, (150,300))
-	win.blit(quitText, (165, 380))
+	pass
 
 def displayMulti(win):
 	win.fill(BACKGROUNDCOLOR)
@@ -71,7 +67,7 @@ def displayDrawPieces(Player): #Changer le titre (la position de la fonction ?)
 		if not i.dragged:
 			i.x = j
 			i.y = 400
-			j+=140
+			j+=150
 
 def displayTexts(win, Player):
 	score = font.render("Score: "+str(Player.points), True, CREAM)

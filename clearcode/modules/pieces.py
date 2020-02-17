@@ -55,8 +55,8 @@ class Pieces: # Class used as reference for pieces and determine draws
 				self.history2.append(Piece(randFigure, self.piece_colors))
 		for j in Players:
 			if j.points // self.stage > 5 and self.level < 4:
-				self.interval += 1
-				self.stage *= 1,25
+				self.level += 1
+				self.stage *= 1.25
 
 class Piece(Pieces): #Piece to place on the grid
 	def __init__(self, figure, color):

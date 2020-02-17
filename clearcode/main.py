@@ -3,6 +3,8 @@ import modules.grid as gd
 import modules.display as dsp
 import modules.player as player
 import modules.pieces as pcs
+import modules.multiplayer as multi
+import random as rnd
 
 def updates():
 	pieces.update(players)
@@ -23,7 +25,43 @@ def isOnGrid(pos):
 def quitGame():
 	doContinue = False
 	pg.display.quit()
-	quit()	
+	quit()
+
+def firstPlayerToPlay():
+	return rnd.randint(0,1)
+
+def initGameSolo():
+	global currentlyDragging, pieces, grid, player1, players
+	currentlyDragging = False
+	pieces = pcs.Pieces()
+
+	grid = gd.Grid(10, pieces)
+	grid1 = gd.Grid(10, pieces)
+	grids = [grid, grid1]
+	for i in grids:
+		i.init()
+		i.definePhysicalLimits()
+
+	player1 = player.Player()
+	players = [player1]
+
+def initGameMulti():
+	global currentlyDragging, pieces, grid, grid1, grids, player1, player2, players, firstPlayerToPlay
+	currentlyDragging = False
+	pieces = pcs.Pieces()
+
+	firstPlayerToPlay = rnd.randint(0,1)
+
+	grid = gd.Grid(10, pieces)
+	grid1 = gd.Grid(10, pieces)
+	grids = [grid, grid1]
+	for i in grids:
+		i.init()
+		i.definePhysicalLimits()
+
+	player1 = player.Player()
+	player2 = player.Player(1)
+	players = [player1, player2]
 
 SCREENHEIGHT = 650
 SCREENWIDTH = 440
@@ -50,18 +88,11 @@ quitButtonRect = pg.Rect(155,380,125,70)
 # TESTS
 boardX = 50
 boardY = 50
+boardCoord = (boardX, boardY)
 
 currentDisplay = 'menu'
 
-currentlyDragging = False
-pieces = pcs.Pieces()
-grid = gd.Grid(10, pieces)
-grid.init()
-grid.definePhysicalLimits()
-player1 = player.Player()
-players = [player1]
-
-#==============
+#===================
 
 doContinue = True
 
@@ -87,11 +118,12 @@ while doContinue:
 								if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
 									grid.putPiece(int(gridPos[0]), int(gridPos[1]), j.figureNumber)
 									player1.draw.remove(j)
+				
 			elif currentDisplay == 'menu':
 				if soloButtonRect.collidepoint(event.pos):
 					currentDisplay = 'solo'
 				elif multiButtonRect.collidepoint(event.pos):
-					currentDisplay = 'multiMenu'
+					currentDisplay = 'gameMultiLocal'
 				elif quitButtonRect.collidepoint(event.pos):
 					quitGame() 
 				
@@ -100,6 +132,7 @@ while doContinue:
 	#INSTRUCTIONS ===
 	if currentDisplay == 'menu':
 		dsp.displayMenu(screen)
+		nbRound = 0
 
 	elif currentDisplay == 'multiMenu':
 		dsp.displayMulti(screen)
@@ -108,12 +141,19 @@ while doContinue:
 		dsp.displayOnlineMulti(screen)
 
 	elif currentDisplay == 'solo':
-		dsp.displayBoard(screen, (boardX, boardY), grid)
-		updates()
-		dsp.displayDrawPieces(player1)
-		dsp.displayTexts(screen, player1)
-		if not grid.isDrawPlaceable(player1):
-			currentDisplay = 'gameover'
+		pass
+
+	elif currentDisplay == 'gameMultiLocal':
+		if nbRound == 0:
+			initGameMulti()
+		if multiView == 'Player1':
+			pass
+		elif multiView == 'Player2':
+			pass
+
+
+
+		nbRound+=1
 
 	elif currentDisplay == 'gameover':
 		dsp.displayGameOverSolo(screen, player1)
