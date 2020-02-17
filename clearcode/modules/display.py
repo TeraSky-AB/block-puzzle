@@ -5,44 +5,81 @@ BOARDCOLOR = (102, 174, 232)
 CREAM = (240, 247, 244)
 REDPINK = (255, 143, 137, 200)
 GREEN = (34,199,139)
-BLACK = (0,0,0)
+NAVY = (37,80,108)
+YELLOW = (255, 207, 74)
+GRAY = (41, 41, 41)
+RED = (219, 109, 103)
 
 margin = 2
 
 pg.font.init()
 font = pg.font.Font('assets/BebasNeue-Regular.ttf', 20)
-mediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 70)
+mediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 35)
 bigFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 100)
-bigMediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 50)
+bigMediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 60)
 
-quit = mediumFont.render("Quit", True, BLACK)
-restart = mediumFont.render("Restart", True, BLACK)
-gameover = bigFont.render("GAME OVER", True, BLACK)
+quit = mediumFont.render("Quit", True, GRAY)
+restart = mediumFont.render("Restart", True, GRAY)
+gameover = bigFont.render("GAME OVER", True, GRAY)
+gameoverShadow = bigFont.render("GAME OVER", True, RED)
 
-pypuzzle = bigFont.render("PyPuzzle", True, CREAM)
-soloText = mediumFont.render("SOLO", True, CREAM)
-multiText = mediumFont.render("MULTI", True, CREAM)
-quitText = mediumFont.render("QUIT", True, CREAM)
 
-multiplayerText = mediumFont.render("MULTIPLAYER", True, CREAM)
-iaText = bigMediumFont.render("PLAYER vs IA", True, CREAM)
-localText = bigMediumFont.render("PLAYER 1 vs PLAYER 2 (LOCAL)", True, CREAM)
-onlineText = bigMediumFont.render("PLAYER 1 vs PLAYER 2 (ONLINE)", True, CREAM)
-returnText = bigMediumFont.render("RETURN", True, CREAM)
+pypuzzle = bigFont.render("PyPuzzle", True, NAVY)
+soloText = mediumFont.render("SOLO", True, NAVY)
+multiText = mediumFont.render("MULTI", True, NAVY)
+quitText = mediumFont.render("QUIT", True, NAVY)
+pypuzzleShadow = bigFont.render("PyPuzzle", True, BOARDCOLOR)
+
+
+multiplayerText = bigMediumFont.render("MULTIPLAYER", True, NAVY)
+iaText = mediumFont.render("PLAYER vs IA", True, NAVY)
+localText = mediumFont.render("PLAYER 1 vs PLAYER 2 (LOCAL)", True, NAVY)
+onlineText = mediumFont.render("PLAYER 1 vs PLAYER 2 (ONLINE)", True, NAVY)
+returnText = mediumFont.render("RETURN", True, NAVY)
+multiplayerTextShadow = bigMediumFont.render("MULTIPLAYER", True, BOARDCOLOR)
+
 
 hostText = mediumFont.render("HOST GAME", True, CREAM)
 joinText = mediumFont.render("JOIN GAME", True, CREAM)
 
+
+
 def displayMenu(win):
+<<<<<<< HEAD
 	pass
+=======
+	win.fill(BACKGROUNDCOLOR)
+	
+	pg.draw.rect(win, BOARDCOLOR, (170, 335, 120, 45))
+	pg.draw.rect(win, CREAM, (165, 330, 120, 45))
+
+	pg.draw.rect(win, BOARDCOLOR, (170, 405, 120, 45))
+	pg.draw.rect(win, GREEN, (165, 400, 120, 45))
+
+
+	pg.draw.rect(win, BOARDCOLOR, (170, 475, 120, 45))
+	pg.draw.rect(win, REDPINK, (165, 470, 120, 45))
+
+	win.blit(pypuzzleShadow, (80,75))
+	win.blit(pypuzzle, (75,70))
+	win.blit(soloText, (199,334))
+	win.blit(multiText, (192,404))
+	win.blit(quitText, (202, 474))
+
+>>>>>>> bbccc9965c525fb34d416059288f6f57eb26ba1f
 
 def displayMulti(win):
 	win.fill(BACKGROUNDCOLOR)
-	win.blit(multiplayerText, (65,50))
-	win.blit(iaText, (25,220))
-	win.blit(localText, (25,300))
-	win.blit(onlineText, (25, 380))
-	win.blit(returnText, (150, 460))
+	win.blit(multiplayerTextShadow, (103,73))
+	win.blit(multiplayerText, (100,70))
+
+	win.blit(iaText, (50,180))
+	win.blit(localText, (50,230))
+	win.blit(onlineText, (50, 280))
+
+	pg.draw.rect(win, BOARDCOLOR, (170, 475, 120, 45))
+	pg.draw.rect(win, REDPINK, (165, 470, 120, 45))
+	win.blit(returnText, (184, 474))
 
 def displayOnlineMulti(win):
 	win.fill(BACKGROUNDCOLOR)
@@ -70,17 +107,24 @@ def displayDrawPieces(Player): #Changer le titre (la position de la fonction ?)
 			j+=150
 
 def displayTexts(win, Player):
-	score = font.render("Score: "+str(Player.points), True, CREAM)
+	score = font.render("Score: "+str(Player.points), True, NAVY)
 	win.blit(score, (10,10))
-	currentPlayer = font.render("Current player: "+str(Player.id+1), True, CREAM)
+	currentPlayer = font.render("Current player: "+str(Player.id+1), True, NAVY)
 	win.blit(currentPlayer, (310,10))		
 
 def displayGameOverSolo(win, Player):
 	win.fill(REDPINK)
-	score = mediumFont.render("Score: "+str(Player.points), True, BLACK)
-	win.blit(score, (125, 90))
-	win.blit(gameover, (50, 200))
-	win.blit(restart, (125, 335))
-	win.blit(quit, (175, 410))
+	score = bigMediumFont.render("Score: "+str(Player.points), True, GRAY)
+	win.blit(score, (120, 245))
+	win.blit(gameoverShadow, (55, 75))
+	win.blit(gameover, (50, 70))
+
+	pg.draw.rect(win, RED, (170, 405, 120, 45))
+	pg.draw.rect(win, BACKGROUNDCOLOR, (165, 400, 120, 45))
+	win.blit(restart, (179, 404))
+
+	pg.draw.rect(win, RED, (170, 475, 120, 45))
+	pg.draw.rect(win, YELLOW, (165, 470, 120, 45))
+	win.blit(quit, (202, 474))
 					
 

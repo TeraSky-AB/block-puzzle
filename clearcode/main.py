@@ -74,9 +74,10 @@ pg.display.set_caption("PyPuzzle")
 
 # MENU RECTS
 
-soloButtonRect = pg.Rect(160,220,130,70)
-multiButtonRect = pg.Rect(150,300,140,70)
-quitButtonRect = pg.Rect(155,380,125,70)
+soloButtonRect = pg.Rect(165, 330, 120, 45)
+multiButtonRect = pg.Rect(165, 400, 120, 45)
+quitButtonRect = pg.Rect(165, 470, 120, 45)
+returnButtonRect = pg.Rect(165, 470, 120, 45)
 
 # GAMEOVER RECTS
 
@@ -100,12 +101,14 @@ while doContinue:
 	for event in pg.event.get():
 		if event.type == pg.QUIT:
 			quitGame()
+
 		elif event.type == pg.MOUSEBUTTONDOWN:
 			if currentDisplay == 'solo' or currentDisplay == 'multi':
 				for j in player1.draw:
 					if j.rect.collidepoint(event.pos) and not currentlyDragging:
 						currentlyDragging = True
 						j.dragged = True
+
 		elif event.type == pg.MOUSEBUTTONUP:
 			if currentDisplay == 'solo' or currentDisplay == 'multi':
 				if currentlyDragging:
@@ -118,7 +121,11 @@ while doContinue:
 								if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
 									grid.putPiece(int(gridPos[0]), int(gridPos[1]), j.figureNumber)
 									player1.draw.remove(j)
+<<<<<<< HEAD
 				
+=======
+
+>>>>>>> bbccc9965c525fb34d416059288f6f57eb26ba1f
 			elif currentDisplay == 'menu':
 				if soloButtonRect.collidepoint(event.pos):
 					currentDisplay = 'solo'
