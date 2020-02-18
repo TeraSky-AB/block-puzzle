@@ -90,7 +90,7 @@ while doContinue:
 								if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
 									grid.putPiece(int(gridPos[0]), int(gridPos[1]), j.figureNumber)
 									player1.draw.remove(j)
-
+                                                                        player1.points+=50
 			elif currentDisplay == 'menu':
 				if soloButtonRect.collidepoint(event.pos):
 					currentDisplay = 'solo'
