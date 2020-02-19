@@ -61,7 +61,7 @@ class Pieces: # Class used as reference for pieces and determine draws
 class Piece(Pieces): #Piece to place on the grid
 	def __init__(self, figure, color):
 		Pieces.__init__(self)
-		self.x = -50
+		self.x = -300
 		self.y = 600
 		self.figureNumber = figure
 		self.figure = self.pieces[figure]
@@ -82,4 +82,4 @@ class Piece(Pieces): #Piece to place on the grid
 			self.y = mousePos[1]-80
 		self.rect.x = self.x
 		self.rect.y = self.y
-		self.drawPiece(win)
+

@@ -45,9 +45,6 @@ joinText = mediumFont.render("JOIN GAME", True, CREAM)
 
 
 def displayMenu(win):
-<<<<<<< HEAD
-	pass
-=======
 	win.fill(BACKGROUNDCOLOR)
 	
 	pg.draw.rect(win, BOARDCOLOR, (170, 335, 120, 45))
@@ -65,8 +62,6 @@ def displayMenu(win):
 	win.blit(soloText, (199,334))
 	win.blit(multiText, (192,404))
 	win.blit(quitText, (202, 474))
-
->>>>>>> bbccc9965c525fb34d416059288f6f57eb26ba1f
 
 def displayMulti(win):
 	win.fill(BACKGROUNDCOLOR)
@@ -93,7 +88,7 @@ def displayBoard(win, blitCoord, grid):
 	for i in range(0,grid.size-2):
 		for j in range(0,grid.size-2):
 			if grid.grid[1+i][1+j]:
-				pg.draw.rect(win, CREAM, (blitCoord[0]+(margin+boxWidth)*i+margin,blitCoord[1]+(margin+boxWidth)*j+margin, boxWidth, boxWidth))
+				pg.draw.rect(win, CREAM, (blitCoord[0]+(margin+boxWidth)*i+margin, blitCoord[1]+(margin+boxWidth)*j+margin, boxWidth, boxWidth))
 			else:
 				pg.draw.rect(win, BOARDCOLOR, (blitCoord[0]+(margin+boxWidth)*i+margin,blitCoord[1]+(margin+boxWidth)*j+margin, boxWidth, boxWidth))
 
@@ -115,6 +110,21 @@ def displayTexts(win, Player):
 def displayGameOverSolo(win, Player):
 	win.fill(REDPINK)
 	score = bigMediumFont.render("Score: "+str(Player.points), True, GRAY)
+	win.blit(score, (120, 245))
+	win.blit(gameoverShadow, (55, 75))
+	win.blit(gameover, (50, 70))
+
+	pg.draw.rect(win, RED, (170, 405, 120, 45))
+	pg.draw.rect(win, BACKGROUNDCOLOR, (165, 400, 120, 45))
+	win.blit(restart, (179, 404))
+
+	pg.draw.rect(win, RED, (170, 475, 120, 45))
+	pg.draw.rect(win, YELLOW, (165, 470, 120, 45))
+	win.blit(quit, (202, 474))
+
+def displayGameOverMulti(win, Player): # A modifier(Afficher les deux scores ainsi que le gagnant)
+	win.fill(REDPINK)
+	score = bigMediumFont.render("Score: " + str(Player.points), True, GRAY)
 	win.blit(score, (120, 245))
 	win.blit(gameoverShadow, (55, 75))
 	win.blit(gameover, (50, 70))

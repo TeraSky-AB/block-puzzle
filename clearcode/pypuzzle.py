@@ -3,65 +3,13 @@ import modules.grid as gd
 import modules.display as dsp
 import modules.player as player
 import modules.pieces as pcs
-import modules.multiplayer as multi
 import random as rnd
-
-def updates():
-	pieces.update(players)
-	for i in players:
-		i.update(pieces)
-		for j in i.draw:
-			j.update(screen)
-	grid.isThereAlignement()
-	player1.points += len(grid.linesCompleted)*100
-	grid.eraseAlignement()
-
-def isOnGrid(pos):
-	if pos[0] > boardX and pos[0] < boardX+320 and pos[1] > boardY and pos[1] < boardY+320:
-		return True
-	else:
-		return False
+import modules.game as gm
 
 def quitGame():
 	doContinue = False
 	pg.display.quit()
 	quit()
-
-def firstPlayerToPlay():
-	return rnd.randint(0,1)
-
-def initGameSolo():
-	global currentlyDragging, pieces, grid, player1, players
-	currentlyDragging = False
-	pieces = pcs.Pieces()
-
-	grid = gd.Grid(10, pieces)
-	grid1 = gd.Grid(10, pieces)
-	grids = [grid, grid1]
-	for i in grids:
-		i.init()
-		i.definePhysicalLimits()
-
-	player1 = player.Player()
-	players = [player1]
-
-def initGameMulti():
-	global currentlyDragging, pieces, grid, grid1, grids, player1, player2, players, firstPlayerToPlay
-	currentlyDragging = False
-	pieces = pcs.Pieces()
-
-	firstPlayerToPlay = rnd.randint(0,1)
-
-	grid = gd.Grid(10, pieces)
-	grid1 = gd.Grid(10, pieces)
-	grids = [grid, grid1]
-	for i in grids:
-		i.init()
-		i.definePhysicalLimits()
-
-	player1 = player.Player()
-	player2 = player.Player(1)
-	players = [player1, player2]
 
 SCREENHEIGHT = 650
 SCREENWIDTH = 440
@@ -90,6 +38,12 @@ returnButtonRect = pg.Rect(165, 470, 120, 45)
 boardX = 50
 boardY = 50
 boardCoord = (boardX, boardY)
+
+firstPlayerToPlay = rnd.randint(0,1)
+currentPlayer = firstPlayerToPlay%2
+
+game = gm.Game(2, screen)
+game.init()
 
 currentDisplay = 'menu'
 
@@ -121,14 +75,10 @@ while doContinue:
 								if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
 									grid.putPiece(int(gridPos[0]), int(gridPos[1]), j.figureNumber)
 									player1.draw.remove(j)
-<<<<<<< HEAD
-				
-=======
 
->>>>>>> bbccc9965c525fb34d416059288f6f57eb26ba1f
 			elif currentDisplay == 'menu':
 				if soloButtonRect.collidepoint(event.pos):
-					currentDisplay = 'solo'
+					currentDisplay = 'game'
 				elif multiButtonRect.collidepoint(event.pos):
 					currentDisplay = 'gameMultiLocal'
 				elif quitButtonRect.collidepoint(event.pos):
@@ -151,12 +101,7 @@ while doContinue:
 		pass
 
 	elif currentDisplay == 'gameMultiLocal':
-		if nbRound == 0:
-			initGameMulti()
-		if multiView == 'Player1':
-			pass
-		elif multiView == 'Player2':
-			pass
+		game.roundMulti()
 
 
 
