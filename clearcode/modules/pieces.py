@@ -1,7 +1,11 @@
 import pygame as pg
 import random as rd
 
-class Pieces: # Class used as reference for pieces and determine draws
+
+class Pieces:
+	"""
+	Pieces object handles the draws and serves as reference for each piece representation on Grid object
+	"""
 	def __init__(self):
 		self.pieces = (
 			('00000','00000','00100','00000','00000'), # 0  : Unity block
@@ -48,6 +52,11 @@ class Pieces: # Class used as reference for pieces and determine draws
 		self.histories = [self.history, self.history2]
 
 	def update(self, Players):
+		"""
+		update() updates Pieces object by checking if history property is empty so they can fulfill it and manage the
+		draw difficulties.
+		:param Players: Player object(needed to check Player points)
+		"""
 		if len(self.history) == 0 or len(self.history2) == 0:
 			for i in range(3):
 				randFigure = rd.randint(0, self.steps[self.level])
@@ -58,7 +67,11 @@ class Pieces: # Class used as reference for pieces and determine draws
 				self.level += 1
 				self.stage *= 1.25
 
-class Piece(Pieces): #Piece to place on the grid
+
+class Piece(Pieces):
+	"""
+	Piece object represent the piece inside and outside the game board.
+	"""
 	def __init__(self, figure, color):
 		Pieces.__init__(self)
 		self.x = -300
@@ -70,12 +83,20 @@ class Piece(Pieces): #Piece to place on the grid
 		self.rect = pg.Rect(self.x, self.y, 160, 160)
 
 	def drawPiece(self, win):
+		"""
+
+		:param win:
+		"""
 		for i in range(5):
 			for j in range(5):
 				if int(self.figure[i][j]):
 					pg.draw.rect(win, self.color, (self.x+(32)*i+2,self.y+(32)*j+2, 30, 30))
 
 	def update(self, win):
+		"""
+
+		:param win:
+		"""
 		mousePos = pg.mouse.get_pos()
 		if self.dragged:
 			self.x = mousePos[0]-80

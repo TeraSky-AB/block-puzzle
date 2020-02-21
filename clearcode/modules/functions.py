@@ -8,4 +8,3 @@ def isOnGrid(pos):
 
 def quitGame():
 	pg.display.quit()
-	quit()
