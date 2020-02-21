@@ -4,8 +4,6 @@ BACKGROUNDCOLOR = (125, 201, 255)
 BOARDCOLOR = (77, 164, 227)
 CREAM = (240, 247, 244)
 REDPINK = (255, 143, 137, 200)
-GREEN = (34, 199, 139)
-NAVY = (37, 80, 108)
 GREEN = (69, 222, 130)
 NAVY = (7, 51, 92)
 YELLOW = (255, 207, 74)
@@ -23,11 +21,13 @@ bigMediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 60)
 gameover = bigFont.render("YOUR SCORE", True, GRAY)
 gameoverShadow = bigFont.render("YOUR SCORE", True, RED)
 
+
 pypuzzle = bigFont.render("PyPuzzle", True, NAVY)
 soloText = mediumFont.render("SOLO", True, NAVY)
 multiText = mediumFont.render("MULTI", True, NAVY)
 quitText = mediumFont.render("QUIT", True, NAVY)
 pypuzzleShadow = bigFont.render("PyPuzzle", True, BOARDCOLOR)
+
 
 multiplayerText = bigMediumFont.render("MULTIPLAYER", True, NAVY)
 iaText = mediumFont.render("PLAYER vs IA", True, NAVY)
@@ -36,32 +36,13 @@ onlineText = mediumFont.render("PLAYER 1 vs PLAYER 2 (ONLINE)", True, NAVY)
 returnText = font.render("RETURN", True, NAVY)
 multiplayerTextShadow = bigMediumFont.render("MULTIPLAYER", True, BOARDCOLOR)
 
+
 hostText = mediumFont.render("HOST GAME", True, CREAM)
 joinText = mediumFont.render("JOIN GAME", True, CREAM)
 
 
+
 def displayMenu(win):
-<<<<<<< HEAD
-    """
-	Draws the menu on window.
-    :param win: Window to display the menu on.
-    """
-    win.fill(BACKGROUNDCOLOR)
-
-    pg.draw.rect(win, BOARDCOLOR, (170, 335, 120, 45))
-    pg.draw.rect(win, CREAM, (165, 330, 120, 45))
-
-    pg.draw.rect(win, BOARDCOLOR, (170, 405, 120, 45))
-    pg.draw.rect(win, GREEN, (165, 400, 120, 45))
-
-    pg.draw.rect(win, BOARDCOLOR, (170, 475, 120, 45))
-    pg.draw.rect(win, REDPINK, (165, 470, 120, 45))
-
-    win.blit(pypuzzleShadow, (80, 75))
-    win.blit(pypuzzle, (75, 70))
-    win.blit(soloText, (199, 334))
-    win.blit(multiText, (192, 404))
-    win.blit(quitText, (202, 474))
 	win.fill(BACKGROUNDCOLOR)
 	pg.draw.rect(win, BOARDCOLOR, (155, 323, 150, 45))
 	pg.draw.rect(win, BOARDCOLOR, (155, 388, 150, 45))
@@ -72,81 +53,21 @@ def displayMenu(win):
 
 
 def displayMulti(win):
-    """
-	Displays the multiplayer menu.
-    :param win:  Window to display the menu on.
-    """
-    win.fill(BACKGROUNDCOLOR)
-    win.blit(multiplayerTextShadow, (103, 73))
-    win.blit(multiplayerText, (100, 70))
+	win.fill(BACKGROUNDCOLOR)
+	win.blit(multiplayerTextShadow, (103,73))
+	win.blit(multiplayerText, (100,70))
 
-    win.blit(iaText, (50, 180))
-    win.blit(localText, (50, 230))
-    win.blit(onlineText, (50, 280))
-
-    pg.draw.rect(win, BOARDCOLOR, (170, 475, 120, 45))
-    pg.draw.rect(win, REDPINK, (165, 470, 120, 45))
-    win.blit(returnText, (184, 474))
+	win.blit(iaText, (50,180))
+	win.blit(localText, (50,230))
+	win.blit(onlineText, (50, 280))
 
 	pg.draw.rect(win, BOARDCOLOR, (155, 453, 150, 45))
 
-
 def displayOnlineMulti(win):
-    """
-	Displays the menu to chose whether the player wants to host or join a game.
-    :param win: Window to display the menu on.
-    """
-    win.fill(BACKGROUNDCOLOR)
-    win.blit(multiplayerText, (65, 50))
-    win.blit(hostText, (160, 220))
-    win.blit(joinText, (150, 300))
-
-<<<<<<< HEAD
-
-def displayBoard(win, blitCoord, grid):
-    """
-	Displays the game board.
-    :param win: Window to display the board on.
-    :param blitCoord: Coordinates where the function draws the board.
-    :param grid: Grid object to display.
-    """
-    boxWidth = 30
-    win.fill(BACKGROUNDCOLOR)
-    for i in range(0, grid.size - 2):
-        for j in range(0, grid.size - 2):
-            if grid.grid[1 + i][1 + j]:
-                pg.draw.rect(win, CREAM, (
-                    blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
-                    boxWidth, boxWidth))
-            else:
-                pg.draw.rect(win, BOARDCOLOR, (
-                    blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
-                    boxWidth, boxWidth))
-
-
-def displayDrawPieces(Player):
-    """
-	Display Piece object at their coordinates.
-    :param Player: Player object.
-    """
-    j = 0
-    for i in Player.draw:
-        if not i.dragged:
-            i.x = j
-            i.y = 400
-            j += 150
-
-
-def displayTexts(win, Player):
-    """
-	Displays texts like player score and current player to play.
-    :param win: Window to display the text on.
-    :param Player: Player object.
-    """
-    score = font.render("Score: " + str(Player.points), True, NAVY)
-    win.blit(score, (10, 10))
-    currentPlayer = font.render("Current player: " + str(Player.id + 1), True, NAVY)
-    win.blit(currentPlayer, (310, 10))
+	win.fill(BACKGROUNDCOLOR)
+	win.blit(multiplayerText, (65,50))
+	win.blit(hostText, (160,220))
+	win.blit(joinText, (150,300))
 
 def displayBoard(win, blitCoord, grid):
 	boxWidth = 30
@@ -186,43 +107,3 @@ def displayGameOverSolo(win, Player):
 	pg.draw.rect(win, RED, (155, 453, 150, 45))
 
 
-def displayGameOverSolo(win, Player):
-    """
-	Displays game over menu for solo mode.
-    :param win: Window to display the menu on.
-    :param Player: Player object.
-    """
-    win.fill(REDPINK)
-    score = bigMediumFont.render("Score: " + str(Player.points), True, GRAY)
-    win.blit(score, (120, 245))
-    win.blit(gameoverShadow, (55, 75))
-    win.blit(gameover, (50, 70))
-
-    pg.draw.rect(win, RED, (170, 405, 120, 45))
-    pg.draw.rect(win, BACKGROUNDCOLOR, (165, 400, 120, 45))
-    win.blit(restart, (179, 404))
-
-    pg.draw.rect(win, RED, (170, 475, 120, 45))
-    pg.draw.rect(win, YELLOW, (165, 470, 120, 45))
-    win.blit(quit, (202, 474))
-
-
-def displayGameOverMulti(win, Player):  # A modifier(Afficher les deux scores ainsi que le gagnant)
-    """
-	Displays game over menu for local multiplayer mode.
-    :param win: Window to display the menu on.
-    :param Player: Player object.
-    """
-    win.fill(REDPINK)
-    score = bigMediumFont.render("Score: " + str(Player.points), True, GRAY)
-    win.blit(score, (120, 245))
-    win.blit(gameoverShadow, (55, 75))
-    win.blit(gameover, (50, 70))
-
-    pg.draw.rect(win, RED, (170, 405, 120, 45))
-    pg.draw.rect(win, BACKGROUNDCOLOR, (165, 400, 120, 45))
-    win.blit(restart, (179, 404))
-
-    pg.draw.rect(win, RED, (170, 475, 120, 45))
-    pg.draw.rect(win, YELLOW, (165, 470, 120, 45))
-    win.blit(quit, (202, 474))
