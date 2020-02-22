@@ -156,25 +156,7 @@ def solo():
 		pg.display.flip()
 
 
-def updatesMultiLocal(pieces, players, grids, screen, currentPlayer):  # Update player draw and check if grid has alignements
-	"""
-	updates() updates the different components of multilocal function.
-	:param pieces: Pieces object
-	:param players: Players objects list
-	:param grids: Grids objects list
-	:param screen: Current window to display game on
-	:param currentPlayer: Number of current player
-	"""
-	pieces.update(players)
-	for player in players:
-		player.update(pieces)
-		for piece in player.draw:
-			piece.update(screen)
-			if player == players[currentPlayer%2]:
-				piece.drawPiece(screen)
-	grids[currentPlayer % 2].isThereAlignement()
-	players[currentPlayer % 2].points += len(grids[currentPlayer % 2].linesCompleted) * 100
-	grids[currentPlayer % 2].eraseAlignement()
+
 
 
 def multiLocal():
