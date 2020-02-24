@@ -212,7 +212,7 @@ def solo():
 								if fnc.isOnGrid(event.pos):
 									gridPos = ((event.pos[0]-boardX)/32+1,(event.pos[1]-boardY)/32+1)
 									if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
-										grid.putPiece(int(gridPos[0]), int(gridPos[1]), j.figureNumber)
+										grid.putPiece(int(gridPos[0]), int(gridPos[1]), j)
 										players[0].points += 30
 										player1.draw.remove(j)
 		if currentDisplay == 'solo':
@@ -277,7 +277,7 @@ def multiLocal():
 								if fnc.isOnGrid(event.pos):
 									gridPos = ((event.pos[0] - boardX) / 32 + 1, (event.pos[1] - boardY) / 32 + 1)
 									if grids[currentPlayer % 2].isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), piece.figureNumber):
-										grids[currentPlayer % 2].putPiece(int(gridPos[0]), int(gridPos[1]), piece.figureNumber)
+										grids[currentPlayer % 2].putPiece(int(gridPos[0]), int(gridPos[1]), piece)
 										players[currentPlayer % 2].draw.remove(piece)
 										players[currentPlayer % 2].points += 30
 										currentPlayer += 1
