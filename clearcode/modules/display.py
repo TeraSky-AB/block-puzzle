@@ -32,6 +32,10 @@ bigMediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 60)
 gameover = bigFont.render("YOUR SCORE", True, GRAY)
 gameoverShadow = bigFont.render("YOUR SCORE", True, RED)
 
+J1 = font.render("Joueur 1 : ", True, GRAY)
+J2 = font.render("Joueur 2 : ", True, GRAY)
+Winner = mediumFont.render("Winner : ", True, GRAY)
+
 pypuzzle = bigFont.render("PyPuzzle", True, NAVY)
 soloText = mediumFont.render("SOLO", True, NAVY)
 multiText = mediumFont.render("MULTI", True, NAVY)
@@ -114,7 +118,6 @@ def displayTexts(win, Player):
     currentPlayer = font.render("Current player: " + str(Player.id + 1), True, NAVY)
     win.blit(currentPlayer, (280, 20))
 
-
 def displayGameOverSolo(win, Player):
     win.fill(REDPINK)
     score = bigMediumFont.render(str(Player.points), True, GRAY)
@@ -122,5 +125,22 @@ def displayGameOverSolo(win, Player):
     win.blit(gameoverShadow, (45, 170))
     win.blit(gameover, (40, 165))
 
+    pg.draw.rect(win, RED, (155, 388, 150, 45))
+    pg.draw.rect(win, RED, (155, 453, 150, 45))
+
+def displayGameOverIA(win, Players):
+    win.fill(REDPINK)
+    score1 = font.render(str(Players.points), True, GRAY)
+    win.blit(score1, (140, 253))
+    win.blit(gameoverShadow, (45, 135))
+    win.blit(gameover, (40, 130))
+    
+    win.blit(J1, (50, 253))
+    win.blit(J2, (270, 253))
+    score2 = bigMediumFont.render(str(Players2.points), True, GRAY)
+    win.blit(score2, (350, 253))
+    
+    win.blit(Winner, (140, 300))
+    
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))
