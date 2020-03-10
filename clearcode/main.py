@@ -14,26 +14,6 @@ screensize = (SCREENWIDTH, SCREENHEIGHT)
 boardX = 65
 boardY = 65
 
-BACKGROUNDCOLOR = (125, 201, 255)
-BOARDCOLOR = (91, 137, 194)
-CREAM = (240, 247, 244)
-REDPINK = (255, 143, 137, 200)
-GREEN = (69, 222, 130)
-NAVY = (7, 51, 92)
-YELLOW = (255, 207, 74)
-GRAY = (41, 41, 41)
-RED = (219, 109, 103)
-
-mediumFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 40)
-smallFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 25)
-soloText = mediumFont.render("SOLO", True, NAVY)
-multiText = mediumFont.render("MULTI", True, NAVY)
-quitText = mediumFont.render("QUIT", True, NAVY)
-returnText = mediumFont.render("RETURN", True, NAVY)
-quitText1 = mediumFont.render("Quit", True, GRAY)
-restart = mediumFont.render("Restart", True, GRAY)
-returnMenuText = smallFont.render("RETURN", True, NAVY)
-returnMenuText1 = smallFont.render("RETURN", True, CREAM)
 # MENU RECTS
 
 soloButtonRect = pg.Rect(150, 318, 150, 50)
@@ -42,11 +22,17 @@ quitButtonRect = pg.Rect(150, 448, 150, 45)
 
 returnButtonRect = pg.Rect(150, 448, 150, 45)
 restartButtonRect = pg.Rect(150, 405, 150, 50)
-returnMenuButtonRect = pg.Rect(340, 645, 85, 30)
+returnMenuButtonRect = pg.Rect(340, 615, 85, 30)
 
 multiLocalButtonRect = pg.Rect(50,230,330,50)
 
 pg.init()
+pg.mixer.init()
+
+soundMenu = pg.mixer.Sound("assets/menu.wav")
+soundGameOver = pg.mixer.Sound("assets/gameover.wav")
+soundButton = pg.mixer.Sound("assets/button.wav")
+soundPlaceable = pg.mixer.Sound("assets/placeable.wav")
 
 screen = pg.display.set_mode(screensize)
 pg.display.set_caption("PyPuzzle")
@@ -85,6 +71,7 @@ def updatesMultiLocal(pieces, players, grids, screen, currentPlayer):
 
 
 def menu():
+	soundMenu.play(-1, 0, 0)
 	doContinue = True
 	while doContinue:
 		for event in pg.event.get():
@@ -92,35 +79,39 @@ def menu():
 				fnc.quitGame()
 			elif event.type == pg.MOUSEBUTTONDOWN:
 				if soloButtonRect.collidepoint(event.pos):
+					soundMenu.stop()
+					soundButton.play()
 					solo()
 				if multiButtonRect.collidepoint(event.pos):
+					soundButton.play()
 					multiMenu()
 				if quitButtonRect.collidepoint(event.pos):
 					fnc.quitGame()
+					
 		dsp.displayMenu(screen)
 		# HOVER
 		pos = pg.mouse.get_pos()
 		# SOLO
 		if 150+150 > pos[0] > 150 and 318+45 > pos[1] > 318:
-			pg.draw.rect(screen, YELLOW, (150, 318, 150, 45))
-			screen.blit(soloText, (195,320))
+			pg.draw.rect(screen, dsp.YELLOW, (150, 318, 150, 45))
+			screen.blit(dsp.soloText, (195,320))
 		else:
-			pg.draw.rect(screen, CREAM, (150, 318, 150, 45))
-			screen.blit(soloText, (195,320))
+			pg.draw.rect(screen, dsp.CREAM, (150, 318, 150, 45))
+			screen.blit(dsp.soloText, (195,320))
 		# MULTI
 		if 150+150 > pos[0] > 150 and 383+45 > pos[1] > 383:
-			pg.draw.rect(screen, YELLOW, (150, 383, 150, 45))
-			screen.blit(multiText, (191,384))
+			pg.draw.rect(screen, dsp.YELLOW, (150, 383, 150, 45))
+			screen.blit(dsp.multiText, (191,384))
 		else:
-			pg.draw.rect(screen, GREEN, (150, 383, 150, 45))
-			screen.blit(multiText, (191,384))
+			pg.draw.rect(screen, dsp.GREEN, (150, 383, 150, 45))
+			screen.blit(dsp.multiText, (191,384))
 		# QUIT
 		if 150+150 > pos[0] > 150 and 448+45 > pos[1] > 448:
-			pg.draw.rect(screen, YELLOW, (150, 448, 150, 45))
-			screen.blit(quitText, (200, 448))
+			pg.draw.rect(screen, dsp.YELLOW, (150, 448, 150, 45))
+			screen.blit(dsp.quitText, (200, 448))
 		else:
-			pg.draw.rect(screen, REDPINK, (150, 448, 150, 45))
-			screen.blit(quitText, (200, 448))
+			pg.draw.rect(screen, dsp.REDPINK, (150, 448, 150, 45))
+			screen.blit(dsp.quitText, (200, 448))
 		pg.display.flip()
 
 def multiMenu():
@@ -132,20 +123,39 @@ def multiMenu():
 				fnc.quitGame()
 			elif event.type == pg.MOUSEBUTTONDOWN:
 				if returnButtonRect.collidepoint(event.pos):
+					soundMenu.stop()
+					soundButton.play()
 					menu()
 				elif multiLocalButtonRect.collidepoint(event.pos):
+					soundMenu.stop()
+					soundButton.play()
 					multiLocal()
 		# HOVER
 		pos = pg.mouse.get_pos()	
 		if 150+150 > pos[0] > 150 and 448+45 > pos[1] > 448:
-			pg.draw.rect(screen, YELLOW, (150, 448, 150, 45))
-			screen.blit(returnText, (179, 448))
+			pg.draw.rect(screen, dsp.YELLOW, (150, 448, 150, 45))
+			screen.blit(dsp.returnText, (179, 448))
 		else:
-			pg.draw.rect(screen, REDPINK, (150, 448, 150, 45))
-			screen.blit(returnText, (179, 448))
+			pg.draw.rect(screen, dsp.REDPINK, (150, 448, 150, 45))
+			screen.blit(dsp.returnText, (179, 448))
+		if 40+160 > pos[0] > 40 and 180+35 > pos[1] > 180:
+			screen.blit(dsp.iaTextHover, (40, 180))
+		else:
+			screen.blit(dsp.iaText, (40, 180))
+
+		if 40+370 > pos[0] > 40 and 230+35 > pos[1] > 230:
+			screen.blit(dsp.localTextHover, (40, 230))
+		else:
+			screen.blit(dsp.localText, (40, 230))
+
+		if 40+385 > pos[0] > 40 and 280+35 > pos[1] > 280:
+			screen.blit(dsp.onlineTextHover, (40, 280))
+		else:
+			screen.blit(dsp.onlineText, (40, 280))
 		pg.display.flip()
 
 def gameOverSolo(player1):
+	soundGameOver.play(-1, 0, 0)
 	dsp.displayGameOverSolo(screen, player1)
 	doContinue = True
 	while doContinue:
@@ -154,24 +164,26 @@ def gameOverSolo(player1):
 				fnc.quitGame()
 			elif event.type == pg.MOUSEBUTTONDOWN:
 				if restartButtonRect.collidepoint(event.pos):
+					soundGameOver.stop()
+					soundButton.play()
 					menu()
 				if quitButtonRect.collidepoint(event.pos):
 					fnc.quitGame()
 		# HOVER			
 		pos = pg.mouse.get_pos()	
 		if 150+150 > pos[0] > 150 and 383+45 > pos[1] > 383:
-			pg.draw.rect(screen, CREAM, (150, 383, 150, 45))
-			screen.blit(restart, (174, 385))
+			pg.draw.rect(screen, dsp.CREAM, (150, 383, 150, 45))
+			screen.blit(dsp.restart, (174, 385))
 		else:
-			pg.draw.rect(screen, BACKGROUNDCOLOR, (150, 383, 150, 45))
-			screen.blit(restart, (174, 385))
+			pg.draw.rect(screen, dsp.BACKGROUNDCOLOR, (150, 383, 150, 45))
+			screen.blit(dsp.restart, (174, 385))
 
 		if 150+150 > pos[0] > 150 and 448+45 > pos[1] > 448:
-			pg.draw.rect(screen, CREAM, (150, 448, 150, 45))
-			screen.blit(quitText1, (200, 448))
+			pg.draw.rect(screen, dsp.CREAM, (150, 448, 150, 45))
+			screen.blit(dsp.quitText1, (200, 448))
 		else:
-			pg.draw.rect(screen, YELLOW, (150, 448, 150, 45))
-			screen.blit(quitText1, (200, 448))
+			pg.draw.rect(screen, dsp.YELLOW, (150, 448, 150, 45))
+			screen.blit(dsp.quitText1, (200, 448))
 		pg.display.flip()
 
 def onlineMultiMenu():
@@ -200,6 +212,8 @@ def solo():
 							currentlyDragging = True
 							j.dragged = True
 				if returnMenuButtonRect.collidepoint(event.pos):
+					soundButton.play()
+					soundMenu.stop()
 					menu()
 
 			elif event.type == pg.MOUSEBUTTONUP:
@@ -212,6 +226,7 @@ def solo():
 								if fnc.isOnGrid(event.pos):
 									gridPos = ((event.pos[0]-boardX)/32+1,(event.pos[1]-boardY)/32+1)
 									if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
+										soundPlaceable.play()
 										grid.putPiece(int(gridPos[0]), int(gridPos[1]), j)
 										players[0].points += 30
 										player1.draw.remove(j)
@@ -225,12 +240,12 @@ def solo():
 		
 		# HOVER
 		pos = pg.mouse.get_pos()
-		if 340+85 > pos[0] > 340 and 645+30 > pos[1] > 645:
-			pg.draw.rect(screen, YELLOW, (340, 645, 85, 30))
-			screen.blit(returnMenuText, (354, 647))
+		if 340+85 > pos[0] > 340 and 615+30 > pos[1] > 615:
+			pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
+			screen.blit(dsp.returnMenuText, (354, 617))
 		else:
-			pg.draw.rect(screen, GRAY, (340, 645, 85, 30))
-			screen.blit(returnMenuText1, (354, 647))
+			pg.draw.rect(screen, dsp.GRAY, (340, 615, 85, 30))
+			screen.blit(dsp.returnMenuText1, (354, 617))
 		pg.display.flip()
 
 def multiLocal():
@@ -304,12 +319,12 @@ def multiLocal():
 
 			# HOVER
 		pos = pg.mouse.get_pos()
-		if 340 + 85 > pos[0] > 340 and 645 + 30 > pos[1] > 645:
-			pg.draw.rect(screen, YELLOW, (340, 645, 85, 30))
-			screen.blit(returnMenuText, (354, 647))
+		if 340+85 > pos[0] > 340 and 615+30 > pos[1] > 615:
+			pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
+			screen.blit(dsp.returnMenuText, (354, 617))
 		else:
-			pg.draw.rect(screen, GRAY, (340, 645, 85, 30))
-			screen.blit(returnMenuText1, (354, 647))
+			pg.draw.rect(screen, dsp.GRAY, (340, 615, 85, 30))
+			screen.blit(dsp.returnMenuText1, (354, 617))
 		pg.display.flip()
 
 if __name__ == '__main__':
