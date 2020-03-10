@@ -2,13 +2,13 @@ import pygame as pg
 
 piecescolors = (
     (0, 0, 0),  # PREVENT A BUG
-    (240, 247, 244),  # CREAM
-    (255, 143, 137, 200),  # REDPINK
-    (69, 222, 130),  # GREEN
-    (255, 207, 74),  # YELLOW
-    (219, 109, 103),  # RED
-    (41, 41, 41),  # GRAY
-    (7, 51, 92),  # NAVY
+    (254, 235, 201),  # CREAM
+    (249, 140, 182),  # REDPINK
+    (133, 202, 93),  # GREEN
+    (255, 250, 129),  # YELLOW
+    (255, 0, 0),  # RED
+    (192, 187, 153),  # GRAY
+    (165, 137, 193),  # NAVY
 )
 
 BACKGROUNDCOLOR = (125, 201, 255)

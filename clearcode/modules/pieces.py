@@ -32,7 +32,7 @@ class Pieces:  # Class used as reference for pieces and determine draws
             ['00000', '00000', '01100', '00110', '00000'],  # 23 : Snake look alike
             ['00000', '00000', '01100', '01100', '00000'],  # 24 : Snake look alike
             ['00000', '00100', '00110', '00010', '00000'],  # 25 : Snake look alike
-            ['00000', '00010', '01100', '00100', '00000'],  # 26 : Snake look alike
+            ['00000', '00010', '00110', '00100', '00000'],  # 26 : Snake look alike
             ['00000', '01110', '00100', '00100', '00000'],  # 27 : T figure
             ['00000', '00100', '00100', '01110', '00000'],  # 28 : T figure
             ['00000', '00100', '00111', '00100', '00000'],  # 29 : T figure
@@ -53,13 +53,13 @@ class Pieces:  # Class used as reference for pieces and determine draws
         if len(self.history) == 0 or len(self.history2) == 0:
             for i in range(3):
                 randFigure = rd.randint(0, self.steps[self.level])
-                randColor = rd.randint(1, 4)
+                randColor = rd.randint(1, 7)
                 self.history.append(Piece(randFigure, randColor))
                 self.history2.append(Piece(randFigure, randColor))
         for j in Players:
             if j.points // self.stage > 5 and self.level < 4:
                 self.level += 1
-                self.stage *= 1, 25
+                self.stage *= 1.25
 
 
 class Piece(Pieces):  # Piece to place on the grid
