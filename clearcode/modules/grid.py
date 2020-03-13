@@ -34,7 +34,7 @@ class Grid:
         for i in range(5):
             for j in range(5):
                 try:
-                    if not lg.nand(self.grid[x + i][y + j], int(self.Pieces.pieces[figure][i][j])):
+                    if not lg.nand(self.grid[x + i][y + j]//self.grid[x+i][y+j], int(self.Pieces.pieces[figure][i][j])):
                         err += 1
                 except:
                     pass

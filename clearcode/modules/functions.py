@@ -9,3 +9,13 @@ def isOnGrid(pos):
 def quitGame():
 	pg.display.quit()
 	quit()
+
+def maxWeight(list):
+	max = list[0]
+	maxIndex = (0,0)
+	for i in range(len(list)):
+		for j in range(1,len(list[i])):
+			if list[i][j][0] > max[0][0]:
+				max = list[i]
+				maxIndex = (i,j)
+	return (maxIndex)

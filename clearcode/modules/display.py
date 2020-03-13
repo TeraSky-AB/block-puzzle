@@ -1,16 +1,5 @@
 import pygame as pg
 
-# piecescolors = (
-#     (0, 0, 0),  # PREVENT A BUG
-#     (254, 235, 201),  # CREAM
-#     (255, 143, 137),  # REDPINK
-#     (141, 232, 150),  # GREEN
-#     (255, 250, 129),  # YELLOW
-#     (255, 0, 0),  # RED
-#     (192, 187, 153),  # GRAY
-#     (165, 137, 193),  # NAVY
-# )
-
 piecescolors = (
     (0, 0, 0),  # PREVENT A BUG
     (255, 241, 171),  # PASTEL YELLOW
@@ -116,9 +105,10 @@ def displayBoard(win, blitCoord, grid):
         for j in range(0, grid.size - 2):
             cell = grid.grid[1 + i][1 + j]
             if cell != 0:
-                pg.draw.rect(win, piecescolors[cell], (
+                pg.draw.rect(win, piecescolors[cell%8], (
                     blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
                     boxWidth, boxWidth))
+
             else:
                 pg.draw.rect(win, BOARDCOLOR, (
                     blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
@@ -141,6 +131,14 @@ def displayTexts(win, Player):
     score = font.render("Score: " + str(Player.points), True, NAVY)
     win.blit(score, (20, 20))
     currentPlayer = font.render("Current player: " + str(Player.id + 1), True, NAVY)
+    win.blit(currentPlayer, (280, 20))
+
+def displayTextsIA(win, Players,currentPlayer):
+    score = font.render("Score: " + str(Players[0].points), True, NAVY)
+    score1 = font.render("Score IA: " + str(Players[1].points), True, NAVY)
+    win.blit(score, (20, 20))
+    win.blit(score1, (20, 400))
+    currentPlayer = font.render("Current player: " + str(Players[currentPlayer % 2].id + 1), True, NAVY)
     win.blit(currentPlayer, (280, 20))
 
 def displayGameOverSolo(win, Player):
