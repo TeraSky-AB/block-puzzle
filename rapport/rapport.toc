@@ -1,0 +1,21 @@
+\babel@toc {french}{}
+\contentsline {part}{I\hspace {1em}Objectifs du projet}{2}%
+\contentsline {section}{\numberline {0.1}Présentation du concept}{3}%
+\contentsline {section}{\numberline {0.2}Cahier des charges}{3}%
+\contentsline {section}{\numberline {0.3}Exemples de jeux publiés}{3}%
+\contentsline {part}{II\hspace {1em}Fonctionnalités implémentés}{4}%
+\contentsline {section}{\numberline {0.4}Mode solo}{5}%
+\contentsline {section}{\numberline {0.5}Mode multijoueur}{5}%
+\contentsline {subsection}{\numberline {0.5.1}Joueur vs Intelligence artificielle}{5}%
+\contentsline {subsection}{\numberline {0.5.2}Joueur vs Joueur en local}{5}%
+\contentsline {subsection}{\numberline {0.5.3}Joueur vs Joueur en ligne}{5}%
+\contentsline {part}{III\hspace {1em}Éléments techniques}{6}%
+\contentsline {section}{\numberline {0.6}La grille}{7}%
+\contentsline {section}{\numberline {0.7}Les pièces}{7}%
+\contentsline {section}{\numberline {0.8}L'aléatoire}{7}%
+\contentsline {section}{\numberline {0.9}L'intelligence artificielle}{7}%
+\contentsline {section}{\numberline {0.10}Le réseau}{7}%
+\contentsline {part}{IV\hspace {1em}Architecture du projet}{8}%
+\contentsline {section}{\numberline {0.11}Diagrammes des modules et des classes}{9}%
+\contentsline {section}{\numberline {0.12}Cas d'utilisation}{9}%
+\contentsline {part}{V\hspace {1em}Conclusion}{10}%

@@ -1,11 +1,12 @@
-import time
 import pygame as pg
 import random as rnd
+import pickle
 import modules.grid as gd
 import modules.display as dsp
 import modules.player as player
 import modules.functions as fnc
 import modules.pieces as pcs
+import modules.network as netw
 
 SCREENHEIGHT = 700
 SCREENWIDTH = 450
@@ -325,7 +326,7 @@ def multiLocal():
             if not grids[currentPlayer % 2].isDrawPlaceable(players[currentPlayer % 2]):
                 currentDisplay = 'gameover'
         elif currentDisplay == 'gameover':
-            dsp.displayGameOverMulti(screen, players[currentPlayer % 2])
+            dsp.displayGameOverMulti(screen, players)
 
             # HOVER
         pos = pg.mouse.get_pos()
@@ -402,7 +403,7 @@ def multiIA():
             dsp.displayTextsIA(screen, players, currentPlayer)
             if currentPlayer % 2:
                 choice = players[1].determineWhatToPlay(grids[1])
-                print("Choix:", choice)
+                print("Choix IA:", choice)
                 grids[1].putPiece(choice[1], choice[2], choice[3])
                 grids[1].printGridState()
                 players[1].draw.remove(choice[3])
@@ -411,8 +412,9 @@ def multiIA():
 
             if not grids[currentPlayer % 2].isDrawPlaceable(players[currentPlayer % 2]):
                 currentDisplay = 'gameover'
+
         elif currentDisplay == 'gameover':
-            dsp.displayGameOverMulti(screen, players[currentPlayer % 2])
+            dsp.displayGameOverMulti(screen, players)
 
         # HOVER
         pos = pg.mouse.get_pos()
@@ -424,6 +426,69 @@ def multiIA():
             screen.blit(dsp.returnMenuText1, (354, 617))
         pg.display.flip()
 
+
+def multiOnlineServer():
+    pass
+
+def multiOnlineClient():
+    pieces = pcs.Pieces()
+    grid = gd.Grid(10, pieces)
+    grid.init()
+    grid.definePhysicalLimits()
+    player1 = player.Player()
+    players = [player1]
+    network = netw.Network().connect()
+
+    currentDisplay = 'solo'
+    currentlyDragging = False
+    doContinue = True
+    while doContinue:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                fnc.quitGame()
+            elif event.type == pg.MOUSEBUTTONDOWN:
+                if currentDisplay == 'solo':
+                    for j in player1.draw:
+                        if j.rect.collidepoint(event.pos) and not currentlyDragging:
+                            currentlyDragging = True
+                            j.dragged = True
+                if returnMenuButtonRect.collidepoint(event.pos):
+                    soundButton.play()
+                    soundMenu.stop()
+                    menu()
+
+            elif event.type == pg.MOUSEBUTTONUP:
+                if currentDisplay == 'solo':
+                    if currentlyDragging:
+                        for j in player1.draw:
+                            if j.rect.collidepoint(event.pos):
+                                currentlyDragging = False
+                                j.dragged = False
+                                if fnc.isOnGrid(event.pos):
+                                    gridPos = ((event.pos[0] - boardX) / 32 + 1, (event.pos[1] - boardY) / 32 + 1)
+                                    if grid.isPiecePlaceable(int(gridPos[0]), int(gridPos[1]), j.figureNumber):
+                                        soundPlaceable.play()
+                                        grid.putPiece(int(gridPos[0]), int(gridPos[1]), j)
+                                        players[0].points += 30
+                                        player1.draw.remove(j)
+
+        if currentDisplay == 'solo':
+            dsp.displayBoard(screen, (boardX, boardY), grid)
+            updates(players, pieces, grid)
+            dsp.displayDrawPieces(player1)
+            dsp.displayTexts(screen, player1)
+            if not grid.isDrawPlaceable(player1):
+                pass
+
+        # HOVER
+        pos = pg.mouse.get_pos()
+        if 340 + 85 > pos[0] > 340 and 615 + 30 > pos[1] > 615:
+            pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
+            screen.blit(dsp.returnMenuText, (354, 617))
+        else:
+            pg.draw.rect(screen, dsp.GRAY, (340, 615, 85, 30))
+            screen.blit(dsp.returnMenuText1, (354, 617))
+        pg.display.flip()
 
 if __name__ == '__main__':
     menu()

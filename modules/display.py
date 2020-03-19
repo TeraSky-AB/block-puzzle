@@ -151,16 +151,16 @@ def displayGameOverSolo(win, Player):
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))
 
-def displayGameOverIA(win, Players):
+def displayGameOverMulti(win, Players):
     win.fill(REDPINK)
-    score1 = font.render(str(Players.points), True, GRAY)
+    score1 = font.render(str(Players[0].points), True, GRAY)
     win.blit(score1, (140, 253))
     win.blit(gameoverShadow, (45, 135))
     win.blit(gameover, (40, 130))
     
     win.blit(J1, (50, 253))
     win.blit(J2, (270, 253))
-    score2 = bigMediumFont.render(str(Players2.points), True, GRAY)
+    score2 = bigMediumFont.render(str(Players[1].points), True, GRAY)
     win.blit(score2, (350, 253))
     
     win.blit(Winner, (140, 300))
