@@ -54,8 +54,7 @@ onlineTextHover = mediumFont.render("PLAYER 1 vs PLAYER 2 (ONLINE)", True, RED)
 returnText = font.render("RETURN", True, NAVY)
 multiplayerTextShadow = bigMediumFont.render("MULTIPLAYER", True, BOARDCOLOR)
 
-hostText = mediumFont.render("HOST GAME", True, CREAM)
-joinText = mediumFont.render("JOIN GAME", True, CREAM)
+wait = mediumFont.render("Waiting for another player..", True, NAVY)
 
 soloText = mediumFont.render("SOLO", True, NAVY)
 multiText = mediumFont.render("MULTI", True, NAVY)
@@ -89,13 +88,6 @@ def displayMulti(win):
     pg.draw.rect(win, LIGHTBLUE, (0, 610, 450, 30))
     pg.draw.rect(win, BLUE, (0, 640, 450, 30))
     pg.draw.rect(win, NAVY, (0, 670, 450, 30))
-
-def displayOnlineMulti(win):
-    win.fill(BACKGROUNDCOLOR)
-    win.blit(multiplayerText, (65, 50))
-    win.blit(hostText, (160, 220))
-    win.blit(joinText, (150, 300))
-
 
 def displayBoard(win, blitCoord, grid):
     boxWidth = 30
@@ -137,9 +129,13 @@ def displayTextsIA(win, Players,currentPlayer):
     score = font.render("Score: " + str(Players[0].points), True, NAVY)
     score1 = font.render("Score IA: " + str(Players[1].points), True, NAVY)
     win.blit(score, (20, 20))
-    win.blit(score1, (20, 400))
-    currentPlayer = font.render("Current player: " + str(Players[currentPlayer % 2].id + 1), True, NAVY)
-    win.blit(currentPlayer, (280, 20))
+    win.blit(score1, (320, 20))
+
+def displayTextsOnline(win, Player, points):
+    score = font.render("Score: " + str(Player.points), True, NAVY)
+    win.blit(score, (20, 20))
+    currentPlayer = font.render("Opponent's score: " + str(points), True, NAVY)
+    win.blit(currentPlayer, (245, 20))
 
 def displayGameOverSolo(win, Player):
     win.fill(REDPINK)
@@ -167,3 +163,7 @@ def displayGameOverMulti(win, Players):
     
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))
+
+def displayWaitPlayers(win):
+    win.fill(BACKGROUNDCOLOR)
+    win.blit(wait, (10, 300))

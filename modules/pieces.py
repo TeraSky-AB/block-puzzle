@@ -63,10 +63,6 @@ class Pieces:  # Class used as reference for pieces and determine draws
 
 
 class Piece(Pieces):  # Piece to place on the grid
-    """
-
-    """
-
     def __init__(self, figure, color):
         Pieces.__init__(self)
         self.color = dsp.piecescolors[color]

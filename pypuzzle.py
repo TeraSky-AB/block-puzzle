@@ -6,7 +6,7 @@ import modules.display as dsp
 import modules.player as player
 import modules.functions as fnc
 import modules.pieces as pcs
-import modules.network as netw
+import modules.network as ntw
 
 SCREENHEIGHT = 700
 SCREENWIDTH = 450
@@ -27,6 +27,7 @@ returnMenuButtonRect = pg.Rect(340, 615, 85, 30)
 
 multiLocalButtonRect = pg.Rect(50, 230, 330, 50)
 multiIAButtonRect = pg.Rect(40, 180, 200, 50)
+multiOnlineButtonRect = pg.Rect(40, 280, 330, 50)
 
 pg.init()
 pg.mixer.init()
@@ -38,7 +39,6 @@ soundPlaceable = pg.mixer.Sound("assets/placeable.wav")
 
 screen = pg.display.set_mode(screensize)
 pg.display.set_caption("PyPuzzle")
-
 
 def updates(players, pieces, grid):
     pieces.update(players)
@@ -138,6 +138,10 @@ def multiMenu():
                     soundMenu.stop()
                     soundButton.play()
                     multiIA()
+                elif multiOnlineButtonRect.collidepoint(event.pos):
+                    soundMenu.stop()
+                    soundButton.play()
+                    multiOnlineClient()
         # HOVER
         pos = pg.mouse.get_pos()
         if 150 + 150 > pos[0] > 150 and 448 + 45 > pos[1] > 448:
@@ -426,10 +430,6 @@ def multiIA():
             screen.blit(dsp.returnMenuText1, (354, 617))
         pg.display.flip()
 
-
-def multiOnlineServer():
-    pass
-
 def multiOnlineClient():
     pieces = pcs.Pieces()
     grid = gd.Grid(10, pieces)
@@ -437,9 +437,9 @@ def multiOnlineClient():
     grid.definePhysicalLimits()
     player1 = player.Player()
     players = [player1]
-    network = netw.Network().connect()
+    network = ntw.Network()
 
-    currentDisplay = 'solo'
+    currentDisplay = 'game'
     currentlyDragging = False
     doContinue = True
     while doContinue:
@@ -447,7 +447,7 @@ def multiOnlineClient():
             if event.type == pg.QUIT:
                 fnc.quitGame()
             elif event.type == pg.MOUSEBUTTONDOWN:
-                if currentDisplay == 'solo':
+                if currentDisplay == 'game':
                     for j in player1.draw:
                         if j.rect.collidepoint(event.pos) and not currentlyDragging:
                             currentlyDragging = True
@@ -458,7 +458,7 @@ def multiOnlineClient():
                     menu()
 
             elif event.type == pg.MOUSEBUTTONUP:
-                if currentDisplay == 'solo':
+                if currentDisplay == 'game':
                     if currentlyDragging:
                         for j in player1.draw:
                             if j.rect.collidepoint(event.pos):
@@ -471,14 +471,22 @@ def multiOnlineClient():
                                         grid.putPiece(int(gridPos[0]), int(gridPos[1]), j)
                                         players[0].points += 30
                                         player1.draw.remove(j)
+                                        network.send("set-points:"+str(player1.points))
 
-        if currentDisplay == 'solo':
+        if network.send("get-state").decode() == "waiting":
+            currentDisplay = 'wait'
+        else:
+            currentDisplay = 'game'
+
+        if currentDisplay == 'game':
             dsp.displayBoard(screen, (boardX, boardY), grid)
             updates(players, pieces, grid)
             dsp.displayDrawPieces(player1)
-            dsp.displayTexts(screen, player1)
+            dsp.displayTextsOnline(screen, player1, network.send("get-points")[0])
             if not grid.isDrawPlaceable(player1):
                 pass
+        elif currentDisplay == 'wait':
+            dsp.displayWaitPlayers(screen)
 
         # HOVER
         pos = pg.mouse.get_pos()
