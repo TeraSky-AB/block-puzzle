@@ -38,9 +38,14 @@ gameoverShadow = bigFont.render("YOUR SCORE", True, RED)
 
 J1 = font.render("Joueur 1 : ", True, GRAY)
 J2 = font.render("Joueur 2 : ", True, GRAY)
-Winner = mediumFont.render("Winner : ", True, GRAY)
+Winner = mediumFont.render("Winner: ", True, GRAY)
+VJ1 = mediumFont.render("Joueur 1 ", True, GRAY)
+VJ2 = mediumFont.render("Joueur 2 ", True, GRAY)
+restart = mediumFont.render("Restart", True, GRAY)
 
+quitText1 = mediumFont.render("Quit", True, GRAY)
 pypuzzle = bigFont.render("PyPuzzle", True, NAVY)
+
 pypuzzleShadow = bigFont.render("PyPuzzle", True, BOARDCOLOR)
 
 multiplayerText = bigMediumFont.render("MULTIPLAYER", True, NAVY)
@@ -156,14 +161,23 @@ def displayGameOverMulti(win, Players):
     
     win.blit(J1, (50, 253))
     win.blit(J2, (270, 253))
-    score2 = bigMediumFont.render(str(Players[1].points), True, GRAY)
+    score2 = font.render(str(Players[1].points), True, GRAY)
     win.blit(score2, (350, 253))
     
-    win.blit(Winner, (140, 300))
+    win.blit(Winner, (120, 300))
+    if Players[0].points > Players[1].points :
+        win.blit(VJ1, (240, 300))
+    else :
+        win.blit(VJ2, (240, 300))
+    
     
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))
 
+
 def displayWaitPlayers(win):
     win.fill(BACKGROUNDCOLOR)
-    win.blit(wait, (10, 300))
+    win.blit(wait, (30, 300))
+    win.blit(restart, (165, 390))
+    win.blit(quitText1, (165, 455))
+
