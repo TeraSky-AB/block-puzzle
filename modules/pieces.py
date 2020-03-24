@@ -39,26 +39,44 @@ class Pieces:  # Class used as reference for pieces and determine draws
             ['00000', '00100', '11100', '00100', '00000']  # 30 : T figure
         )
 
+        self.probs = [[8.5,22.5,39,55.5,72,84.5,100,200,200,200,200,200,200,200],
+          [8.5,20.5,33.5,48,63,73,83,92,100,200,200,200,200,200],
+          [6.5,17,28.5,41.5,54,63.5,73,80.5,87,93.5,100,200,200,200],
+          [5.5,15,27,39.5,51,59.5,68,76.5,83,89.5,95,100,200],
+          [5.5,13,24.5,36,46.5,55,63.5,71,77.5,84,89.5,95,100]]
+        
         # self.piece_colors = (240, 247, 244)
 
         self.level = 0
         self.stage = 200
-        self.steps = [12, 18, 22, 26, 30]
+        self.steps = 0
 
         self.history = []
         self.history2 = []
         self.histories = [self.history, self.history2]
 
+    def alea(self,probs,steps):
+        nb = rd.randint(0,100)
+        figure = 0
+        for i in range(0,12):
+            if nb <= self.probs[self.steps][0]:
+                figure = 1
+            elif nb > self.probs[self.steps][i] and nb <= self.probs[self.steps][i+1]:
+                figure = i+2
+
+        return figure
+
+
     def update(self, Players):
         if len(self.history) == 0 or len(self.history2) == 0:
             for i in range(3):
-                randFigure = rd.randint(0, self.steps[self.level])
+                randFigure = self.alea(self.probs, self.steps)
                 randColor = rd.randint(1, 7)
                 self.history.append(Piece(randFigure, randColor))
                 self.history2.append(Piece(randFigure, randColor))
         for j in Players:
-            if j.points // self.stage > 5 and self.level < 4:
-                self.level += 1
+            if j.points // self.stage > 5 and self.steps < 4:
+                self.steps += 1
                 self.stage *= 1.25
 
 
