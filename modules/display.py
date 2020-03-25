@@ -155,21 +155,20 @@ def displayGameOverSolo(win, Player):
 def displayGameOverMulti(win, Players):
     win.fill(REDPINK)
     score1 = font.render(str(Players[0].points), True, GRAY)
-    win.blit(score1, (140, 253))
+    win.blit(score1, (160, 253))
     win.blit(gameoverShadow, (45, 135))
     win.blit(gameover, (40, 130))
     
-    win.blit(J1, (50, 253))
+    win.blit(J1, (75, 253))
     win.blit(J2, (270, 253))
     score2 = font.render(str(Players[1].points), True, GRAY)
-    win.blit(score2, (350, 253))
+    win.blit(score2, (355, 253))
     
-    win.blit(Winner, (120, 300))
+    win.blit(Winner, (110, 310))
     if Players[0].points > Players[1].points :
-        win.blit(VJ1, (240, 300))
+        win.blit(VJ1, (230, 310))
     else :
-        win.blit(VJ2, (240, 300))
-    
+        win.blit(VJ2, (230, 310))
     
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))

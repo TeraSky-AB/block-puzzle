@@ -200,6 +200,40 @@ def gameOverSolo(player1):
         pg.display.flip()
 
 
+def gameOverMulti(players):
+    soundGameOver.play(-1, 0, 0)
+    dsp.displayGameOverMulti(screen, players)
+    doContinue = True
+    while doContinue:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                fnc.quitGame()
+            elif event.type == pg.MOUSEBUTTONDOWN:
+                if restartButtonRect.collidepoint(event.pos):
+                    soundGameOver.stop()
+                    soundButton.play()
+                    menu()
+                if quitButtonRect.collidepoint(event.pos):
+                    fnc.quitGame()
+        # HOVER
+        pos = pg.mouse.get_pos()
+        print(pos)
+        if 150 + 150 > pos[0] > 150 and 383 + 45 > pos[1] > 383:
+            pg.draw.rect(screen, dsp.CREAM, (150, 383, 150, 45))
+            screen.blit(dsp.restart, (174, 385))
+        else:
+            pg.draw.rect(screen, dsp.BACKGROUNDCOLOR, (150, 383, 150, 45))
+            screen.blit(dsp.restart, (174, 385))
+
+        if 150 + 150 > pos[0] > 150 and 448 + 45 > pos[1] > 448:
+            pg.draw.rect(screen, dsp.CREAM, (150, 448, 150, 45))
+            screen.blit(dsp.quitText1, (200, 448))
+        else:
+            pg.draw.rect(screen, dsp.YELLOW, (150, 448, 150, 45))
+            screen.blit(dsp.quitText1, (200, 448))
+        pg.display.flip()
+
+
 def onlineMultiMenu():
     dsp.displayOnlineMulti(screen)
 
@@ -245,6 +279,7 @@ def solo():
                                         grid.putPiece(int(gridPos[0]), int(gridPos[1]), j)
                                         players[0].points += 30
                                         player1.draw.remove(j)
+
         if currentDisplay == 'solo':
             dsp.displayBoard(screen, (boardX, boardY), grid)
             updates(players, pieces, grid)
@@ -311,6 +346,7 @@ def multiLocal():
                                         players[currentPlayer % 2].draw.remove(piece)
                                         players[currentPlayer % 2].points += 30
                                         currentPlayer += 1
+                                        soundPlaceable.play()
                     if returnMenuButtonRect.collidepoint(event.pos):
                         menu()
                 elif currentDisplay == 'gameover':
@@ -330,7 +366,7 @@ def multiLocal():
             if not grids[currentPlayer % 2].isDrawPlaceable(players[currentPlayer % 2]):
                 currentDisplay = 'gameover'
         elif currentDisplay == 'gameover':
-            dsp.displayGameOverMulti(screen, players)
+            gameOverMulti(players)
 
             # HOVER
         pos = pg.mouse.get_pos()
@@ -389,6 +425,7 @@ def multiIA():
                                         players[currentPlayer % 2].draw.remove(piece)
                                         players[currentPlayer % 2].points += 30
                                         currentPlayer += 1
+                                        soundPlaceable.play()
                     if returnMenuButtonRect.collidepoint(event.pos):
                         menu()
                 elif currentDisplay == 'gameover':
@@ -418,7 +455,7 @@ def multiIA():
                 currentDisplay = 'gameover'
 
         elif currentDisplay == 'gameover':
-            dsp.displayGameOverMulti(screen, players)
+            gameOverMulti(players)
 
         # HOVER
         pos = pg.mouse.get_pos()
