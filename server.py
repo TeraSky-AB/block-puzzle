@@ -4,7 +4,7 @@ import threading
 
 
 class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer son adresse en premier
-    def __init__(self, conn, p, gameID ):
+    def __init__(self, conn, p, gameID):
         threading.Thread.__init__(self)
         self.conn = conn
         self.player = p
@@ -12,7 +12,10 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
 
     def run(self):
         while True:
-            data = self.conn.recv(2048).decode()
+            try:
+                data = self.conn.recv(2048).decode()
+            except:
+                break
             if gameID in games:
                 if not data:
                     break
@@ -23,15 +26,20 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
                         self.conn.send(pickle.dumps(games[self.gameID]["playersPoints"]))
                     elif data == "get-points":
                         self.conn.send(pickle.dumps(games[self.gameID]["playersPoints"]))
-                        print("Player", self.player, "from game", self.gameID,"requested point state")
                     elif data[0:11] == "set-points:":
-                        games[gameID]["playersPoints"][self.player] = int(data[11:])
+                        games[self.gameID]["playersPoints"][self.player] = int(data[11:])
                         print("Player", self.player, "from game", self.gameID, "set his points to", data[11:])
                         self.conn.send("1".encode())
                     elif data == "get-state":
                         self.conn.send(games[self.gameID]["state"].encode())
-            else:
-                conn.send("return".encode())
+                    elif data == "quit":
+                        games[self.gameID]["state"] = "quit"
+                        del games[self.gameID]
+                        self.conn.close()
+                    elif data == "get-player":
+                        self.conn.send(pickle.dumps(self.player))
+        print("Lost connection")
+        self.conn.close()
 
 
 server = "192.168.1.26"
@@ -46,7 +54,6 @@ except socket.error as err:
 sock.listen()
 print("Server started, now waiting connection..")
 
-connectedPersons = set()
 games = {}
 idCount = 0
 

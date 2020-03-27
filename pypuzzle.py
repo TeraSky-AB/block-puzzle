@@ -40,6 +40,7 @@ soundPlaceable = pg.mixer.Sound("assets/placeable.wav")
 screen = pg.display.set_mode(screensize)
 pg.display.set_caption("PyPuzzle")
 
+
 def updates(players, pieces, grid):
     pieces.update(players)
     for i in players:
@@ -232,10 +233,6 @@ def gameOverMulti(players):
             pg.draw.rect(screen, dsp.YELLOW, (150, 448, 150, 45))
             screen.blit(dsp.quitText1, (200, 448))
         pg.display.flip()
-
-
-def onlineMultiMenu():
-    dsp.displayOnlineMulti(screen)
 
 
 def solo():
@@ -467,37 +464,45 @@ def multiIA():
             screen.blit(dsp.returnMenuText1, (354, 617))
         pg.display.flip()
 
+
 def multiOnlineClient():
+    network = ntw.Network()
+    if network.connect():
+        return
+    cPlayer = pickle.loads(network.send("get-player"))
+    oPlayer = 0 if cPlayer else 1
+
     pieces = pcs.Pieces()
     grid = gd.Grid(10, pieces)
     grid.init()
     grid.definePhysicalLimits()
-    player1 = player.Player()
-    players = [player1]
-    network = ntw.Network()
+    gamePlayer = player.Player()
+    players = [gamePlayer]
 
-    currentDisplay = 'game'
+    currentDisplay = "wait"
     currentlyDragging = False
     doContinue = True
+
     while doContinue:
         for event in pg.event.get():
             if event.type == pg.QUIT:
+                network.send("quit")
                 fnc.quitGame()
             elif event.type == pg.MOUSEBUTTONDOWN:
                 if currentDisplay == 'game':
-                    for j in player1.draw:
+                    for j in gamePlayer.draw:
                         if j.rect.collidepoint(event.pos) and not currentlyDragging:
                             currentlyDragging = True
                             j.dragged = True
                 if returnMenuButtonRect.collidepoint(event.pos):
                     soundButton.play()
                     soundMenu.stop()
+                    network.send("quit")
                     menu()
-
             elif event.type == pg.MOUSEBUTTONUP:
                 if currentDisplay == 'game':
                     if currentlyDragging:
-                        for j in player1.draw:
+                        for j in gamePlayer.draw:
                             if j.rect.collidepoint(event.pos):
                                 currentlyDragging = False
                                 j.dragged = False
@@ -507,33 +512,53 @@ def multiOnlineClient():
                                         soundPlaceable.play()
                                         grid.putPiece(int(gridPos[0]), int(gridPos[1]), j)
                                         players[0].points += 30
-                                        player1.draw.remove(j)
-                                        network.send("set-points:"+str(player1.points))
+                                        gamePlayer.draw.remove(j)
+                                        network.send("set-points:" + str(gamePlayer.points))
 
-        if network.send("get-state").decode() == "waiting":
-            currentDisplay = 'wait'
-        else:
+
+        try:
+            currentGameState = network.send("get-state").decode()
+        except:
+            currentGameState = "quit"
+        #print("Current game state:", currentGameState, "\nCurrent display:", currentDisplay)
+        if currentGameState == "waiting":
+            currentDisplay = "wait"
+        elif currentGameState == "quit":
+            currentDisplay = 'quit'
+            print("Quitting")
+        elif currentGameState == "gameover":
+            points = pickle.loads(network.send("get-points"))
+            dsp.displayGameOverMultiOnline(screen, points, cPlayer)
+        elif currentGameState == "running":
             currentDisplay = 'game'
 
-        if currentDisplay == 'game':
+        if currentDisplay == "wait":
+            dsp.displayWaitPlayers(screen)
+        elif currentDisplay == "game":
             dsp.displayBoard(screen, (boardX, boardY), grid)
             updates(players, pieces, grid)
-            dsp.displayDrawPieces(player1)
-            dsp.displayTextsOnline(screen, player1, network.send("get-points")[0])
-            if not grid.isDrawPlaceable(player1):
-                pass
-        elif currentDisplay == 'wait':
-            dsp.displayWaitPlayers(screen)
+            dsp.displayDrawPieces(gamePlayer)
+            try:
+                otherPlayerPoints = pickle.loads(network.send("get-points"))[oPlayer]
+            except:
+                otherPlayerPoints = 0
+            dsp.displayTextsOnline(screen, gamePlayer, otherPlayerPoints)
+            if not grid.isDrawPlaceable(gamePlayer):
+                points = pickle.loads(network.send("go"))
+                dsp.displayGameOverMultiOnline(screen, points, cPlayer)
 
         # HOVER
-        pos = pg.mouse.get_pos()
-        if 340 + 85 > pos[0] > 340 and 615 + 30 > pos[1] > 615:
-            pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
-            screen.blit(dsp.returnMenuText, (354, 617))
-        else:
-            pg.draw.rect(screen, dsp.GRAY, (340, 615, 85, 30))
-            screen.blit(dsp.returnMenuText1, (354, 617))
+        if currentDisplay == "game":
+            pos = pg.mouse.get_pos()
+            if 340 + 85 > pos[0] > 340 and 615 + 30 > pos[1] > 615:
+                pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
+                screen.blit(dsp.returnMenuText, (354, 617))
+            else:
+                pg.draw.rect(screen, dsp.GRAY, (340, 615, 85, 30))
+                screen.blit(dsp.returnMenuText1, (354, 617))
+
         pg.display.flip()
+
 
 if __name__ == '__main__':
     menu()

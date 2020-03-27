@@ -44,8 +44,7 @@ class Pieces:  # Class used as reference for pieces and determine draws
           [6.5,17,28.5,41.5,54,63.5,73,80.5,87,93.5,100,200,200,200],
           [5.5,15,27,39.5,51,59.5,68,76.5,83,89.5,95,100,200],
           [5.5,13,24.5,36,46.5,55,63.5,71,77.5,84,89.5,95,100]]
-        
-        # self.piece_colors = (240, 247, 244)
+
 
         self.level = 0
         self.stage = 200
@@ -112,20 +111,12 @@ class Piece(Pieces):  # Piece to place on the grid
         return piece
 
     def drawPiece(self, win):
-        """
-
-        :param win:
-        """
         for i in range(5):
             for j in range(5):
                 if int(self.figure[i][j]) != 0:
                     pg.draw.rect(win, dsp.piecescolors[self.color], (self.x + 32 * i + 2, self.y + 32 * j + 2, 30, 30))
 
     def update(self, win):
-        """
-
-        :param win:
-        """
         mousePos = pg.mouse.get_pos()
         if self.dragged:
             self.x = mousePos[0] - 80

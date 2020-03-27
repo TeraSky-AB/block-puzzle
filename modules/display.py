@@ -35,12 +35,18 @@ smallFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 25)
 
 gameover = bigFont.render("YOUR SCORE", True, GRAY)
 gameoverShadow = bigFont.render("YOUR SCORE", True, RED)
+gameoverMulti = bigFont.render("YOUR SCORES", True, GRAY)
+gameoverShadowMulti = bigFont.render("YOUR SCORES", True, RED)
 
 J1 = font.render("Joueur 1 : ", True, GRAY)
 J2 = font.render("Joueur 2 : ", True, GRAY)
+J1b = font.render("You : ", True, GRAY)
+J2b = font.render("Opponent : ", True, GRAY)
 Winner = mediumFont.render("Winner: ", True, GRAY)
 VJ1 = mediumFont.render("Joueur 1 ", True, GRAY)
 VJ2 = mediumFont.render("Joueur 2 ", True, GRAY)
+VYou = mediumFont.render("You", True, GRAY)
+VOpp = mediumFont.render("Opponent", True, GRAY)
 restart = mediumFont.render("Restart", True, GRAY)
 
 quitText1 = mediumFont.render("Quit", True, GRAY)
@@ -154,6 +160,7 @@ def displayGameOverSolo(win, Player):
 
 def displayGameOverMulti(win, Players):
     win.fill(REDPINK)
+
     score1 = font.render(str(Players[0].points), True, GRAY)
     win.blit(score1, (160, 253))
     win.blit(gameoverShadow, (45, 135))
@@ -174,9 +181,30 @@ def displayGameOverMulti(win, Players):
     pg.draw.rect(win, RED, (155, 453, 150, 45))
 
 
+def displayGameOverMultiOnline(win, points, player):
+    thisPlayer = player
+    otherPlayer = 0 if player else 1
+    win.fill(REDPINK)
+    score1 = font.render(str(points[thisPlayer]), True, GRAY)
+    win.blit(score1, (160, 253))
+    win.blit(gameoverShadow, (45, 135))
+    win.blit(gameover, (40, 130))
+    win.blit(J1b, (75, 253))
+    win.blit(J2b, (270, 253))
+    score2 = font.render(str(points[otherPlayer]), True, GRAY)
+    win.blit(score2, (355, 253))
+    win.blit(Winner, (110, 310))
+    if points[thisPlayer] > points[otherPlayer]:
+        win.blit(VYou, (230, 310))
+    else:
+        win.blit(VOpp, (230, 310))
+
+    pg.draw.rect(win, RED, (155, 388, 150, 45))
+    pg.draw.rect(win, RED, (155, 453, 150, 45))
+
+
 def displayWaitPlayers(win):
     win.fill(BACKGROUNDCOLOR)
     win.blit(wait, (30, 300))
-    win.blit(restart, (165, 390))
-    win.blit(quitText1, (165, 455))
+
 

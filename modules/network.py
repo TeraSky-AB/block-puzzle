@@ -1,6 +1,4 @@
 import socket
-import threading
-import pickle
 
 class Network():
     def __init__(self):
@@ -8,18 +6,17 @@ class Network():
         self.server = "192.168.1.26"
         self.port = 5555
         self.addr = (self.server, self.port)
-        self.p = self.connect()
 
     def connect(self):
         try:
             self.client.connect(self.addr)
         except:
-            pass
+            print("Connection au serveur échoué")
 
     def send(self, data):
         try:
             self.client.send(data.encode("Utf-8"))
-            return self.client.recv(2048)
+            return self.client.recv(4096)
         except socket.error as e:
             print(e)
 
