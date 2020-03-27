@@ -524,8 +524,7 @@ def multiOnlineClient():
         if currentGameState == "waiting":
             currentDisplay = "wait"
         elif currentGameState == "quit":
-            currentDisplay = 'quit'
-            print("Quitting")
+            menu()
         elif currentGameState == "gameover":
             points = pickle.loads(network.send("get-points"))
             dsp.displayGameOverMultiOnline(screen, points, cPlayer)

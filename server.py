@@ -13,7 +13,7 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
     def run(self):
         while True:
             try:
-                data = self.conn.recv(2048).decode()
+                data = self.conn.recv(4096).decode()
             except:
                 break
             if gameID in games:
@@ -32,18 +32,26 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
                         self.conn.send("1".encode())
                     elif data == "get-state":
                         self.conn.send(games[self.gameID]["state"].encode())
-                    elif data == "quit":
-                        games[self.gameID]["state"] = "quit"
-                        del games[self.gameID]
-                        self.conn.close()
                     elif data == "get-player":
                         self.conn.send(pickle.dumps(self.player))
+                    elif data == "quit":
+                        games[self.gameID]["state"] = "quit"
+                        break
+                    else:
+                        break
+            else:
+                break
         print("Lost connection")
+        try:
+            del games[self.gameID]
+            print("Terminating game", self.gameID)
+        except:
+            print("Error deleting game", self.gameID, "or game already deleted")
         self.conn.close()
 
 
 server = "192.168.1.26"
-port = 5555
+port = 5000
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
@@ -63,7 +71,7 @@ while True:
 
     idCount += 1
     p = 0
-    gameID = (idCount-1)//2
+    gameID = (idCount - 1) // 2
     if idCount % 2 == 1:
         games[gameID] = {
             "playersPoints": [0, 0],
@@ -74,4 +82,3 @@ while True:
         games[gameID]["state"] = "running"
         newThread = threadedClient(conn, 1, gameID)
     newThread.start()
-
