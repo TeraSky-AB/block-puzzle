@@ -3,7 +3,10 @@ import socket
 import threading
 
 
-class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer son adresse en premier
+class ThreadedClient(threading.Thread):  # Si le joueur join, il doit envoyer son adresse en premier
+    """
+    ThreadedClient class handles the client requests and return appropriate responses.
+    """
     def __init__(self, conn, p, gameID):
         threading.Thread.__init__(self)
         self.conn = conn
@@ -11,6 +14,9 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
         self.gameID = gameID
 
     def run(self):
+        """
+        Thread instructions to call.
+        """
         while True:
             try:
                 data = self.conn.recv(4096).decode()
@@ -22,7 +28,6 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
                 else:
                     if data == "go":
                         games[self.gameID]["state"] = "gameover"
-                        print("Game", self.gameID, "is over")
                         self.conn.send(pickle.dumps(games[self.gameID]["playersPoints"]))
                     elif data == "get-points":
                         self.conn.send(pickle.dumps(games[self.gameID]["playersPoints"]))
@@ -47,6 +52,8 @@ class threadedClient(threading.Thread):  # Si le joueur join, il doit envoyer so
             print("Terminating game", self.gameID)
         except:
             print("Error deleting game", self.gameID, "or game already deleted")
+        global idCount
+        idCount -= 1
         self.conn.close()
 
 
@@ -62,6 +69,7 @@ except socket.error as err:
 sock.listen()
 print("Server started, now waiting connection..")
 
+global idCount
 games = {}
 idCount = 0
 
@@ -77,8 +85,8 @@ while True:
             "playersPoints": [0, 0],
             "state": "waiting",
         }
-        newThread = threadedClient(conn, 0, gameID)
+        newThread = ThreadedClient(conn, 0, gameID)
     else:
         games[gameID]["state"] = "running"
-        newThread = threadedClient(conn, 1, gameID)
+        newThread = ThreadedClient(conn, 1, gameID)
     newThread.start()

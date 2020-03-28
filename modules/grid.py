@@ -2,7 +2,10 @@ import modules.logicalgate as lg
 
 
 class Grid:
-    def __init__(self, size, Pieces):  # Vérifier comment faire le lien entre le grille, les pièces et le joueur
+    """
+    Grid object.
+    """
+    def __init__(self, size, Pieces):
         self.size = size + 2
         self.grid = []
 
@@ -10,24 +13,40 @@ class Grid:
 
         self.linesCompleted = []
 
-    def init(self):  # Create a new grid
+    def init(self):
+        """
+        init() method create the grid list.
+        """
         for i in range(self.size):
             self.grid.append([])
             for j in range(self.size):
                 self.grid[i].append(0)
 
-    def printGridState(self):  # To check the state of the grid on the console
+    def print(self):
+        """
+        print() method prints the grid list on console.
+        """
         for i in self.grid:
             print(i)
 
-    def definePhysicalLimits(self):  # Define limits of the board by placing 1s all around the grid
+    def definePhysicalLimits(self):
+        """
+        definePhysicalLimits() method puts ones all around the grid list.
+        """
         for i in range(self.size):
             self.grid[i][0] = 1
             self.grid[0][i] = 1
             self.grid[self.size - 1][i] = 1
             self.grid[i][self.size - 1] = 1
 
-    def isPiecePlaceable(self, x, y, figure):  # Check if piece is placeable
+    def isPiecePlaceable(self, x, y, figure):
+        """
+        isPiecePlaceable() checks if a piece can be placed at specified coordinates in the grid.
+        @param x: x coordinate
+        @param y: y coordinate
+        @param figure: figure number in pieces object
+        @return: Boolean choose whether the piece can be placed or not.
+        """
         x -= 2
         y -= 2
         err = 0
@@ -43,7 +62,13 @@ class Grid:
         else:
             return True
 
-    def putPiece(self, x, y, Piece):  # Place the piece on the grid
+    def putPiece(self, x, y, Piece):
+        """
+        putPiece() method place the piece on the grid.
+        @param x: x coordinate
+        @param y: y coordinate
+        @param Piece: Piece object.
+        """
         x -= 2
         y -= 2
         for i in range(5):
@@ -53,7 +78,10 @@ class Grid:
                 except:
                     pass
 
-    def isThereAlignement(self):  # Check if there is an alignement on the grid object
+    def isThereAlignment(self):
+        """
+        isThereAlignment() method checks if there is an alignment on the grid.
+        """
         for i in range(self.size - 2):
             line = 0
             column = 0
@@ -67,7 +95,10 @@ class Grid:
             if column == self.size - 2:
                 self.linesCompleted.append(['c', 1 + i])
 
-    def eraseAlignement(self):  # Erase the alignements of the grid object
+    def eraseAlignment(self):
+        """
+        eraseAlignment() erase the alignments on the grid.
+        """
         for i in self.linesCompleted:
             if i[0] == 'c':
                 for j in range(self.size - 2):
@@ -78,6 +109,11 @@ class Grid:
             self.linesCompleted.remove(i)
 
     def isDrawPlaceable(self, Player):
+        """
+        isDrawPlaceable() checks if all the player's draw can be placed on the grid.
+        @param Player: Player object
+        @return: Boolean choose whether the player can play or not
+        """
         err = 0
         for piece in Player.draw:
             for x in range(self.size - 2):

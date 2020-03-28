@@ -35,16 +35,14 @@ smallFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 25)
 
 gameover = bigFont.render("YOUR SCORE", True, GRAY)
 gameoverShadow = bigFont.render("YOUR SCORE", True, RED)
-gameoverMulti = bigFont.render("YOUR SCORES", True, GRAY)
-gameoverShadowMulti = bigFont.render("YOUR SCORES", True, RED)
 
-J1 = font.render("Joueur 1 : ", True, GRAY)
-J2 = font.render("Joueur 2 : ", True, GRAY)
+J1 = font.render("Player 1 : ", True, GRAY)
+J2 = font.render("Player 2 : ", True, GRAY)
 J1b = font.render("You : ", True, GRAY)
 J2b = font.render("Opponent : ", True, GRAY)
 Winner = mediumFont.render("Winner: ", True, GRAY)
-VJ1 = mediumFont.render("Joueur 1 ", True, GRAY)
-VJ2 = mediumFont.render("Joueur 2 ", True, GRAY)
+VJ1 = mediumFont.render("Player 1 ", True, GRAY)
+VJ2 = mediumFont.render("Player 2 ", True, GRAY)
 VYou = mediumFont.render("You", True, GRAY)
 VOpp = mediumFont.render("Opponent", True, GRAY)
 restart = mediumFont.render("Restart", True, GRAY)
@@ -78,6 +76,10 @@ returnMenuText1 = smallFont.render("RETURN", True, CREAM)
 
 
 def displayMenu(win):
+    """
+    displayMenu() displays the main menu interface.
+    @param win: Pygame window Surface.
+    """
     win.fill(BACKGROUNDCOLOR)
     pg.draw.rect(win, BOARDCOLOR, (155, 323, 150, 45))
     pg.draw.rect(win, BOARDCOLOR, (155, 388, 150, 45))
@@ -90,7 +92,12 @@ def displayMenu(win):
     pg.draw.rect(win, BLUE, (0, 640, 450, 30))
     pg.draw.rect(win, NAVY, (0, 670, 450, 30))
 
+
 def displayMulti(win):
+    """
+    displayMulti() displays the multiplayer menu interface.
+    @param win: Pygame window Surface.
+    """
     win.fill(BACKGROUNDCOLOR)
     win.blit(multiplayerTextShadow, (103, 73))
     win.blit(multiplayerText, (100, 70))
@@ -100,15 +107,21 @@ def displayMulti(win):
     pg.draw.rect(win, BLUE, (0, 640, 450, 30))
     pg.draw.rect(win, NAVY, (0, 670, 450, 30))
 
+
 def displayBoard(win, blitCoord, grid):
+    """
+    displayBoard() displays the game board.
+    @param win: Pygame window Surface.
+    @param blitCoord: Coordinates where the game board is displayed
+    @param grid: Grid Object
+    """
     boxWidth = 30
     win.fill(BACKGROUNDCOLOR)
-    # grid.printGridState()
     for i in range(0, grid.size - 2):
         for j in range(0, grid.size - 2):
             cell = grid.grid[1 + i][1 + j]
             if cell != 0:
-                pg.draw.rect(win, piecescolors[cell%8], (
+                pg.draw.rect(win, piecescolors[cell % 8], (
                     blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
                     boxWidth, boxWidth))
 
@@ -121,7 +134,11 @@ def displayBoard(win, blitCoord, grid):
     pg.draw.rect(win, BOARDCOLOR, (345, 620, 85, 30))
 
 
-def displayDrawPieces(Player):  # Changer le titre (la position de la fonction ?)
+def displayDrawPieces(Player):
+    """
+    displayDrawPieces() define the coordinates of draw's pieces.
+    @param Player: Player object
+    """
     j = 0
     for i in Player.draw:
         if not i.dragged:
@@ -131,24 +148,48 @@ def displayDrawPieces(Player):  # Changer le titre (la position de la fonction ?
 
 
 def displayTexts(win, Player):
+    """
+    displayTexts() displays the interface's texts: score and current player. Used in solo and local multiplayer.
+    @param win: Pygame window Surface.
+    @param Player: Player object.
+    """
     score = font.render("Score: " + str(Player.points), True, NAVY)
     win.blit(score, (20, 20))
     currentPlayer = font.render("Current player: " + str(Player.id + 1), True, NAVY)
     win.blit(currentPlayer, (280, 20))
 
-def displayTextsIA(win, Players,currentPlayer):
+
+def displayTextsIA(win, Players):
+    """
+    displayTextsIA() displays the interface's texts: score of both player and IA.
+    @param win: Pygame window Surface.
+    @param Players: Player Object.
+    """
     score = font.render("Score: " + str(Players[0].points), True, NAVY)
     score1 = font.render("Score IA: " + str(Players[1].points), True, NAVY)
     win.blit(score, (20, 20))
     win.blit(score1, (320, 20))
 
+
 def displayTextsOnline(win, Player, points):
+    """
+    displayTextsOnline() displays the interface's texts: score of both player and opponent.
+    @param win: Pygame window Surface.
+    @param Player: Player Object.
+    @param points: List of both players's points.
+    """
     score = font.render("Score: " + str(Player.points), True, NAVY)
     win.blit(score, (20, 20))
     currentPlayer = font.render("Opponent's score: " + str(points), True, NAVY)
     win.blit(currentPlayer, (245, 20))
 
+
 def displayGameOverSolo(win, Player):
+    """
+    displayGameOverSolo() displays the solo game mode's game over menu.
+    @param win: Pygame window Surface.
+    @param Player: Player Object.
+    """
     win.fill(REDPINK)
     score = bigMediumFont.render(str(Player.points), True, GRAY)
     win.blit(score, (180, 288))
@@ -158,41 +199,53 @@ def displayGameOverSolo(win, Player):
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))
 
+
 def displayGameOverMulti(win, Players):
+    """
+    displayGameOverMulti() displays the local multiplayer game mode's game over menu.
+    @param win: Pygame window Surface.
+    @param Players: Player objects list.
+    """
     win.fill(REDPINK)
 
     score1 = font.render(str(Players[0].points), True, GRAY)
     win.blit(score1, (160, 253))
     win.blit(gameoverShadow, (45, 135))
     win.blit(gameover, (40, 130))
-    
+
     win.blit(J1, (75, 253))
     win.blit(J2, (270, 253))
     score2 = font.render(str(Players[1].points), True, GRAY)
     win.blit(score2, (355, 253))
-    
+
     win.blit(Winner, (110, 310))
-    if Players[0].points > Players[1].points :
+    if Players[0].points > Players[1].points:
         win.blit(VJ1, (230, 310))
-    else :
+    else:
         win.blit(VJ2, (230, 310))
-    
+
     pg.draw.rect(win, RED, (155, 388, 150, 45))
     pg.draw.rect(win, RED, (155, 453, 150, 45))
 
 
 def displayGameOverMultiOnline(win, points, player):
+    """
+    displayGameOverMultiOnline() displays the online multiplayer game mode's game over menu.
+    @param win: Pygame window Surface.
+    @param points: List of both players's points.
+    @param player: Number of the client player.
+    """
     thisPlayer = player
     otherPlayer = 0 if player else 1
     win.fill(REDPINK)
     score1 = font.render(str(points[thisPlayer]), True, GRAY)
-    win.blit(score1, (160, 253))
+    win.blit(score1, (120, 253))
     win.blit(gameoverShadow, (45, 135))
     win.blit(gameover, (40, 130))
     win.blit(J1b, (75, 253))
     win.blit(J2b, (270, 253))
     score2 = font.render(str(points[otherPlayer]), True, GRAY)
-    win.blit(score2, (355, 253))
+    win.blit(score2, (365, 253))
     win.blit(Winner, (110, 310))
     if points[thisPlayer] > points[otherPlayer]:
         win.blit(VYou, (230, 310))
@@ -204,7 +257,9 @@ def displayGameOverMultiOnline(win, points, player):
 
 
 def displayWaitPlayers(win):
+    """
+    displayWaitPlayers() displays the "waiting for other player" screen.
+    @param win: Pygame window Surface.
+    """
     win.fill(BACKGROUNDCOLOR)
     win.blit(wait, (30, 300))
-
-

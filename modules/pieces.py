@@ -3,7 +3,10 @@ import random as rd
 import modules.display as dsp
 
 
-class Pieces:  # Class used as reference for pieces and determine draws
+class Pieces:
+    """
+    Class used as reference for pieces and determine draws
+    """
     def __init__(self):
         self.pieces = (
             ['00000', '00000', '00100', '00000', '00000'],  # 0  : Unity block
@@ -39,12 +42,11 @@ class Pieces:  # Class used as reference for pieces and determine draws
             ['00000', '00100', '11100', '00100', '00000']  # 30 : T figure
         )
 
-        self.probs = [[8.5,22.5,39,55.5,72,84.5,100,200,200,200,200,200,200,200],
-          [8.5,20.5,33.5,48,63,73,83,92,100,200,200,200,200,200],
-          [6.5,17,28.5,41.5,54,63.5,73,80.5,87,93.5,100,200,200,200],
-          [5.5,15,27,39.5,51,59.5,68,76.5,83,89.5,95,100,200],
-          [5.5,13,24.5,36,46.5,55,63.5,71,77.5,84,89.5,95,100]]
-
+        self.probs = [[8.5, 22.5, 39, 55.5, 72, 84.5, 100, 200, 200, 200, 200, 200, 200, 200],
+                      [8.5, 20.5, 33.5, 48, 63, 73, 83, 92, 100, 200, 200, 200, 200, 200],
+                      [6.5, 17, 28.5, 41.5, 54, 63.5, 73, 80.5, 87, 93.5, 100, 200, 200, 200],
+                      [5.5, 15, 27, 39.5, 51, 59.5, 68, 76.5, 83, 89.5, 95, 100, 200],
+                      [5.5, 13, 24.5, 36, 46.5, 55, 63.5, 71, 77.5, 84, 89.5, 95, 100]]
 
         self.level = 0
         self.stage = 200
@@ -54,22 +56,28 @@ class Pieces:  # Class used as reference for pieces and determine draws
         self.history2 = []
         self.histories = [self.history, self.history2]
 
-    def alea(self,probs,steps):
-        nb = rd.randint(0,100)
+    def alea(self):
+        """
+        alea() function determine random piece.
+        @return: Return the piece to add to the player's draw.
+        """
+        nb = rd.randint(0, 100)
         figure = 0
-        for i in range(0,12):
+        for i in range(0, 12):
             if nb <= self.probs[self.steps][0]:
                 figure = 1
-            elif nb > self.probs[self.steps][i] and nb <= self.probs[self.steps][i+1]:
-                figure = i+2
-
+            elif nb > self.probs[self.steps][i] and nb <= self.probs[self.steps][i + 1]:
+                figure = i + 2
         return figure
 
-
     def update(self, Players):
+        """
+        update() method checks if history is empty in order to fulfill it and check if the level must be increased.
+        @param Players: Players object list.
+        """
         if len(self.history) == 0 or len(self.history2) == 0:
             for i in range(3):
-                randFigure = self.alea(self.probs, self.steps)
+                randFigure = self.alea()
                 randColor = rd.randint(1, 7)
                 self.history.append(Piece(randFigure, randColor))
                 self.history2.append(Piece(randFigure, randColor))
@@ -80,6 +88,9 @@ class Pieces:  # Class used as reference for pieces and determine draws
 
 
 class Piece(Pieces):  # Piece to place on the grid
+    """
+    Single piece object.
+    """
     def __init__(self, figure, color):
         Pieces.__init__(self)
         self.color = dsp.piecescolors[color]
@@ -92,6 +103,11 @@ class Piece(Pieces):  # Piece to place on the grid
         self.rect = pg.Rect(self.x, self.y, 160, 160)
 
     def repair(self, string):
+        """
+        repair() method rebuild the string after applyColor call.
+        @param string: string to repair
+        @return: repaired string
+        """
         stringLength = len(string)
         backup = string
         if stringLength != 5:
@@ -102,6 +118,11 @@ class Piece(Pieces):  # Piece to place on the grid
         return string
 
     def applyColor(self, figure):
+        """
+        Change the value of the piece to define color on board.
+        @param figure: Figure to change value on
+        @return: figure with values changed
+        """
         piece = self.pieces[figure]
         for i in range(5):
             piece[i] = int(piece[i])
@@ -111,12 +132,20 @@ class Piece(Pieces):  # Piece to place on the grid
         return piece
 
     def drawPiece(self, win):
+        """
+        drawPiece() displays the piece on the screen.
+        @param win: Pygame window surface.
+        """
         for i in range(5):
             for j in range(5):
                 if int(self.figure[i][j]) != 0:
                     pg.draw.rect(win, dsp.piecescolors[self.color], (self.x + 32 * i + 2, self.y + 32 * j + 2, 30, 30))
 
     def update(self, win):
+        """
+        update() method updates coordinates.
+        @param win: Pygame window surface.
+        """
         mousePos = pg.mouse.get_pos()
         if self.dragged:
             self.x = mousePos[0] - 80

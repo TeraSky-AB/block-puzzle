@@ -42,15 +42,21 @@ pg.display.set_caption("PyPuzzle")
 
 
 def updates(players, pieces, grid):
+    """
+    updates() updates the different objects needed in solo mode.
+    @param players: player objects list
+    @param pieces: pieces object
+    @param grid: grid object
+    """
     pieces.update(players)
     for i in players:
         i.update(pieces)
         for j in i.draw:
             j.update(screen)
             j.drawPiece(screen)
-    grid.isThereAlignement()
+    grid.isThereAlignment()
     players[0].points += len(grid.linesCompleted) * 100
-    grid.eraseAlignement()
+    grid.eraseAlignment()
 
 
 def updatesMultiLocal(pieces, players, grids, screen, currentPlayer):
@@ -69,12 +75,15 @@ def updatesMultiLocal(pieces, players, grids, screen, currentPlayer):
             piece.update(screen)
             if player == players[currentPlayer % 2]:
                 piece.drawPiece(screen)
-    grids[currentPlayer % 2].isThereAlignement()
+    grids[currentPlayer % 2].isThereAlignment()
     players[currentPlayer % 2].points += len(grids[currentPlayer % 2].linesCompleted) * 100
-    grids[currentPlayer % 2].eraseAlignement()
+    grids[currentPlayer % 2].eraseAlignment()
 
 
 def menu():
+    """
+    menu() is the main menu function.
+    """
     soundMenu.play(-1, 0, 0)
     doContinue = True
     while doContinue:
@@ -120,6 +129,9 @@ def menu():
 
 
 def multiMenu():
+    """
+    multiMenu() is the multiplayer menu function.
+    """
     dsp.displayMulti(screen)
     doContinue = True
     while doContinue:
@@ -169,6 +181,10 @@ def multiMenu():
 
 
 def gameOverSolo(player1):
+    """
+    gameOverSolo() is the game over menu for solo mode.
+    @param player1: player object
+    """
     soundGameOver.play(-1, 0, 0)
     dsp.displayGameOverSolo(screen, player1)
     doContinue = True
@@ -202,6 +218,10 @@ def gameOverSolo(player1):
 
 
 def gameOverMulti(players):
+    """
+    gameOverMulti() is the game over menu for local multiplayer mode.
+    @param players: player objects list
+    """
     soundGameOver.play(-1, 0, 0)
     dsp.displayGameOverMulti(screen, players)
     doContinue = True
@@ -218,7 +238,6 @@ def gameOverMulti(players):
                     fnc.quitGame()
         # HOVER
         pos = pg.mouse.get_pos()
-        print(pos)
         if 150 + 150 > pos[0] > 150 and 383 + 45 > pos[1] > 383:
             pg.draw.rect(screen, dsp.CREAM, (150, 383, 150, 45))
             screen.blit(dsp.restart, (174, 385))
@@ -236,6 +255,9 @@ def gameOverMulti(players):
 
 
 def solo():
+    """
+    solo() handles the solo mode of PyPuzzle.
+    """
     pieces = pcs.Pieces()
     grid = gd.Grid(10, pieces)
     grid.init()
@@ -379,7 +401,7 @@ def multiLocal():
 def multiIA():
     """
     multiIA() handles the local multiplayer: player versus AI. Both players's board are displayed one after
-    the other on a 650x440 wide window.
+    the other.
     """
     players = [player.Player(), player.IA()]
     grids = []
@@ -438,12 +460,12 @@ def multiIA():
             dsp.displayBoard(screen, (boardX, boardY), grids[currentPlayer % 2])
             updatesMultiLocal(pieces, players, grids, screen, currentPlayer)
             dsp.displayDrawPieces(players[currentPlayer % 2])
-            dsp.displayTextsIA(screen, players, currentPlayer)
+            dsp.displayTextsIA(screen, players)
             if currentPlayer % 2:
                 choice = players[1].determineWhatToPlay(grids[1])
                 print("Choix IA:", choice)
                 grids[1].putPiece(choice[1], choice[2], choice[3])
-                grids[1].printGridState()
+                grids[1].print()
                 players[1].draw.remove(choice[3])
                 players[1].points += 30
                 currentPlayer += 1
@@ -466,9 +488,15 @@ def multiIA():
 
 
 def multiOnlineClient():
+    """
+        multiOnlineClient() handles the online multiplayer: player versus player. Both players's board are only
+        displayed on their screen, only the opponent's score is displayed.
+    """
     network = ntw.Network()
-    if network.connect():
-        return
+    try:
+        network.connect()
+    except:
+        menu()
     cPlayer = pickle.loads(network.send("get-player"))
     oPlayer = 0 if cPlayer else 1
 
@@ -480,8 +508,11 @@ def multiOnlineClient():
     players = [gamePlayer]
 
     currentDisplay = "wait"
+    currentGameState = "waiting"
     currentlyDragging = False
     doContinue = True
+    savedpoints = 0
+    playing = 1
 
     while doContinue:
         for event in pg.event.get():
@@ -514,23 +545,27 @@ def multiOnlineClient():
                                         players[0].points += 30
                                         gamePlayer.draw.remove(j)
                                         network.send("set-points:" + str(gamePlayer.points))
-
+                elif currentDisplay == 'gameover':
+                    if restartButtonRect.collidepoint(event.pos):
+                        soundButton.play()
+                        network.send("quit")
+                        menu()
+                    elif quitButtonRect.collidepoint(event.pos):
+                        network.send("quit")
+                        fnc.quitGame()
 
         try:
             currentGameState = network.send("get-state").decode()
         except:
             currentGameState = "quit"
-        #print("Current game state:", currentGameState, "\nCurrent display:", currentDisplay)
         if currentGameState == "waiting":
             currentDisplay = "wait"
         elif currentGameState == "quit":
             menu()
-        elif currentGameState == "gameover":
-            points = pickle.loads(network.send("get-points"))
-            dsp.displayGameOverMultiOnline(screen, points, cPlayer)
+        elif currentGameState == "gameover" and not playing:
+            currentDisplay = "gameover"
         elif currentGameState == "running":
             currentDisplay = 'game'
-
         if currentDisplay == "wait":
             dsp.displayWaitPlayers(screen)
         elif currentDisplay == "game":
@@ -543,18 +578,37 @@ def multiOnlineClient():
                 otherPlayerPoints = 0
             dsp.displayTextsOnline(screen, gamePlayer, otherPlayerPoints)
             if not grid.isDrawPlaceable(gamePlayer):
-                points = pickle.loads(network.send("go"))
+                playing = 0
+                try:
+                    points = pickle.loads(network.send("go"))
+                    saved_points = points
+                except:
+                    points = saved_points
                 dsp.displayGameOverMultiOnline(screen, points, cPlayer)
 
         # HOVER
+        pos = pg.mouse.get_pos()
         if currentDisplay == "game":
-            pos = pg.mouse.get_pos()
             if 340 + 85 > pos[0] > 340 and 615 + 30 > pos[1] > 615:
                 pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
                 screen.blit(dsp.returnMenuText, (354, 617))
             else:
                 pg.draw.rect(screen, dsp.GRAY, (340, 615, 85, 30))
                 screen.blit(dsp.returnMenuText1, (354, 617))
+        if currentDisplay == "gameover":
+            if 150 + 150 > pos[0] > 150 and 383 + 45 > pos[1] > 383:
+                pg.draw.rect(screen, dsp.CREAM, (150, 383, 150, 45))
+                screen.blit(dsp.restart, (174, 385))
+            else:
+                pg.draw.rect(screen, dsp.BACKGROUNDCOLOR, (150, 383, 150, 45))
+                screen.blit(dsp.restart, (174, 385))
+
+            if 150 + 150 > pos[0] > 150 and 448 + 45 > pos[1] > 448:
+                pg.draw.rect(screen, dsp.CREAM, (150, 448, 150, 45))
+                screen.blit(dsp.quitText1, (200, 448))
+            else:
+                pg.draw.rect(screen, dsp.YELLOW, (150, 448, 150, 45))
+                screen.blit(dsp.quitText1, (200, 448))
 
         pg.display.flip()
 
