@@ -3,7 +3,7 @@ import socket
 import threading
 
 
-class ThreadedClient(threading.Thread):  # Si le joueur join, il doit envoyer son adresse en premier
+class ThreadedClient(threading.Thread):
     """
     ThreadedClient class handles the client requests and return appropriate responses.
     """

@@ -52,7 +52,7 @@ class IA(Player):
                     if ghostGrid.isPiecePlaceable(i, j, self.draw[piece].figureNumber):
                         weight[piece][cpt][0] += 1
                         ghostGrid.putPiece(i + 1, j + 1, self.draw[piece])
-                        ghostGrid.isThereAlignement()
+                        ghostGrid.isThereAlignment()
                         weight[piece][cpt][0] += len(ghostGrid.linesCompleted)
                     cpt += 1
         choice = fnc.maxWeight(weight)
