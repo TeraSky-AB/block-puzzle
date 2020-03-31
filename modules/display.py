@@ -35,7 +35,8 @@ smallFont = pg.font.Font('assets/BebasNeue-Regular.ttf', 25)
 
 gameover = bigFont.render("YOUR SCORE", True, GRAY)
 gameoverShadow = bigFont.render("YOUR SCORE", True, RED)
-
+gameoverM = bigFont.render("YOUR SCORES", True, GRAY)
+gameoverShadowM = bigFont.render("YOUR SCORES", True, RED)
 J1 = font.render("Player 1 : ", True, GRAY)
 J2 = font.render("Player 2 : ", True, GRAY)
 J1b = font.render("You : ", True, GRAY)
@@ -210,8 +211,8 @@ def displayGameOverMulti(win, Players):
 
     score1 = font.render(str(Players[0].points), True, GRAY)
     win.blit(score1, (160, 253))
-    win.blit(gameoverShadow, (45, 135))
-    win.blit(gameover, (40, 130))
+    win.blit(gameoverShadowM, (35, 135))
+    win.blit(gameoverM, (30, 130))
 
     win.blit(J1, (75, 253))
     win.blit(J2, (270, 253))
@@ -240,8 +241,8 @@ def displayGameOverMultiOnline(win, points, player):
     win.fill(REDPINK)
     score1 = font.render(str(points[thisPlayer]), True, GRAY)
     win.blit(score1, (120, 253))
-    win.blit(gameoverShadow, (45, 135))
-    win.blit(gameover, (40, 130))
+    win.blit(gameoverShadowM, (35, 135))
+    win.blit(gameoverM, (30, 130))
     win.blit(J1b, (75, 253))
     win.blit(J2b, (270, 253))
     score2 = font.render(str(points[otherPlayer]), True, GRAY)
