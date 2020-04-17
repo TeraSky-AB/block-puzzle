@@ -54,8 +54,21 @@
 \part{Objectifs du projet}
 \section{Présentation du concept}
 Tout d'abord, nous avons choisi de créer un puzzle block puisque nous avions plus d'affinité et d'idées en rapport avec ce sujet. Nous voulions que ce jeu soit simple d'utilisation afin que tout le monde puisse y jouer. Le jeu que nous avons développé est composé de 4 modes de jeux, le premier étant le mode de jeu solo, il se présente sous forme d'une grille carré de 10 cases de côté. Le joueur obtient 3 pièces à placer sur la grille tirées aléatoirement parmi un total de 30 pièces(toutes orientations inclus). Les pièces qui apparaissent doivent toutes être placés dans la grille avant que les suivantes soit tirés. Si le tirage courant du joueur ne peut pas être placé alors un écran de fin de jeu s'affiche, montrant le score de la personne. Sur ce menu, le joueur aura la possibilité de retourner au menu principal ou de recommencer une partie. Ensuite le jeu se compose d'un mode multijoueur. Le premier étant contre une intelligence artificielle ayant le même mode de fonctionnement que le mode solo. Seul le score actuel de l'intelligence artificielle figure sur l'écran du joueur afin d'éviter d'en copier la stratégie. Le second mode multijoueur est, lui, un mode joueur contre joueur en local sur une même machine. Les grilles des joueurs s'affichent l'une après l'autre afin de limiter, de même, l'imitation de la stratégie adverse. Le dernier mode de jeu est un mode joueur contre joueur également mais en ligne où le but est de faire le plus de points.
-
 \section{Cahier des charges}
+Comme dit précédemment, nous voulions que le jeu soit simple d'utilisation afin qu'il puisse être accessible au plus grand nombre, nous voulions également que le jeu puisse être joué peu importe si on est seul ou à plusieurs, pour cela, nous avons décidé d'implémenter en accord avec le sujet du projet:
+\begin{itemize}
+	\item 4 modes de jeu: 
+	\begin{itemize}
+		\item Mode de jeu solo.
+		\item Mode de jeu multijoueur joueur contre une intelligence artificielle.
+		\item Mode de jeu multijoueur joueur contre joueur en local.
+		\item Mode de jeu multijoueur joueur contre joueur en ligne.	
+	\end{itemize}
+	\item Un système de tirage pseudo-aléatoire des pièces.
+	\item Une interface simple et ergonomique pour que l'utilisateur ne se perde pas.
+	\item Un programme divisé en plusieurs modules.
+\end{itemize}
+
 
 \section{Exemples du jeux publiés}
 Voici plusieurs block-puzzle provenant de jeux.fr, et des applications pour android: \\
@@ -63,7 +76,7 @@ Voici plusieurs block-puzzle provenant de jeux.fr, et des applications pour andr
 \includegraphics[height=180px]{images/jeuxPublie2.png}
 \includegraphics[height=180px]{images/jeuxPublie3.png}\\
 
-On peut y retrouver les mêmes caractéristiques que notre projet. Notre projet a été conçu sur une base classique de block-puzzle qui réunit ces trois images montrées précédemment. Les différences entres ces block-puzzles et le nôtre sont l'aspect graphique ainsi que la sauvegarde du meilleur score établis sur le jeu par le joueur. On peut constater à l'essai de notre block-puzzle uniquement l'apparition des scores qui vont être actifs en fonction du jeu du joueur. Cependant nos règles sont un peu différentes par rapport au jeu déjà publié. On a décidé de ne pas rajouter de bonus ou d'aide à chaque fois qu'une ligne ou une colonne est remplie. C'est un choix volontaire pour provoquer une augmentation de concurrence de jeu avec d'autres joueurs mais aussi pour une adaptation plus développée de la difficulté de jeu. 
+On peut y retrouver les mêmes caractéristiques que notre projet. Notre projet a été conçu sur une base classique de block-puzzle qui réunit ces trois images montrées précédemment. Les différences entres ces block-puzzles et le nôtre sont l'aspect graphique ainsi que la sauvegarde du meilleur score établis sur le jeu par le joueur. On peut constater à l'essai de notre block-puzzle uniquement l'apparition des scores qui vont être actifs en fonction du jeu du joueur. Cependant nos règles sont un peu différentes par rapport au jeu déjà publié.
 \part{Fonctionnalités implémentés}
 \section{Mode solo}
 \begin{wrapfigure}{R}{0.35\textwidth}
@@ -121,15 +134,71 @@ Enfin, si je le joueur perd en étant bloqué sur le placement impossible d'une 
 Comme on peut le voir sur cette photo, le score du joueur ainsi que celui de l'intelligence artificielle sont affiché. De plus on a décidé de rajouter une ligne pour faire ressortir le gagnant de la partie. Dans cette image, Player1 est le joueur se trouvant derrière l'écran et Player2 est l'intelligence artificielle. Afin d'éviter au joueur de repartir dans le menu pour relancer une partie, il a la possibilité de la relancer directement grâce au bouton "restart". Il a aussi la possibilité de quitter le jeu en cliquant sur le bouton "quit". Si le joueur veut retourner au menu, alors il devra d'abord recommencer une partie et cliquer sur le bouton "return" se trouvant en bas à droite de la fenêtre. 
 
 \subsection{Joueur vs Joueur en local}
+Le concept est le même que celui contre l'intelligence artificielle, mais cette fois-ci il se fera contre un autre joueur sur un même ordinateur, chaque joueur joue l'un après l'autre, le but étant de pouvoir placer les pièces tirées le plus longtemps possible, le premier à ne plus pouvoir placer son tirage se voit perdre. Le nombre de points n'est donc pas très important à prendre en compte dans ce mode de jeu. \\
+
+Il y a toujours la possibilité de quitter la partie à tout moment avec le bouton "return" situé en bas à droite.
 \subsection{Joueur vs Joueur en ligne}
 
 \part{Éléments techniques}
-\section{La grille}
-La grille est mise sous la forme d'une classe, 
+
 \section{Les pièces}
+Les pièces sont représentés grâce à deux classes, il y a d'abord la classe \textbf{\textit{Pieces}} qui a comme propriété un tableau à deux dimensions, chaque lignes représentes une pièce différente et chaque colonne représente une "couche" de la pièce, comme toutes les pièces rentrent dans un carré de 5 par 5, il y a donc 5 couches. Une couche est une chaîne de caractère contenant des 0 et des 1. Chaque 1 représente une case constituant la pièce et les 0 représentent le vide. L'objet \textbf{\textit{Pieces}} est également chargé du tirage des pièces grâce aux propriétés \textbf{\textit{history}} où sont stocké les prochaines pièces tirées ainsi que la méthode \textbf{\textit{alea}} qui est la méthode de tirage pseudo-aléatoire. \\
+
+La pièce en elle-même est représentée par la classe \textbf{\textit{Piece}} qui hérite de \textbf{\textit{Pieces}}, elle contient comme propriété sa couleur, un numéro correspondant à sa place dans le tableau \textbf{\textit{pieces}} contenant tous les pièces vu précédemment, sa position sur l'affichage quand elle est affichée dans le tirage ou déplacée par l'utilisateur, un booléen qui contient \textbf{\textit{True}} si la pièce est actuellement saisi par l'utilisateur et \textbf{\textit{False}} si elle ne l'est pas. La couleur des pièces dépend de la valeur de la chaîne de caractère de représentation de la pièce, par défaut nous avons vu que les couches de la pièces sont représentés par des 1 et des 0, la méthode \textbf{\textit{applyColor}} va changer chaque couche de la pièce en entier et la multiplier par la valeur correspondant à la couleur voulu. Cependant la passage de la chaîne de caractère à un entier va "dégrader" la pièce puisque tous les 0 situés avant les 1 dans la chaîne de caractère vont être supprimé, pour remédier à cela, il existe une autre méthode: \textbf{\textit{repair}} qui permet de rajouter à nouveau les 0 et donc "réparer" la pièce.
+
+\includegraphics{images/schema_piece.png}
+
+\section{La grille}
+La grille est mise sous la forme d'un objet contenant comme propriétés sa taille, une grille où on placera les pièces, un objet \textbf{\textit{Pieces}} qu'on a décrit précédemment ainsi qu'un tableau où sont listés les lignes et colonnes complétées dans la grille.
+
+L'objet \textbf{\textit{Grid}} contient également des méthodes permettant de la modifier ou de voir son état:
+\begin{itemize}
+	\item \textbf{\textit{init}} : Cette méthode permet d'initialiser la grille c'est à dire ajouter les listes correspondant aux colonnes avec la taille spécifiée.
+	\item \textbf{\textit{print}} : Permet d'avoir l'état de la grille affichée dans la console.
+	\item \textbf{\textit{definePhysicalLimits}} : Permet d'ajouter tout autour de la grille des 1 afin d'empêcher le joueur de placer des pièces en dehors de la grille.
+	\item \textbf{\textit{isPiecePlaceable}} : Permet de voir si une pièce peut être placée à des coordonnées données.
+	\item \textbf{\textit{putPiece}} : Permet de placer une pièce dans la grille.
+	\item \textbf{\textit{isThereAlignment}} : Permet d'ajouter à la propriété \textbf{\textit{linesCompleted}} les lignes et colonnes complétés.
+	\item \textbf{\textit{eraseAlignment}} : Supprime les alignements dans la grille.
+	\item \textbf{\textit{isDrawPlaceable}} : Vérifie si le tirage d'un joueur donné peut être placé dans la grille.
+\end{itemize}
+
 \section{L'aléatoire}
+
+
 \section{L'intelligence artificielle}
+L'intelligence artificielle se présente comme une dérivée de la classe \textbf{\textit{Player}} car elle a les mêmes priorités qu'un joueur comme ses points ou un tirage, le changement se fait avec la méthode \textbf{\textit{determineWhatToPlay}} qui retourne le placement le plus judicieux à effectuer sous la forme d'un tableau contenant le poids attribué au mouvement, les coordonnées ou il doit se faire et la pièce à jouer. \\
+
+La méthode va tester pour chaque case de la grille si chaque pièce peut être placée, dans ce cas le poid du mouvement sera incrémenté de 1, ensuite si le mouvement créer une ou plusieurs lignes, il rajoutera au poids le nombre de lignes remplies. Pour deux poids égaux, ce sera la mouvement le plus en bas à droite de la grille qui sera compté. \\
+
+Sur 100 parties solo jouées par l'intelligence, voici les statistiques que nous avons pu récolter(via le programme "IAStats.py" situé à la racine du répertoire git): \\
+
+Nombre de rounds:\\
+Moyenne: 51.08\\
+Maximum: 86\\
+Minimum: 26\\
+
+Nombre de points:\\
+Moyenne: 2317.4\\
+Maximum: 4400\\
+Minimum: 780\\
+
+
 \section{Le réseau}
+Le jeu PyPuzzle possédé par le joueur ne fait office que de client pour le jeu en réseau donc les personnes possédant le jeu n'auront pas la possibilité d'héberger leur propre partie à partir de leur client mais devront rejoindre un serveur. \\
+
+La partie client est un jeu solo classique comme décrit précédemment, le client va recevoir à chaque tour de boucle l'état de la partie qui peut être soit:
+\begin{itemize}
+	\item "wait" : En attente d'un second joueur.
+	\item "running" : La partie est en cours.
+	\item "quit" : Un des client a quitté la partie, l'autre client retourne au menu principal.
+	\item "gameover" : Un des deux joueurs a fini de jouer.
+\end{itemize}
+Il va également demander l'état des points des deux joueurs afin de les afficher. Tout se fait grâce à l'objet \textbf{\textit{Network}} permettant de simplifier la connexion et l'envoi de donnée au serveur.\\
+
+Côté serveur, chaque connexion client incrémente une variable \textbf{\textit{idCount}} qui va permettre d'attribuer un joueur se connectant à une partie. Chaque partie dispose d'un \textbf{\textit{gameID}} qui permet de l'identifier dans un dictionnaire: \textbf{\textit{games}}. Chaque partie de jeu dans le dictionnaire contient le nombre de points des deux joueurs ainsi que l'état dans lequel est la partie. Lorsque qu'une partie se termine, les joueurs se déconnectent, \textbf{\textit{idCount}} est décrémenté et les données de la partie dans le dictionnaire sont supprimés afin de libérer de la mémoire.
+
+
 \section{L'interface graphique}
 Pour l'interface du jeu, on utilise \textbf{\textit{Pygame}}, une bibliothèque graphique dédiée aux jeux vidéos. 
 Pygame n'est pas fourni avec Python. Donc, pour jouer, vous devrez télécharger et installer Pygame à la place. Pour appliquer Pygame:
@@ -269,7 +338,7 @@ Elle fait une atmosphère relaxée quand on le joue. Échouer mais pas en colèr
 \begin{itemize} 
     \item Font: Bebas Neue Regular (Free Copyright)
     \item Couleur principale: \textbf{bleu(125, 201, 255)}
-    \item Couleurs des pieces: les couleurs pastels\\
+    \item Couleurs des pièces: les couleurs pastels\\
         \includegraphics[scale=0.3]{images/palette1.png}
     \item Couleurs de menu\\
         \includegraphics[scale=0.3]{images/palette2.png}
@@ -280,13 +349,19 @@ On voulait ajouter de la musique à notre jeu, car on pensait que cela attirerai
 Comme la musique est quelque chose de très populaire à partir de maintenant, on pensait que les 
 joueurs aimeraient que on ajoute de la musique au jeu que on a créé.\\
 
-Au début du jeu, pas de bruit tonitruant, pas de son nervosité, on souhaite de mettre les conforts et les joyeux en joueant en premier. C'est pourquoi on choisit l'accord de base au piano C(Do) majeur.
+Au début du jeu, pas de bruit tonitruant, pas de son nervosité, on souhaite de mettre les conforts et les joyeux en jouant en premier. C'est pourquoi on choisit l'accord de base au piano C(Do) majeur.
 Ensuite, le son des boutons est la note F(Fa) correspond à la première note de son du menu.
-Puis, quand on joue, il n'y a pas de son au fond, il existe que le son des pièces pour que l'on se sent concentrer. Il faut savoir que l'on n'oublie pas que on est entraine de jouer au jeu donc le son du bongo apparait quand on glisse-despose les pièces.
+Puis, quand on joue, il n'y a pas de son au fond, il existe que le son des pièces pour que l'on se sent concentrer. Il faut savoir que l'on n'oublie pas que on est entraine de jouer au jeu donc le son du bongo apparait quand on drag and drop les pièces.
 Enfin, on choisit l'accord guitare C(Do) mineur, on pense à créer une synchronisation de la musique.
 
 
 \part{Conclusion}
+Pour conclure, nous voulons remercier Mme.LAMBERT de nous avoir encadré pendant les cours de travaux pratiques ainsi que M.BONNET pour ses cours. Merci d'avoir pris le temps de lire ce rapport. \\
 
+Numéros de téléphone: \\
+Romuald GAFFE: \\
+Yanis COSNEFROY:\\
+Nguyen Phuong Vy VU:\\
+Alexandre BOURGOIN: \
 
 \end{document}
