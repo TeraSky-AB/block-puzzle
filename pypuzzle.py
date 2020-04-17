@@ -464,11 +464,14 @@ def multiIA():
             if currentPlayer % 2:
                 choice = players[1].determineWhatToPlay(grids[1])
                 print("Choix IA:", choice)
-                grids[1].putPiece(choice[1], choice[2], choice[3])
-                grids[1].print()
-                players[1].draw.remove(choice[3])
-                players[1].points += 30
-                currentPlayer += 1
+                if choice[0] == 0:
+                    currentDisplay == "gameover"
+                else:
+                    grids[1].putPiece(choice[1], choice[2], choice[3])
+                    grids[1].print()
+                    players[1].draw.remove(choice[3])
+                    players[1].points += 30
+                    currentPlayer += 1
 
             if not grids[currentPlayer % 2].isDrawPlaceable(players[currentPlayer % 2]):
                 currentDisplay = 'gameover'
