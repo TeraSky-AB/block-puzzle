@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  16 APR 2020 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  22 APR 2020 13:52
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -644,26 +644,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 [8 <./images/4-endmulti.png>] [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 <images/schema_piece.png, id=62, 337.26pt x 96.36pt>
 File: images/schema_piece.png Graphic file (type png)
 <use images/schema_piece.png>
-Package pdftex.def Info: images/schema_piece.png  used on input line 149.
+Package pdftex.def Info: images/schema_piece.png  used on input line 151.
 (pdftex.def)             Requested size: 337.25917pt x 96.35974pt.
 
-Overfull \hbox (7.25917pt too wide) in paragraph at lines 149--150
+Overfull \hbox (7.25917pt too wide) in paragraph at lines 151--152
 [][] 
  []
 
 [10 <./images/schema_piece.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
@@ -674,31 +669,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--180
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--185
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-05.
+07.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [12]
-Overfull \hbox (53.50897pt too wide) in paragraph at lines 280--282
+Overfull \hbox (53.50897pt too wide) in paragraph at lines 282--284
 []\T1/cmr/m/n/10 Pour les son, on uti-lise \T1/cmr/bx/it/10 py-game.mixer \T1/c
 mr/m/n/10 avec les sous-éléments \T1/cmr/bx/it/10 py-game.mixer.Sound()\T1/cmr/
 m/n/10 ,
@@ -712,71 +712,71 @@ m/n/10 ,
 <images/1-menu.png, id=92, 340.27126pt x 551.05875pt>
 File: images/1-menu.png Graphic file (type png)
 <use images/1-menu.png>
-Package pdftex.def Info: images/1-menu.png  used on input line 314.
+Package pdftex.def Info: images/1-menu.png  used on input line 316.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 <images/1-ani.png, id=93, 340.27126pt x 551.05875pt>
 File: images/1-ani.png Graphic file (type png)
 <use images/1-ani.png>
-Package pdftex.def Info: images/1-ani.png  used on input line 315.
+Package pdftex.def Info: images/1-ani.png  used on input line 317.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/2-menumulti.png Graphic file (type png)
 <use images/2-menumulti.png>
-Package pdftex.def Info: images/2-menumulti.png  used on input line 317.
+Package pdftex.def Info: images/2-menumulti.png  used on input line 319.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 <images/2-ani.png, id=94, 340.27126pt x 551.05875pt>
 File: images/2-ani.png Graphic file (type png)
 <use images/2-ani.png>
-Package pdftex.def Info: images/2-ani.png  used on input line 318.
+Package pdftex.def Info: images/2-ani.png  used on input line 320.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 <images/3-ingamestart.png, id=95, 340.27126pt x 551.05875pt>
 File: images/3-ingamestart.png Graphic file (type png)
 <use images/3-ingamestart.png>
-Package pdftex.def Info: images/3-ingamestart.png  used on input line 320.
+Package pdftex.def Info: images/3-ingamestart.png  used on input line 322.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/3-ingame.png Graphic file (type png)
 <use images/3-ingame.png>
-Package pdftex.def Info: images/3-ingame.png  used on input line 321.
+Package pdftex.def Info: images/3-ingame.png  used on input line 323.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/3-playwithai.png Graphic file (type png)
 <use images/3-playwithai.png>
-Package pdftex.def Info: images/3-playwithai.png  used on input line 322.
+Package pdftex.def Info: images/3-playwithai.png  used on input line 324.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/4-end.png Graphic file (type png)
 <use images/4-end.png>
-Package pdftex.def Info: images/4-end.png  used on input line 324.
+Package pdftex.def Info: images/4-end.png  used on input line 326.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 <images/4-endani.png, id=96, 340.27126pt x 551.05875pt>
 File: images/4-endani.png Graphic file (type png)
 <use images/4-endani.png>
-Package pdftex.def Info: images/4-endani.png  used on input line 325.
+Package pdftex.def Info: images/4-endani.png  used on input line 327.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/4-endmulti.png Graphic file (type png)
 <use images/4-endmulti.png>
-Package pdftex.def Info: images/4-endmulti.png  used on input line 326.
+Package pdftex.def Info: images/4-endmulti.png  used on input line 328.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
  [18 <./images/1-menu.png> <./images/1-ani.png> <./images/2-ani.png> <./images/
 3-ingamestart.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 333--337
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
 <images/palette1.png, id=105, 982.872pt x 150.5625pt>
 File: images/palette1.png Graphic file (type png)
 <use images/palette1.png>
-Package pdftex.def Info: images/palette1.png  used on input line 342.
+Package pdftex.def Info: images/palette1.png  used on input line 344.
 (pdftex.def)             Requested size: 294.86388pt x 45.16908pt.
 <images/palette2.png, id=106, 1260.1479pt x 150.5625pt>
 File: images/palette2.png Graphic file (type png)
 <use images/palette2.png>
-Package pdftex.def Info: images/palette2.png  used on input line 344.
+Package pdftex.def Info: images/palette2.png  used on input line 346.
 (pdftex.def)             Requested size: 378.04729pt x 45.16908pt.
 
-Overfull \hbox (63.04485pt too wide) in paragraph at lines 343--345
+Overfull \hbox (63.04485pt too wide) in paragraph at lines 345--347
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
+Underfull \hbox (badness 10000) in paragraph at lines 350--353
 
  []
 
@@ -784,7 +784,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--351
 [20] [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
@@ -816,9 +816,9 @@ pk> <C:\Users\alexa\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 r/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\alexa\AppData\Local\MiKTeX\2.9\font
 s/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\alexa\AppData\Local\MiKTe
 X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk>
-Output written on rapport.pdf (23 pages, 3094205 bytes).
+Output written on rapport.pdf (23 pages, 3093556 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
+ 578 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
