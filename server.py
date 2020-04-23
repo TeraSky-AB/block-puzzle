@@ -57,7 +57,7 @@ class ThreadedClient(threading.Thread):
         self.conn.close()
 
 
-server = "192.168.1.26"
+server = "127.0.0.1"
 port = 5000
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

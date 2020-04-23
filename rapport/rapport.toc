@@ -39,20 +39,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.11.2}Gameplay}{14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IV\hspace {1em}Architecture du projet}{15}%
+\contentsline {part}{IV\hspace {1em}Expérimentations et usages}{15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.12}Diagrammes des modules et des classes}{16}%
+\contentsline {section}{\numberline {0.12}Capture écrans}{16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.13}Cas d'utilisation}{16}%
+\contentsline {section}{\numberline {0.13}Mesures de performance}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Expérimentations et usages}{17}%
+\contentsline {subsection}{\numberline {0.13.1}Interfaces graphiques}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.14}Capture écrans}{18}%
+\contentsline {subsection}{\numberline {0.13.2}Effet sonore}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.15}Mesures de performance}{19}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.15.1}Interfaces graphiques}{19}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.15.2}Effet sonore}{19}%
+\contentsline {part}{V\hspace {1em}Organisation}{19}%
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{VI\hspace {1em}Conclusion}{21}%

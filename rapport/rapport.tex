@@ -86,7 +86,7 @@ On peut y retrouver les mêmes caractéristiques que notre projet. Notre projet 
 \end{wrapfigure}
 Tout d'abord la structure du jeu en mode solo est une structure de jeu plutôt classique comme on peut le voir dans l'image présente ci-dessous :\\
 
-Comme on peut le constater à l'image du projet, il y a une grille placée au centre de la fenêtre qui possède une taille fixe. Autour de cette grille, va se trouver des informations essentielles pour le joueur comme son score actuel qui est placé en haut à gauche de la fenêtre. À droite, va se trouver le joueur qui joueur qui joue au jeu. En dessous de la grille, on va retrouver les 3 blocs de départ que le joueur devra placer dans la grille. Enfin, tout en bas à droite, il va y avoir un bouton pour permettre à l'utilisateur de retourner au menu du jeu. \\
+Comme on peut le constater à l'image du projet, il y a une grille placée au centre de la fenêtre qui possède une taille fixe. Autour de cette grille, va se trouver des informations essentielles pour le joueur comme son score actuel qui est placé en haut à gauche de la fenêtre. À droite, va se trouver le joueur qui joue. En dessous de la grille, on va retrouver les 3 pièces que le joueur devra placer sur la grille. Enfin, tout en bas à droite, il va y avoir un bouton pour permettre à l'utilisateur de retourner au menu du jeu. \\
 
 Ensuite, les règles du jeu vont s'appliquer au fur et à mesure du jeu du joueur. Quand un block sera placé dans la grille, il va y avoir un ajout de 30 points à son score. Et dès qu'une ligne ou une colonne sera remplie, il va y avoir une disparition de la ligne ou de la colonne voir même les deux si les conditions sont réunies. Le bonus de point sera alors de 100 points lorsqu'une ligne ou une colonne est construite par l'utilisateur. Le joueur ne peut pas mettre sa partie en pause. Cependant, il n'y a pas de limite de temps. Dès que les trois blocs sont placés dans la grille, trois autres bloques vont réapparaître avec une probabilité de difficultés qui est calculée en fonction du score. \\
 
@@ -110,7 +110,7 @@ Comme on peut le voir sur cette photo, le score du joueur est affiché. Afin d'�
     \caption{Menu multijoueur}
     \vspace{-20pt}
 \end{wrapfigure}
-Différents modes de multijoueur sont présents dans ce projet. On peut y retrouver un multijoueur où un joueur réel va jouer contre une intelligence artificielle, un multoujoueur ou deux joueur vont s'affronter. Et enfin un multijoueur en réseau où deux joueur vont pouvoir s'affronter sur deux écrans séparés. En dessous va se trouver une photo ou va être représenté le menu du multijoueur. On va aussi y retrouver la possibilité d'un retour au menu principal dans le menu du multijoueur si le joueur veut jouer seul.\\
+Différents modes de multijoueur sont présents dans ce projet. On peut y retrouver un multijoueur où un joueur réel va jouer contre une intelligence artificielle, un multijoueur où deux joueurs vont s'affronter. Et enfin un multijoueur en réseau où deux joueur vont pouvoir s'affronter sur deux écrans séparés. En dessous se trouve une image représentant le menu du multijoueur. On peut également y retrouver la possibilité d'un retour au menu principal dans le menu si le joueur veut jouer seul.\\
 
 
 \subsection{Joueur vs Intelligence artificielle}
@@ -120,7 +120,7 @@ Différents modes de multijoueur sont présents dans ce projet. On peut y retrou
     \caption{Joueur vs IA}
     \vspace{-10pt}
 \end{wrapfigure}
-Tout d'abord, il faut savoir que le mode multijoueur avec le joueur contre l'intelligence artificielle se joue comme le mode solo. Le joueur va pouvoir jouer comme il voudra. Il n'aura pas accès à la grille de l'intelligence artificielle pour éviter de la tricherie. Cependant le joueur pourra jouer une fois sur deux. Le premier tour est commencé par l'intelligence artificielle puis est suivie du joueur se trouvant derrière l'écran. L'utilisateur va avoir comme information sa grille, ses points, les points de son adversaire, donc ici de l'intelligence artificielle et de ses blocs. Le joueur et l'intelligence artificielle vont tout les deux avoir les mêmes blocs pour que les difficultés soient égales de chaque côté. Le joueur va pouvoir retourner au menu si il le souhaite, toujours grâce au bouton se trouvant en bas à droite. Ci dessous, va se présenter une photo de la grille du jeu avec les différentes informations énoncées précédemment que le joueur va avoir.\\
+Tout d'abord, il faut savoir que le mode multijoueur avec le joueur contre l'intelligence artificielle se joue comme le mode solo. Le joueur va pouvoir jouer comme il voudra. Il n'aura pas accès à la grille de l'intelligence artificielle pour éviter la tricherie. L'utilisateur va avoir comme information sa grille, ses points, les points de son adversaire. Le joueur et l'intelligence artificielle vont tout les deux avoir les mêmes blocs pour que la difficulté soit la même de chaque côté. Le joueur va pouvoir retourner au menu si il le souhaite, toujours grâce au bouton se trouvant en bas à droite. Ci dessous, va se présenter une photo de la grille du jeu avec les différentes informations énoncées précédemment que le joueur va avoir.\\
 
 \begin{wrapfigure}{R}{0.35\textwidth}
     \centering
@@ -304,10 +304,6 @@ pour déterminer les positions de la souris.
 \subsection{Gameplay}
 
 
-\part{Architecture du projet}
-\section{Diagrammes des modules et des classes}
-\section{Cas d'utilisation}
-
 \part{Expérimentations et usages}
 \section{Capture écrans}
 Les captures ci-dessous rendront le joueur passionné de jouer au jeu.
@@ -356,14 +352,52 @@ Ensuite, le son des boutons est la note F(Fa) correspond à la première note de
 Puis, quand on joue, il n'y a pas de son de fond, il existe que le son des pièces pour que l'on se sente concentré. Il faut savoir que l'on n'oublie pas être en train de jouer au jeu donc le son du bongo apparait quand on drag and drop les pièces.
 Enfin, on choisit l'accord guitare C(Do) mineur et on pense à créer une synchronisation de la musique.
 
+\part{Organisation}
 
-\part{Conclusion}
-Pour conclure, nous voulons remercier Mme.LAMBERT de nous avoir encadré pendant les cours de travaux pratiques ainsi que M.BONNET pour ses cours. Merci d'avoir pris le temps de lire ce rapport. \\
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline   
+Fonction/classe				&Fichier		  			&Personnes \\ \hline\hline
+updates&      				pypuzzle.py&      			Alexandre\\\hline
+updatesMultiLocal&     		pypuzzle.py&      			Alexandre\\\hline
+menu&      					pypuzzle.py&      			Romuald, Vy, Yanis\\\hline
+multiMenu&      			pypuzzle.py&      			Alexandre\\\hline
+gameOverSolo&      			pypuzzle.py&      			Alexandre\\\hline
+gameOverMulti&      		pypuzzle.py&      			Vy, Yanis\\\hline
+solo&      					pypuzzle.py&      			Alexandre, Romuald, Yanis, Vy\\\hline
+multiLocal&      			pypuzzle.py&      			Alexandre, Vy\\\hline
+multiIA&      				pypuzzle.py&      			Alexandre, Vy, Romuald\\\hline
+multiOnlineClient&      	pypuzzle.py&				Alexandre, Vy\\\hline
+&      						server.py&     				Alexandre\\\hline
+&							IAStats.py&					Alexandre \\\hline
+displayMenu&      			modules/display.py&      	Vy\\\hline
+displayMulti&      			modules/display.py&      	Vy\\\hline
+displayBoard&      			modules/display.py&      	Alexandre, Vy\\\hline
+displayDrawPieces&      	modules/display.py&      	Alexandre\\\hline
+displayTexts&      			modules/display.py&      	Alexandre\\\hline
+displayTextsIA&      		modules/display.py&      	Alexandre\\\hline
+displayTextsOnline&      	modules/display.py&      	Alexandre\\\hline
+displayGameOverSolo&      	modules/display.py&      	Alexandre, Yanis, Vy\\\hline
+displayGameOverMulti&      	modules/display.py&      	Yanis, Vy\\\hline
+displaygameOverMultiOnline& modules/display.py&      	Alexandre, Yanis, Vy\\\hline
+displayWaitPlayers&      	modules/display.py&      	Alexandre\\\hline
+&	      					modules/functions.py&      	Alexandre\\\hline
+&      						modules/logicalgate.py&     Alexandre\\\hline
+Grid&      					modules/grid.py&      		Alexandre, Yanis\\\hline
+Network&      				modules/network.py&      	Alexandre\\\hline
+Pieces&      				modules/pieces.py&      	Alexandre, Romuald\\\hline
+Piece&      				modules/pieces.py&      	Alexandre\\\hline
+Player&      				modules/player.py&      	Alexandre\\\hline
+IA&      					modules/player.py&      	Alexandre\\\hline
+\end{tabular}\end{center}
 
 Numéros de téléphone: \\
 Romuald GAFFE: \\
 Yanis COSNEFROY:\\
 Nguyen Phuong Vy VU:\\
 Alexandre BOURGOIN: \
+
+
+\part{Conclusion}
+Pour conclure, nous voulons remercier Mme.LAMBERT de nous avoir encadré pendant les cours de travaux pratiques ainsi que M.BONNET pour ses cours. Merci d'avoir pris le temps de lire ce rapport. \\
 
 \end{document}

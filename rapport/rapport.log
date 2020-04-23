@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  22 APR 2020 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  23 APR 2020 00:54
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -546,6 +546,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
  []
 
 
+Underfull \hbox (badness 2689) in paragraph at lines 89--90
+\T1/cmr/m/n/10 la fe-nêtre qui pos-sède une taille fixe. Au-
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 89--90
+\T1/cmr/m/n/10 de la fe-nêtre. À droite, va se trou-ver le
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 89--90
+\T1/cmr/m/n/10 va re-trou-ver les 3 pièces que le joueur de-
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 89--90
+\T1/cmr/m/n/10 vra pla-cer sur la grille. En-fin, tout en bas
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
@@ -572,38 +592,8 @@ File: images/2-menumulti.png Graphic file (type png)
 Package pdftex.def Info: images/2-menumulti.png  used on input line 109.
 (pdftex.def)             Requested size: 103.50105pt x 121.98921pt.
 
-Underfull \hbox (badness 2237) in paragraph at lines 113--114
-\T1/cmr/m/n/10 sents dans ce pro-jet. On peut y re-trou-ver
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 113--114
-\T1/cmr/m/n/10 un mul-ti-joueur où un joueur réel va jouer
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 113--114
-\T1/cmr/m/n/10 vont pou-voir s'af-fron-ter sur deux écrans sé-
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 113--114
-\T1/cmr/m/n/10 pa-rés. En des-sous va se trou-ver une photo
- []
-
-
-Underfull \hbox (badness 4454) in paragraph at lines 113--114
-\T1/cmr/m/n/10 ou va être re-pré-senté le menu du mul-ti-
- []
-
-
-Underfull \hbox (badness 1708) in paragraph at lines 113--114
-\T1/cmr/m/n/10 joueur. On va aussi y re-trou-ver la pos-si-bi-
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 113--114
-\T1/cmr/m/n/10 lité d'un re-tour au menu prin-ci-pal dans le
+Underfull \hbox (badness 1635) in paragraph at lines 113--114
+\T1/cmr/m/n/10 ci-pal dans le menu si le joueur veut jouer
  []
 
 
@@ -616,6 +606,16 @@ File: images/3-playwithai.png Graphic file (type png)
 <use images/3-playwithai.png>
 Package pdftex.def Info: images/3-playwithai.png  used on input line 119.
 (pdftex.def)             Requested size: 103.50105pt x 158.48936pt.
+
+Underfull \hbox (badness 1888) in paragraph at lines 123--124
+\T1/cmr/m/n/10 pas ac-cès à la grille de l'in-tel-li-gence ar-ti-fi-
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 123--124
+\T1/cmr/m/n/10 les mêmes blocs pour que la dif-fi-culté soit
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
@@ -706,85 +706,90 @@ m/n/10 ,
 
 [13] [14] [15
 
-] [16] [17
-
 ]
-<images/1-menu.png, id=92, 340.27126pt x 551.05875pt>
+<images/1-menu.png, id=86, 340.27126pt x 551.05875pt>
 File: images/1-menu.png Graphic file (type png)
 <use images/1-menu.png>
-Package pdftex.def Info: images/1-menu.png  used on input line 316.
+Package pdftex.def Info: images/1-menu.png  used on input line 312.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/1-ani.png, id=93, 340.27126pt x 551.05875pt>
+<images/1-ani.png, id=87, 340.27126pt x 551.05875pt>
 File: images/1-ani.png Graphic file (type png)
 <use images/1-ani.png>
-Package pdftex.def Info: images/1-ani.png  used on input line 317.
+Package pdftex.def Info: images/1-ani.png  used on input line 313.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/2-menumulti.png Graphic file (type png)
 <use images/2-menumulti.png>
-Package pdftex.def Info: images/2-menumulti.png  used on input line 319.
+Package pdftex.def Info: images/2-menumulti.png  used on input line 315.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/2-ani.png, id=94, 340.27126pt x 551.05875pt>
+<images/2-ani.png, id=88, 340.27126pt x 551.05875pt>
 File: images/2-ani.png Graphic file (type png)
 <use images/2-ani.png>
-Package pdftex.def Info: images/2-ani.png  used on input line 320.
+Package pdftex.def Info: images/2-ani.png  used on input line 316.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/3-ingamestart.png, id=95, 340.27126pt x 551.05875pt>
+<images/3-ingamestart.png, id=89, 340.27126pt x 551.05875pt>
 File: images/3-ingamestart.png Graphic file (type png)
 <use images/3-ingamestart.png>
-Package pdftex.def Info: images/3-ingamestart.png  used on input line 322.
+Package pdftex.def Info: images/3-ingamestart.png  used on input line 318.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/3-ingame.png Graphic file (type png)
 <use images/3-ingame.png>
-Package pdftex.def Info: images/3-ingame.png  used on input line 323.
+Package pdftex.def Info: images/3-ingame.png  used on input line 319.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/3-playwithai.png Graphic file (type png)
 <use images/3-playwithai.png>
-Package pdftex.def Info: images/3-playwithai.png  used on input line 324.
+Package pdftex.def Info: images/3-playwithai.png  used on input line 320.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/4-end.png Graphic file (type png)
 <use images/4-end.png>
-Package pdftex.def Info: images/4-end.png  used on input line 326.
+Package pdftex.def Info: images/4-end.png  used on input line 322.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/4-endani.png, id=96, 340.27126pt x 551.05875pt>
+<images/4-endani.png, id=90, 340.27126pt x 551.05875pt>
 File: images/4-endani.png Graphic file (type png)
 <use images/4-endani.png>
-Package pdftex.def Info: images/4-endani.png  used on input line 327.
+Package pdftex.def Info: images/4-endani.png  used on input line 323.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/4-endmulti.png Graphic file (type png)
 <use images/4-endmulti.png>
-Package pdftex.def Info: images/4-endmulti.png  used on input line 328.
+Package pdftex.def Info: images/4-endmulti.png  used on input line 324.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
- [18 <./images/1-menu.png> <./images/1-ani.png> <./images/2-ani.png> <./images/
+ [16 <./images/1-menu.png> <./images/1-ani.png> <./images/2-ani.png> <./images/
 3-ingamestart.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 335--339
+Underfull \hbox (badness 10000) in paragraph at lines 331--335
 
  []
 
-<images/palette1.png, id=105, 982.872pt x 150.5625pt>
+<images/palette1.png, id=98, 982.872pt x 150.5625pt>
 File: images/palette1.png Graphic file (type png)
 <use images/palette1.png>
-Package pdftex.def Info: images/palette1.png  used on input line 344.
+Package pdftex.def Info: images/palette1.png  used on input line 340.
 (pdftex.def)             Requested size: 294.86388pt x 45.16908pt.
-<images/palette2.png, id=106, 1260.1479pt x 150.5625pt>
+<images/palette2.png, id=99, 1260.1479pt x 150.5625pt>
 File: images/palette2.png Graphic file (type png)
 <use images/palette2.png>
-Package pdftex.def Info: images/palette2.png  used on input line 346.
+Package pdftex.def Info: images/palette2.png  used on input line 342.
 (pdftex.def)             Requested size: 378.04729pt x 45.16908pt.
 
-Overfull \hbox (63.04485pt too wide) in paragraph at lines 345--347
+Overfull \hbox (63.04485pt too wide) in paragraph at lines 341--343
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--353
+Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
-[19 <./images/4-endani.png> <./images/palette1.png> <./images/palette2.png>]
+[17 <./images/4-endani.png> <./images/palette1.png> <./images/palette2.png>]
+[18] [19
+
+]
+Overfull \hbox (56.82738pt too wide) in paragraph at lines 358--391
+ [] 
+ []
+
 [20] [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
@@ -816,9 +821,9 @@ pk> <C:\Users\alexa\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 r/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\alexa\AppData\Local\MiKTeX\2.9\font
 s/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\alexa\AppData\Local\MiKTe
 X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk>
-Output written on rapport.pdf (23 pages, 3093556 bytes).
+Output written on rapport.pdf (23 pages, 3094207 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
+ 577 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

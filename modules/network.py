@@ -8,7 +8,7 @@ class Network:
 
     def __init__(self):
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server = "*0.0.0.0"  # A changer
+        self.server = "127.0.0.1"  # A changer
         self.port = 5000
         self.addr = (self.server, self.port)
 

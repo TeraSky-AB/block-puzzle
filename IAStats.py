@@ -44,7 +44,7 @@ def test_IA():
             player1.draw.remove(choice[3])
             player1.points += 30
             updates(players, pieces, grid)
-            if not grid.isDrawPlaceable(player1):
+            if not grid.isDrawPlaceable(player1) or choice[0] == 0:
                 pointsPerGame.append(player1.points)
                 roundsPerGame.append(currentRound)
                 print("=========================")
