@@ -1,54 +1,62 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Objectifs du projet}{2}%
+\contentsline {part}{I\hspace {1em}Objectifs du projet}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.1}Présentation du concept}{3}%
+\contentsline {section}{\numberline {0.1}Présentation du concept}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.2}Cahier des charges}{3}%
+\contentsline {section}{\numberline {0.2}Cahier des charges}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.3}Exemples du jeux publiés}{3}%
+\contentsline {section}{\numberline {0.3}Exemples du jeux publiés}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}Fonctionnalités implémentés}{5}%
+\contentsline {part}{II\hspace {1em}Fonctionnalités implémentés}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.4}Mode solo}{6}%
+\contentsline {section}{\numberline {0.4}Mode solo}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.5}Mode multijoueur}{7}%
+\contentsline {section}{\numberline {0.5}Mode multijoueur}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.5.1}Joueur vs Intelligence artificielle}{7}%
+\contentsline {subsection}{\numberline {0.5.1}Joueur vs Intelligence artificielle}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.5.2}Joueur vs Joueur en local}{8}%
+\contentsline {subsection}{\numberline {0.5.2}Joueur vs Joueur en local}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.5.3}Joueur vs Joueur en ligne}{8}%
+\contentsline {subsection}{\numberline {0.5.3}Joueur vs Joueur en ligne}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}Éléments techniques}{9}%
+\contentsline {part}{III\hspace {1em}Éléments techniques}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.6}Les pièces}{10}%
+\contentsline {section}{\numberline {0.6}Les pièces}{11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.7}La grille}{10}%
+\contentsline {section}{\numberline {0.7}La grille}{11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.8}L'aléatoire}{11}%
+\contentsline {section}{\numberline {0.8}L'aléatoire}{12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.9}L'intelligence artificielle}{11}%
+\contentsline {section}{\numberline {0.9}L'intelligence artificielle}{12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.10}Le réseau}{11}%
+\contentsline {section}{\numberline {0.10}Le réseau}{12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.11}L'interface graphique}{12}%
+\contentsline {section}{\numberline {0.11}L'interface graphique}{13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.11.1}Le menu}{12}%
+\contentsline {subsection}{\numberline {0.11.1}Le menu}{13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.11.2}Gameplay}{14}%
+\contentsline {subsection}{\numberline {0.11.2}Gameplay}{15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IV\hspace {1em}Expérimentations et usages}{15}%
+\contentsline {part}{IV\hspace {1em}Expérimentations et usages}{16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.12}Capture écrans}{16}%
+\contentsline {section}{\numberline {0.12}Capture écrans}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.13}Mesures de performance}{17}%
+\contentsline {section}{\numberline {0.13}Mesures de performance}{18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.13.1}Interfaces graphiques}{17}%
+\contentsline {subsection}{\numberline {0.13.1}Interfaces graphiques}{18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.13.2}Effet sonore}{17}%
+\contentsline {subsection}{\numberline {0.13.2}Effet sonore}{18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Organisation}{19}%
+\contentsline {part}{V\hspace {1em}Architecture du projet}{20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VI\hspace {1em}Conclusion}{21}%
+\contentsline {section}{\numberline {0.14}Diagrammes des classes}{21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0.15}Arborescences des dossiers}{22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0.16}Modules utilisés}{22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{VI\hspace {1em}Organisation}{23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{VII\hspace {1em}Conclusion}{25}%

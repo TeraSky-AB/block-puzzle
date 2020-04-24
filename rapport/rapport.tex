@@ -7,10 +7,50 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{wrapfig}
+\usepackage[edges]{forest}
 
 \definecolor{blue}{RGB}{38, 115, 255}
 \definecolor{yellow}{RGB}{166, 122, 0}
 \definecolor{red}{RGB}{166, 0, 0}
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+
+\newlength\Size
+\setlength\Size{4pt}
+\tikzset{%
+  folder/.pic={%
+    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);
+    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+  },
+  file/.pic={%
+    \filldraw [draw=folderborder, top color=folderbg!5, bottom color=folderbg!10] (-\Size,.4*\Size+5pt) coordinate (a) |- (\Size,-1.2*\Size) coordinate (b) -- ++(0,1.6*\Size) coordinate (c) -- ++(-5pt,5pt) coordinate (d) -- cycle (d) |- (c) ;
+  },
+}
+\forestset{%
+  declare autowrapped toks={pic me}{},
+  pic dir tree/.style={%
+    for tree={%
+      folder,
+      font=\ttfamily,
+      grow'=0,
+    },
+    before typesetting nodes={%
+      for tree={%
+        edge label+/.option={pic me},
+      },
+    },
+  },
+  pic me set/.code n args=2{%
+    \forestset{%
+      #1/.style={%
+        inner xsep=2\Size,
+        pic me={pic {#2}},
+      }
+    }
+  },
+  pic me set={directory}{folder},
+  pic me set={file}{file},
+}
 
 \lstdefinestyle{style1}{ 
     commentstyle=\color{yellow},
@@ -280,11 +320,11 @@ Et pour colorer le fond, on utilise \textbf{\textit{"screen".fill()}}.
 \end{lstlisting}
 
 Pour les son, on utilise \textbf{\textit{pygame.mixer}} avec les sous-éléments \textbf{\textit{pygame.mixer.Sound()}}, \textbf{\textit{"nom".play()}} et \textbf{\textit{"nom".stop()}}.
-Type de fichier est .wav (Les formats de fichiers audio pris en charge par Pygame sont MID, WAV et MP3.)
+Type de fichier est .wav (Les formats de fichiers audio pris en charge par Pygame sont OGG, WAV et MP3.)
 \begin{lstlisting}
     pg.mixer.@\color{blue}init@() #pour fonctioner
     soundMenu = pg.mixer.@\color{blue}Sound@("assets/menu.wav")
-    soundMenu.@\color{blue}play@(-1, 0, 0)
+    soundMenu.@\color{blue}play@(-1, 0, 0) #-1 signifie que la musique se repetera indefiniment
 \end{lstlisting}
 
 On juste utilise une animation, c'est le survol quand on entre les boutons.
@@ -337,9 +377,9 @@ Elle fait une atmosphère relaxée quand on joue. On échoue, mais sans s'énerv
     \item Font: Bebas Neue Regular (Free Copyright)
     \item Couleur principale: \textbf{bleu(125, 201, 255)}
     \item Couleurs des pièces: les couleurs pastels\\
-        \includegraphics[scale=0.3]{images/palette1.png}
+        \includegraphics[scale=0.2]{images/palette1.png}
     \item Couleurs de menu\\
-        \includegraphics[scale=0.3]{images/palette2.png}
+        \includegraphics[scale=0.2]{images/palette2.png}
 \end{itemize}
 
 \subsection{Effet sonore}
@@ -352,6 +392,79 @@ Ensuite, le son des boutons est la note F(Fa) correspond à la première note de
 Puis, quand on joue, il n'y a pas de son de fond, il existe que le son des pièces pour que l'on se sente concentré. Il faut savoir que l'on n'oublie pas être en train de jouer au jeu donc le son du bongo apparait quand on drag and drop les pièces.
 Enfin, on choisit l'accord guitare C(Do) mineur et on pense à créer une synchronisation de la musique.
 
+\part{Architecture du projet}
+\section{Diagrammes des classes}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{images/classes.png}
+    \caption{Classes du dossier \textbf{modules} des fichers \textbf{\textit{grid.py, network.py, pieces.py et player.py.}}}
+    \vspace{1cm}
+    \includegraphics[scale=0.5]{images/classes.server.png}
+    \caption{Classe de fichier \textbf{\textit{server.py}}}
+\end{figure}
+Nous n'utilisons pas des classes pour les fichiers \textbf{\textit{IAStats.py, pypuzzle.py, display.py, function.py et logicalgate.py.}}
+\section{Arborescences des dossiers}
+\begin{forest}
+  pic dir tree,
+  where level=0{}{% folder icons by default; override using file for file icons
+    directory,
+  },
+  [block-puzzle
+    [assets
+      [BebasNeue-Regular.ttf, file
+      ]
+      [button.wav, file
+      ]
+      [gameover.wav, file
+      ]
+      [menu.wav, file
+      ]
+      [placeable.wav, file
+      ]
+    ]
+    [modules
+      [\_\_init\_\_.py, file
+      ]
+      [display.py, file
+      ]
+      [function.py, file
+      ]
+      [grid.py, file
+      ]
+      [logicalgate.py, file
+      ]
+      [network.py, file
+      ]
+      [pieces.py, file
+      ]
+      [player.py, file
+      ]
+    ]
+    [IAStats.py, file
+    ]
+    [pypuzzle.py, file
+    ]
+    [server.py, file
+    ]
+  ]
+\end{forest}
+\section{Modules utilisés}
+\begin{lstlisting}
+    import pygame @\color{blue}as@ pg
+    import random @\color{blue}as@ rnd
+    import socket
+    import threading
+    import pickle
+    import modules.logicalgate @\color{blue}as@ lg
+    import modules.grid @\color{blue}as@ gd
+    import modules.display @\color{blue}as@ dsp
+    import modules.player @\color{blue}as@ player
+    import modules.functions @\color{blue}as@ fnc
+    import modules.pieces @\color{blue}as@ pcs
+    import modules.network @\color{blue}as@ ntw
+\end{lstlisting}
+%\section{Cas d'utilisation}
+
 \part{Organisation}
 
 \begin{center}
@@ -360,8 +473,8 @@ Fonction/classe				&Fichier		  			&Personnes \\ \hline\hline
 updates&      				pypuzzle.py&      			Alexandre\\\hline
 updatesMultiLocal&     		pypuzzle.py&      			Alexandre\\\hline
 menu&      					pypuzzle.py&      			Romuald, Vy, Yanis\\\hline
-multiMenu&      			pypuzzle.py&      			Alexandre\\\hline
-gameOverSolo&      			pypuzzle.py&      			Alexandre\\\hline
+multiMenu&      			pypuzzle.py&      			Alexandre, Vy\\\hline
+gameOverSolo&      			pypuzzle.py&      			Alexandre, Vy\\\hline
 gameOverMulti&      		pypuzzle.py&      			Vy, Yanis\\\hline
 solo&      					pypuzzle.py&      			Alexandre, Romuald, Yanis, Vy\\\hline
 multiLocal&      			pypuzzle.py&      			Alexandre, Vy\\\hline
@@ -373,7 +486,7 @@ displayMenu&      			modules/display.py&      	Vy\\\hline
 displayMulti&      			modules/display.py&      	Vy\\\hline
 displayBoard&      			modules/display.py&      	Alexandre, Vy\\\hline
 displayDrawPieces&      	modules/display.py&      	Alexandre\\\hline
-displayTexts&      			modules/display.py&      	Alexandre\\\hline
+displayTexts&      			modules/display.py&      	Alexandre, Vy\\\hline
 displayTextsIA&      		modules/display.py&      	Alexandre\\\hline
 displayTextsOnline&      	modules/display.py&      	Alexandre\\\hline
 displayGameOverSolo&      	modules/display.py&      	Alexandre, Yanis, Vy\\\hline
@@ -393,7 +506,7 @@ IA&      					modules/player.py&      	Alexandre\\\hline
 Numéros de téléphone: \\
 Romuald GAFFE: \\
 Yanis COSNEFROY:\\
-Nguyen Phuong Vy VU:\\
+Nguyen Phuong Vy VU: 06 65 77 58 80\\
 Alexandre BOURGOIN: \
 
 
