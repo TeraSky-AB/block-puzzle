@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.29)  26 APR 2020 02:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.29)  28 APR 2020 01:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,8 +1206,48 @@ File: images/2-menumulti.png Graphic file (type png)
 Package pdftex.def Info: images/2-menumulti.png  used on input line 149.
 (pdftex.def)             Requested size: 103.50105pt x 121.98921pt.
 
-Underfull \hbox (badness 1635) in paragraph at lines 153--154
-\T1/cmr/m/n/10 ci-pal dans le menu si le joueur veut jouer
+Underfull \hbox (badness 2237) in paragraph at lines 153--154
+\T1/cmr/m/n/10 sents dans ce pro-jet. On peut y re-trou-ver
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 153--154
+\T1/cmr/m/n/10 un mul-ti-joueur où un joueur réel va jouer
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 153--154
+\T1/cmr/m/n/10 contre une in-tel-li-gence ar-ti-fi-cielle, un mul-ti-
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 153--154
+\T1/cmr/m/n/10 joueur où deux joueurs vont s'af-fron-ter sur
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 153--154
+\T1/cmr/m/n/10 ter sur deux écrans sé-pa-rés. En des-sous se
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 153--154
+\T1/cmr/m/n/10 trouve une image re-pré-sen-tant le menu du
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 153--154
+\T1/cmr/m/n/10 mul-ti-joueur. On peut éga-le-ment y re-trou-ver
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 153--154
+\T1/cmr/m/n/10 la pos-si-bi-lité d'un re-tour au menu prin-ci-
+ []
+
+
+Underfull \hbox (badness 2922) in paragraph at lines 153--154
+\T1/cmr/m/n/10 pal dans le menu si le joueur veut jouer
  []
 
 
@@ -1221,13 +1261,8 @@ File: images/3-playwithai.png Graphic file (type png)
 Package pdftex.def Info: images/3-playwithai.png  used on input line 159.
 (pdftex.def)             Requested size: 103.50105pt x 158.48936pt.
 
-Underfull \hbox (badness 1888) in paragraph at lines 163--164
-\T1/cmr/m/n/10 pas ac-cès à la grille de l'in-tel-li-gence ar-ti-fi-
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 163--164
-\T1/cmr/m/n/10 les mêmes blocs pour que la dif-fi-culté soit
+Underfull \hbox (badness 1721) in paragraph at lines 163--164
+\T1/cmr/m/n/10 ar-ti-fi-cielle se joue comme le mode solo. Le
  []
 
 
@@ -1312,10 +1347,10 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 247.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [13]
-Overfull \hbox (53.50897pt too wide) in paragraph at lines 322--324
-[]\T1/cmr/m/n/10 Pour les son, on uti-lise \T1/cmr/bx/it/10 py-game.mixer \T1/c
-mr/m/n/10 avec les sous-éléments \T1/cmr/bx/it/10 py-game.mixer.Sound()\T1/cmr/
-m/n/10 ,
+Overfull \hbox (57.45245pt too wide) in paragraph at lines 322--324
+[]\T1/cmr/m/n/10 Pour les sons, on uti-lise \T1/cmr/bx/it/10 py-game.mixer \T1/
+cmr/m/n/10 avec les sous-éléments \T1/cmr/bx/it/10 py-game.mixer.Sound()\T1/cmr
+/m/n/10 ,
  []
 
 [14] [15] [16
@@ -1433,10 +1468,10 @@ Package logreq Info: Writing requests to 'rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43569 strings out of 492616
- 933296 string characters out of 6129481
- 1495549 words of memory out of 5000000
- 47047 multiletter control sequences out of 15000+600000
+ 43568 strings out of 492616
+ 933281 string characters out of 6129481
+ 1480549 words of memory out of 5000000
+ 47046 multiletter control sequences out of 15000+600000
  544170 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  135i,8n,177p,1583b,2651s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1455,7 +1490,7 @@ e/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/
 19/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019
 /texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on rapport.pdf (27 pages, 3241499 bytes).
+Output written on rapport.pdf (27 pages, 3241700 bytes).
 PDF statistics:
  229 PDF objects out of 1000 (max. 8388607)
  128 compressed objects within 2 object streams

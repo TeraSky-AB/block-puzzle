@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.3}Exemples du jeux publi\IeC {\'e}s}{4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}Fonctionnalit\IeC {\'e}s impl\IeC {\'e}ment\IeC {\'e}s}{6}% 
+\contentsline {part}{II\hspace {1em}Fonctionnalit\IeC {\'e}s impl\IeC {\'e}ment\IeC {\'e}es}{6}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.4}Mode solo}{7}% 
 \defcounter {refsection}{0}\relax 
@@ -41,13 +41,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{IV\hspace {1em}Exp\IeC {\'e}rimentations et usages}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.12}Capture \IeC {\'e}crans}{17}% 
+\contentsline {section}{\numberline {0.12}Capture d'\IeC {\'e}crans}{17}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.13}Mesures de performance}{18}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {0.13.1}Interfaces graphiques}{18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {0.13.2}Effet sonore}{18}% 
+\contentsline {subsection}{\numberline {0.13.2}Effets sonores}{18}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{V\hspace {1em}Architecture du projet}{20}% 
 \defcounter {refsection}{0}\relax 
