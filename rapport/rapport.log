@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.29)  28 APR 2020 01:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.15)  28 APR 2020 20:18
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**rapport.tex
-(./rapport.tex
-LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+**./rapport.tex
+(rapport.tex
+LaTeX2e <2019-10-01>
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
+Document Class: report 2019/08/27 v1.4j Standard LaTeX document class
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -22,30 +20,41 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/05/04 3.31 The Babel package
+) ("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.st
+y"
+Package: babel 2019/09/27 3.34 The Babel package
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/05/04 3.31 Babel switching mechanism
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def
+"
+File: switch.def 2019/09/27 3.34 Babel switching mechanism
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel-french/french.ldf
-Language: french 2019/03/30 v3.5e French support from the babel system
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel-french\fre
+nch.ldf"
+Language: french 2019/09/07 v3.5f French support from the babel system
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/05/04 3.31 Babel common definitions
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2019/09/27 3.34 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
+ef")
 \bbl@dirlevel=\count90
 )
 \l@acadian = a dialect from \language\l@french 
+\l@canadien = a dialect from \language\l@french 
 \FB@nonchar=\count91
-Package babel Info: Making : an active character on input line 414.
-Package babel Info: Making ; an active character on input line 415.
-Package babel Info: Making ! an active character on input line 416.
-Package babel Info: Making ? an active character on input line 417.
+Package babel Info: Making : an active character on input line 419.
+Package babel Info: Making ; an active character on input line 420.
+Package babel Info: Making ! an active character on input line 421.
+Package babel Info: Making ? an active character on input line 422.
 \FBguill@level=\count92
 \FBold@everypar=\toks14
 \FB@Mht=\dimen104
@@ -63,54 +72,66 @@ Package babel Info: Making ? an active character on input line 417.
 \parindentFFN=\dimen110
 \FBfnindent=\dimen111
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/carlisle\scalefnt.
+sty")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2019/07/20 v1.3b Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+sty"
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
+x.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.s
+ty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -118,30 +139,32 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
+sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count99
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count100
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.def
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+)) ("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
+"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+) ("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -196,14 +219,16 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip50
 \blx@bcfin=\read1
 \blx@bcfout=\write3
+\blx@langwohyphens=\language82
 \c@mincomprange=\count142
 \c@maxcomprange=\count143
 \c@mincompwidth=\count144
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm.de
+f"
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
@@ -292,14 +317,16 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-compa
+t.def"
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load BibTeX backend compatibility...
 Package biblatex Info: ... file 'blx-bibtex.def' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-bibte
+x.def"
+File: blx-bibtex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 
 
 Package biblatex Warning: Using fall-back BibTeX(8) backend:
@@ -308,34 +335,45 @@ Package biblatex Warning: Using fall-back BibTeX(8) backend:
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+def"
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
 \c@textcitecount=\count279
 \c@textcitetotal=\count280
 \c@textcitemaxnames=\count281
-\c@biburlnumpenalty=\count282
-\c@biburlucpenalty=\count283
-\c@biburllcpenalty=\count284
-\c@smartand=\count285
+\c@biburlbigbreakpenalty=\count282
+\c@biburlbreakpenalty=\count283
+\c@biburlnumpenalty=\count284
+\c@biburlucpenalty=\count285
+\c@biburllcpenalty=\count286
+\biburlbigskip=\muskip11
+\biburlnumskip=\muskip12
+\biburlucskip=\muskip13
+\biburllcskip=\muskip14
+\c@smartand=\count287
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\numer
+ic.bbx"
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count286
-\c@bbx:relatedtotal=\count287
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
+ard.bbx"
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count288
+\c@bbx:relatedtotal=\count289
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
+ic.cbx"
+File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -351,45 +389,50 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.cfg
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+cfg"
 File: biblatex.cfg 
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count288
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+sty"
+\lst@mode=\count290
 \lst@gtempboxa=\box27
 \lst@token=\toks18
-\lst@length=\count289
+\lst@length=\count291
 \lst@currlwidth=\dimen114
-\lst@column=\count290
-\lst@pos=\count291
+\lst@column=\count292
+\lst@pos=\count293
 \lst@lostspace=\dimen115
 \lst@width=\dimen116
-\lst@newlines=\count292
-\lst@lineno=\count293
+\lst@newlines=\count294
+\lst@lineno=\count295
 \lst@maxwidth=\dimen117
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count294
-\lst@skipnumbers=\count295
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count296
+\lst@skipnumbers=\count297
 \lst@framebox=\box28
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/02/27 1.8b listings configuration
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package: listings 2019/02/27 1.8b (Carsten Heinz)
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -403,49 +446,62 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.st
+y"
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
-\c@WF@wrappedlines=\count296
+\c@WF@wrappedlines=\count298
 \WF@box=\box29
 \WF@everypar=\toks19
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/forest/forest.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/forest\forest.sty"
 Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\
+tikz.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf
+.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfr
+cs.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+futil-common.tex"
 \pgfutil@everybye=\toks20
 \pgfutil@tempdima=\dimen120
 \pgfutil@tempdimb=\dimen121
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+futil-common-lists.tex"))
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+futil-latex.def"
 \pgfutil@abb=\box30
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everyshi.sty
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+frcs.code.tex"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision
+.tex")
+Package: pgfrcs 2019/08/03 v3.1.4b (3.1.4b)
 ))
-Package: pgf 2019/04/04 v3.1.2 (3.1.2)
+Package: pgf 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2019/04/04 v3.1.2 (3.1.2)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf
+core.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pg
+fsys.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
+pgfsys.code.tex"
+Package: pgfsys 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+fkeys.code.tex"
 \pgfkeys@pathtoks=\toks21
 \pgfkeys@temptoks=\toks22
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+fkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks23
 ))
 \pgf@x=\dimen122
@@ -456,291 +512,312 @@ ode.tex
 \pgf@yb=\dimen127
 \pgf@xc=\dimen128
 \pgf@yc=\dimen129
+\pgf@xd=\dimen130
+\pgf@yd=\dimen131
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count297
-\c@pgf@countb=\count298
-\c@pgf@countc=\count299
-\c@pgf@countd=\count300
+\c@pgf@counta=\count299
+\c@pgf@countb=\count300
+\c@pgf@countc=\count301
+\c@pgf@countd=\count302
 \t@pgf@toka=\toks24
 \t@pgf@tokb=\toks25
 \t@pgf@tokc=\toks26
-\pgf@sys@id@count=\count301
+\pgf@sys@id@count=\count303
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
+pgf.cfg"
+File: pgf.cfg 2019/08/03 v3.1.4b (3.1.4b)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
-File: pgfsys-pdftex.def 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
+pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
-File: pgfsys-common-pdf.def 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
+pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2019/08/03 v3.1.4b (3.1.4b)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
-File: pgfsyssoftpath.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfsyssoftpath@smallbuffer@items=\count302
-\pgfsyssoftpath@bigbuffer@items=\count303
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
+pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfsyssoftpath@smallbuffer@items=\count304
+\pgfsyssoftpath@bigbuffer@items=\count305
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
-File: pgfsysprotocol.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
+pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2019/04/04 v3.1.2 (3.1.2)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen130
-\pgfmath@count=\count304
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcore.code.tex"
+Package: pgfcore 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+.code.tex"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+calc.code.tex"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+util.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+parser.code.tex"
+\pgfmath@dimen=\dimen132
+\pgfmath@count=\count306
 \pgfmath@box=\box31
 \pgfmath@toks=\toks27
 \pgfmath@stack@operand=\toks28
 \pgfmath@stack@operation=\toks29
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count305
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.code.tex"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.basic.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.trigonometric.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.random.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.comparison.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.base.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.round.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.misc.code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+functions.integerarithmetics.code.tex")))
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+float.code.tex"
+\c@pgfmathroundto@lastzeros=\count307
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
-File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@picminx=\dimen131
-\pgf@picmaxx=\dimen132
-\pgf@picminy=\dimen133
-\pgf@picmaxy=\dimen134
-\pgf@pathminx=\dimen135
-\pgf@pathmaxx=\dimen136
-\pgf@pathminy=\dimen137
-\pgf@pathmaxy=\dimen138
-\pgf@xx=\dimen139
-\pgf@xy=\dimen140
-\pgf@yx=\dimen141
-\pgf@yy=\dimen142
-\pgf@zx=\dimen143
-\pgf@zy=\dimen144
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.
+code.tex")
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@picminx=\dimen133
+\pgf@picmaxx=\dimen134
+\pgf@picminy=\dimen135
+\pgf@picmaxy=\dimen136
+\pgf@pathminx=\dimen137
+\pgf@pathmaxx=\dimen138
+\pgf@pathminy=\dimen139
+\pgf@pathmaxy=\dimen140
+\pgf@xx=\dimen141
+\pgf@xy=\dimen142
+\pgf@yx=\dimen143
+\pgf@yy=\dimen144
+\pgf@zx=\dimen145
+\pgf@zy=\dimen146
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
-File: pgfcorepathconstruct.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@path@lastx=\dimen145
-\pgf@path@lasty=\dimen146
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@path@lastx=\dimen147
+\pgf@path@lasty=\dimen148
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
-File: pgfcorepathusage.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@shorten@end@additional=\dimen147
-\pgf@shorten@start@additional=\dimen148
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@shorten@end@additional=\dimen149
+\pgf@shorten@start@additional=\dimen150
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
-File: pgfcorescopes.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfpic=\box32
 \pgf@hbox=\box33
 \pgf@layerbox@main=\box34
-\pgf@picture@serial@count=\count306
+\pgf@picture@serial@count=\count308
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
-File: pgfcoregraphicstate.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgflinewidth=\dimen149
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgflinewidth=\dimen151
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
-File: pgfcoretransformations.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@pt@x=\dimen150
-\pgf@pt@y=\dimen151
-\pgf@pt@temp=\dimen152
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@pt@x=\dimen152
+\pgf@pt@y=\dimen153
+\pgf@pt@temp=\dimen154
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
-File: pgfcorequick.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
-File: pgfcoreobjects.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
-File: pgfcorepathprocessing.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
-File: pgfcorearrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfarrowsep=\dimen153
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfarrowsep=\dimen155
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
-File: pgfcoreshade.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@max=\dimen154
-\pgf@sys@shading@range@num=\count307
-\pgf@shadingcount=\count308
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@max=\dimen156
+\pgf@sys@shading@range@num=\count309
+\pgf@shadingcount=\count310
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
-File: pgfcoreimage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
-File: pgfcoreexternal.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfexternal@startupbox=\box35
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
-File: pgfcorelayers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
-File: pgfcoretransparency.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
-File: pgfcorepatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
-File: pgfcorerdf.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
+gfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
-File: pgfmoduleshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
+oduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfnodeparttextbox=\box36
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
-File: pgfmoduleplot.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
+oduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
-Package: pgfcomp-version-0-65 2019/04/04 v3.1.2 (3.1.2)
-\pgf@nodesepstart=\dimen155
-\pgf@nodesepend=\dimen156
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\
+pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@nodesepstart=\dimen157
+\pgf@nodesepend=\dimen158
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
-Package: pgfcomp-version-1-18 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\
+pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2019/08/03 v3.1.4b (3.1.4b)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgff
+or.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfk
+eys.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+fkeys.code.tex"))
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.s
+ty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+.code.tex"))
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
+ffor.code.tex"
+Package: pgffor 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen157
-\pgffor@skip=\dimen158
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
+.code.tex")
+\pgffor@iter=\dimen159
+\pgffor@skip=\dimen160
 \pgffor@stack=\toks30
 \pgffor@toks=\toks31
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
-Package: tikz 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz\tikz.code.tex"
+Package: tikz 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
-File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@plot@mark@count=\count309
-\pgfplotmarksize=\dimen159
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
+flibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@plot@mark@count=\count311
+\pgfplotmarksize=\dimen161
 )
-\tikz@lastx=\dimen160
-\tikz@lasty=\dimen161
-\tikz@lastxsaved=\dimen162
-\tikz@lastysaved=\dimen163
-\tikzleveldistance=\dimen164
-\tikzsiblingdistance=\dimen165
+\tikz@lastx=\dimen162
+\tikz@lasty=\dimen163
+\tikz@lastxsaved=\dimen164
+\tikz@lastysaved=\dimen165
+\tikz@lastmovetox=\dimen166
+\tikz@lastmovetoy=\dimen167
+\tikzleveldistance=\dimen168
+\tikzsiblingdistance=\dimen169
 \tikz@figbox=\box37
 \tikz@figbox@bg=\box38
 \tikz@tempbox=\box39
 \tikz@tempbox@bg=\box40
-\tikztreelevel=\count310
-\tikznumberofchildren=\count311
-\tikznumberofcurrentchild=\count312
-\tikz@fig@count=\count313
+\tikztreelevel=\count312
+\tikznumberofchildren=\count313
+\tikznumberofcurrentchild=\count314
+\tikz@fig@count=\count315
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
-File: pgfmodulematrix.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfmatrixcurrentrow=\count314
-\pgfmatrixcurrentcolumn=\count315
-\pgf@matrix@numberofcolumns=\count316
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
+odulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfmatrixcurrentrow=\count316
+\pgfmatrixcurrentcolumn=\count317
+\pgf@matrix@numberofcolumns=\count318
 )
-\tikz@expandcount=\count317
+\tikz@expandcount=\count319
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
+apes\pgflibraryshapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
+apes\pgflibraryshapes.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
+apes\pgflibraryshapes.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
+apes\pgflibraryshapes.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.callouts.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.callouts.code.tex))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.callouts.code.tex"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
+apes\pgflibraryshapes.callouts.code.tex"))
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
+apes\pgflibraryshapes.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfnodepartlowerbox=\box41
 \pgfnodeparttwobox=\box42
 \pgfnodepartthreebox=\box43
@@ -762,165 +839,177 @@ File: pgflibraryshapes.multipart.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgfnodepartsixbox=\box59
 \pgfnodepartfivebox=\box60
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibraryfit.code.tex"
+File: tikzlibraryfit.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2019/04/04 v3.1.2 (3.1.2)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
-ctions.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
-e.tex)
-\pgf@intersect@solutions=\count318
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
+flibraryintersections.code.tex"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
+flibraryfpu.code.tex")
+\pgf@intersect@solutions=\count320
+)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgfopts\pgfopts.st
+y"
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks32
 \pgfopts@list@add@b@toks=\toks33
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/elocalloc/elocalloc.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/elocalloc\elocallo
+c.sty"
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/environ/environ.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.st
+y"
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspa
+ces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks34
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-05-07 L3 programming layer (loader) 
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
+xparse.sty"
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty
+"
+Package: expl3 2020-04-06 L3 programming layer (loader) 
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-05-07 L3 programming layer (code)
-\c_max_int=\count319
-\l_tmpa_int=\count320
-\l_tmpb_int=\count321
-\g_tmpa_int=\count322
-\g_tmpb_int=\count323
-\g__kernel_prg_map_int=\count324
-\c__ior_term_ior=\count325
-\c_log_iow=\count326
-\l_iow_line_count_int=\count327
-\l__iow_line_target_int=\count328
-\l__iow_one_indent_int=\count329
-\l__iow_indent_int=\count330
-\c_zero_dim=\dimen166
-\c_max_dim=\dimen167
-\l_tmpa_dim=\dimen168
-\l_tmpb_dim=\dimen169
-\g_tmpa_dim=\dimen170
-\g_tmpb_dim=\dimen171
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3-cod
+e.tex"
+Package: expl3 2020-04-06 L3 programming layer (code)
+\c_max_int=\count321
+\l_tmpa_int=\count322
+\l_tmpb_int=\count323
+\g_tmpa_int=\count324
+\g_tmpb_int=\count325
+\l__seq_internal_a_int=\count326
+\l__seq_internal_b_int=\count327
+\g__kernel_prg_map_int=\count328
+\c__ior_term_noprompt_ior=\count329
+\c_log_iow=\count330
+\l_iow_line_count_int=\count331
+\l__iow_line_target_int=\count332
+\l__iow_one_indent_int=\count333
+\l__iow_indent_int=\count334
+\c_zero_dim=\dimen170
+\c_max_dim=\dimen171
+\l_tmpa_dim=\dimen172
+\l_tmpb_dim=\dimen173
+\g_tmpa_dim=\dimen174
+\g_tmpb_dim=\dimen175
 \c_zero_skip=\skip65
 \c_max_skip=\skip66
 \l_tmpa_skip=\skip67
 \l_tmpb_skip=\skip68
 \g_tmpa_skip=\skip69
 \g_tmpb_skip=\skip70
-\c_zero_muskip=\muskip11
-\c_max_muskip=\muskip12
-\l_tmpa_muskip=\muskip13
-\l_tmpb_muskip=\muskip14
-\g_tmpa_muskip=\muskip15
-\g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count331
-\l__intarray_loop_int=\count332
-\c__intarray_sp_dim=\dimen172
-\g__intarray_font_int=\count333
-\c__fp_leading_shift_int=\count334
-\c__fp_middle_shift_int=\count335
-\c__fp_trailing_shift_int=\count336
-\c__fp_big_leading_shift_int=\count337
-\c__fp_big_middle_shift_int=\count338
-\c__fp_big_trailing_shift_int=\count339
-\c__fp_Bigg_leading_shift_int=\count340
-\c__fp_Bigg_middle_shift_int=\count341
-\c__fp_Bigg_trailing_shift_int=\count342
-\c__kernel_randint_max_int=\count343
-\g__fp_array_int=\count344
-\l__fp_array_loop_int=\count345
-\l__sort_length_int=\count346
-\l__sort_min_int=\count347
-\l__sort_top_int=\count348
-\l__sort_max_int=\count349
-\l__sort_true_max_int=\count350
-\l__sort_block_int=\count351
-\l__sort_begin_int=\count352
-\l__sort_end_int=\count353
-\l__sort_A_int=\count354
-\l__sort_B_int=\count355
-\l__sort_C_int=\count356
-\l__tl_analysis_normal_int=\count357
-\l__tl_analysis_index_int=\count358
-\l__tl_analysis_nesting_int=\count359
-\l__tl_analysis_type_int=\count360
-\l__regex_internal_a_int=\count361
-\l__regex_internal_b_int=\count362
-\l__regex_internal_c_int=\count363
-\l__regex_balance_int=\count364
-\l__regex_group_level_int=\count365
-\l__regex_mode_int=\count366
-\c__regex_cs_in_class_mode_int=\count367
-\c__regex_cs_mode_int=\count368
-\l__regex_catcodes_int=\count369
-\l__regex_default_catcodes_int=\count370
-\c__regex_catcode_D_int=\count371
-\c__regex_catcode_S_int=\count372
-\c__regex_catcode_L_int=\count373
-\c__regex_catcode_O_int=\count374
-\c__regex_catcode_A_int=\count375
-\c__regex_all_catcodes_int=\count376
-\l__regex_show_lines_int=\count377
-\l__regex_min_state_int=\count378
-\l__regex_max_state_int=\count379
-\l__regex_left_state_int=\count380
-\l__regex_right_state_int=\count381
-\l__regex_capturing_group_int=\count382
-\l__regex_min_pos_int=\count383
-\l__regex_max_pos_int=\count384
-\l__regex_curr_pos_int=\count385
-\l__regex_start_pos_int=\count386
-\l__regex_success_pos_int=\count387
-\l__regex_curr_char_int=\count388
-\l__regex_curr_catcode_int=\count389
-\l__regex_last_char_int=\count390
-\l__regex_case_changed_char_int=\count391
-\l__regex_curr_state_int=\count392
-\l__regex_step_int=\count393
-\l__regex_min_active_int=\count394
-\l__regex_max_active_int=\count395
-\l__regex_replacement_csnames_int=\count396
-\l__regex_match_count_int=\count397
-\l__regex_min_submatch_int=\count398
-\l__regex_submatch_int=\count399
-\l__regex_zeroth_submatch_int=\count400
-\g__regex_trace_regex_int=\count401
+\c_zero_muskip=\muskip15
+\c_max_muskip=\muskip16
+\l_tmpa_muskip=\muskip17
+\l_tmpb_muskip=\muskip18
+\g_tmpa_muskip=\muskip19
+\g_tmpb_muskip=\muskip20
+\l_keys_choice_int=\count335
+\l__intarray_loop_int=\count336
+\c__intarray_sp_dim=\dimen176
+\g__intarray_font_int=\count337
+\c__fp_leading_shift_int=\count338
+\c__fp_middle_shift_int=\count339
+\c__fp_trailing_shift_int=\count340
+\c__fp_big_leading_shift_int=\count341
+\c__fp_big_middle_shift_int=\count342
+\c__fp_big_trailing_shift_int=\count343
+\c__fp_Bigg_leading_shift_int=\count344
+\c__fp_Bigg_middle_shift_int=\count345
+\c__fp_Bigg_trailing_shift_int=\count346
+\c__kernel_randint_max_int=\count347
+\g__fp_array_int=\count348
+\l__fp_array_loop_int=\count349
+\l__sort_length_int=\count350
+\l__sort_min_int=\count351
+\l__sort_top_int=\count352
+\l__sort_max_int=\count353
+\l__sort_true_max_int=\count354
+\l__sort_block_int=\count355
+\l__sort_begin_int=\count356
+\l__sort_end_int=\count357
+\l__sort_A_int=\count358
+\l__sort_B_int=\count359
+\l__sort_C_int=\count360
+\l__str_internal_int=\count361
+\c__str_replacement_char_int=\count362
+\l__tl_analysis_normal_int=\count363
+\l__tl_analysis_index_int=\count364
+\l__tl_analysis_nesting_int=\count365
+\l__tl_analysis_type_int=\count366
+\l__regex_internal_a_int=\count367
+\l__regex_internal_b_int=\count368
+\l__regex_internal_c_int=\count369
+\l__regex_balance_int=\count370
+\l__regex_group_level_int=\count371
+\l__regex_mode_int=\count372
+\c__regex_cs_in_class_mode_int=\count373
+\c__regex_cs_mode_int=\count374
+\l__regex_catcodes_int=\count375
+\l__regex_default_catcodes_int=\count376
+\c__regex_catcode_D_int=\count377
+\c__regex_catcode_S_int=\count378
+\c__regex_catcode_L_int=\count379
+\c__regex_catcode_O_int=\count380
+\c__regex_catcode_A_int=\count381
+\c__regex_all_catcodes_int=\count382
+\l__regex_show_lines_int=\count383
+\l__regex_min_state_int=\count384
+\l__regex_max_state_int=\count385
+\l__regex_left_state_int=\count386
+\l__regex_right_state_int=\count387
+\l__regex_capturing_group_int=\count388
+\l__regex_min_pos_int=\count389
+\l__regex_max_pos_int=\count390
+\l__regex_curr_pos_int=\count391
+\l__regex_start_pos_int=\count392
+\l__regex_success_pos_int=\count393
+\l__regex_curr_char_int=\count394
+\l__regex_curr_catcode_int=\count395
+\l__regex_last_char_int=\count396
+\l__regex_case_changed_char_int=\count397
+\l__regex_curr_state_int=\count398
+\l__regex_step_int=\count399
+\l__regex_min_active_int=\count400
+\l__regex_max_active_int=\count401
+\l__regex_replacement_csnames_int=\count402
+\l__regex_match_count_int=\count403
+\l__regex_min_submatch_int=\count404
+\l__regex_submatch_int=\count405
+\l__regex_zeroth_submatch_int=\count406
+\g__regex_trace_regex_int=\count407
 \c_empty_box=\box61
 \l_tmpa_box=\box62
 \l_tmpb_box=\box63
 \g_tmpa_box=\box64
 \g_tmpb_box=\box65
-\l__box_top_dim=\dimen173
-\l__box_bottom_dim=\dimen174
-\l__box_left_dim=\dimen175
-\l__box_right_dim=\dimen176
-\l__box_top_new_dim=\dimen177
-\l__box_bottom_new_dim=\dimen178
-\l__box_left_new_dim=\dimen179
-\l__box_right_new_dim=\dimen180
+\l__box_top_dim=\dimen177
+\l__box_bottom_dim=\dimen178
+\l__box_left_dim=\dimen179
+\l__box_right_dim=\dimen180
+\l__box_top_new_dim=\dimen181
+\l__box_bottom_new_dim=\dimen182
+\l__box_left_new_dim=\dimen183
+\l__box_right_new_dim=\dimen184
 \l__box_internal_box=\box66
 \l__coffin_internal_box=\box67
-\l__coffin_internal_dim=\dimen181
-\l__coffin_offset_x_dim=\dimen182
-\l__coffin_offset_y_dim=\dimen183
-\l__coffin_x_dim=\dimen184
-\l__coffin_y_dim=\dimen185
-\l__coffin_x_prime_dim=\dimen186
-\l__coffin_y_prime_dim=\dimen187
+\l__coffin_internal_dim=\dimen185
+\l__coffin_offset_x_dim=\dimen186
+\l__coffin_offset_y_dim=\dimen187
+\l__coffin_x_dim=\dimen188
+\l__coffin_y_dim=\dimen189
+\l__coffin_x_prime_dim=\dimen190
+\l__coffin_y_prime_dim=\dimen191
 \c_empty_coffin=\box68
 \l__coffin_aligned_coffin=\box69
 \l__coffin_aligned_internal_coffin=\box70
@@ -928,160 +1017,270 @@ Package: expl3 2019-05-07 L3 programming layer (code)
 \l_tmpb_coffin=\box72
 \g_tmpa_coffin=\box73
 \g_tmpb_coffin=\box74
-\l__coffin_bounding_shift_dim=\dimen188
-\l__coffin_left_corner_dim=\dimen189
-\l__coffin_right_corner_dim=\dimen190
-\l__coffin_bottom_corner_dim=\dimen191
-\l__coffin_top_corner_dim=\dimen192
-\l__coffin_scaled_total_height_dim=\dimen193
-\l__coffin_scaled_width_dim=\dimen194
+\l__coffin_bounding_shift_dim=\dimen192
+\l__coffin_left_corner_dim=\dimen193
+\l__coffin_right_corner_dim=\dimen194
+\l__coffin_bottom_corner_dim=\dimen195
+\l__coffin_top_corner_dim=\dimen196
+\l__coffin_scaled_total_height_dim=\dimen197
+\l__coffin_scaled_width_dim=\dimen198
 \c__coffin_empty_coffin=\box75
 \l__coffin_display_coffin=\box76
 \l__coffin_display_coord_coffin=\box77
 \l__coffin_display_pole_coffin=\box78
-\l__coffin_display_offset_dim=\dimen195
-\l__coffin_display_x_dim=\dimen196
-\l__coffin_display_y_dim=\dimen197
-\g__file_internal_ior=\read3
-\l__seq_internal_a_int=\count402
-\l__seq_internal_b_int=\count403
-\c__deprecation_minus_one=\count404
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2019-04-06 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count405
-\l__driver_pdf_tmp_box=\box79
+\l__coffin_display_offset_dim=\dimen199
+\l__coffin_display_x_dim=\dimen256
+\l__coffin_display_y_dim=\dimen257
+\g__char_data_ior=\read3
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\l3depreca
+tion.def"
+File: l3deprecation.def 2019-04-06 v L3 Deprecated functions
 ))
-Package: xparse 2019-05-03 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count406
-\g__xparse_grabber_int=\count407
-\l__xparse_m_args_int=\count408
-\l__xparse_v_nesting_int=\count409
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-pdfmode.def"
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count408
+\l__pdf_internal_box=\box79
+))
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count409
+\g__xparse_grabber_int=\count410
+\l__xparse_m_args_int=\count411
+\l__xparse_v_nesting_int=\count412
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/inlinedef/inlinedef.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inlinedef\inlinede
+f.sty"
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks35
-\ID@count=\count410
+\ID@count=\count413
 )
 \ID@usercommands=\toks36
-\safeloop@depth=\count411
-\safeRKloop@depth=\count412
-\forest@temp@dimen=\dimen198
-\forest@temp@count=\count413
-\forest@n=\count414
-\forest@temp@global@count=\count415
+\safeloop@depth=\count414
+\safeRKloop@depth=\count415
+\forest@temp@dimen=\dimen258
+\forest@temp@count=\count416
+\forest@n=\count417
+\forest@temp@global@count=\count418
 \forest@temp@toks=\toks37
-\forest@temparray@M=\count416
-\forest@temparray@N=\count417
-\forest@global@temparray@M=\count418
-\forest@global@temparray@N=\count419
-\forest@isnum@count=\count420
-\forest@isdim@nonintpart=\count421
-\forest@isdim@dimen=\dimen199
-\forest@sort@m=\count422
-\forest@sort@k=\count423
-\forest@sort@p=\count424
+\forest@temparray@M=\count419
+\forest@temparray@N=\count420
+\forest@global@temparray@M=\count421
+\forest@global@temparray@N=\count422
+\forest@isnum@count=\count423
+\forest@isdim@nonintpart=\count424
+\forest@isdim@dimen=\dimen259
+\forest@sort@m=\count425
+\forest@sort@k=\count426
+\forest@sort@p=\count427
 \bracket@content=\toks38
 \bracket@afterthought=\toks39
-\forest@node@maxid=\count425
-\forest@process@left@M=\count426
-\forest@process@left@N=\count427
-\forest@process@right@M=\count428
-\forest@process@right@N=\count429
-\forest@process@saved@M=\count430
-\forest@process@saved@N=\count431
-\forest@process@result@M=\count432
-\forest@process@result@N=\count433
-\forest@process@n=\count434
+\forest@node@maxid=\count428
+\forest@process@left@M=\count429
+\forest@process@left@N=\count430
+\forest@process@right@M=\count431
+\forest@process@right@N=\count432
+\forest@process@saved@M=\count433
+\forest@process@saved@N=\count434
+\forest@process@result@M=\count435
+\forest@process@result@N=\count436
+\forest@process@n=\count437
 \forest@nodewalk@branch@toks=\toks40
 \forest@nodewalk@shortsteps@resolution=\toks41
 \forest@do@dynamics=\toks42
 \forest@box=\box80
-\forest@xg=\dimen256
-\forest@yg=\dimen257
-\forest@xs=\dimen258
-\forest@ys=\dimen259
+\forest@xg=\dimen260
+\forest@yg=\dimen261
+\forest@xs=\dimen262
+\forest@ys=\dimen263
 \forest@pi@toks=\toks43
 \forest@segment@toks=\toks44
 \forest@PIi@toks=\toks45
 \forest@PIii@toks=\toks46
 \forest@copy@in=\read4
 \forest@copy@out=\write5
-\forest@externalize@max@outer@n=\count435
-\forest@externalize@inner@n=\count436
+\forest@externalize@max@outer@n=\count438
+\forest@externalize@inner@n=\count439
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/forest/forest-lib-edges.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/forest\forest-lib-
+edges.sty"
 Package: forest-lib-edges 2016/12/05 v0.1.1
 )
-\Size=\skip71
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.
+sty"
+Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/02/27 1.8b listings language file
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-
+hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-
+generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-Package biblatex Info: Trying to load language 'french'...
-Package biblatex Info: ... file 'french.lbx' found.
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.
+sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.s
+ty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen264
+\Hy@linkcounter=\count440
+\Hy@pagecounter=\count441
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/french.lbx
-File: french.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.de
+f"
+File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count442
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.
+cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4540.
+Package hyperref Info: Link nesting OFF on input line 4545.
+Package hyperref Info: Hyper index ON on input line 4548.
+Package hyperref Info: Plain pages OFF on input line 4555.
+Package hyperref Info: Backreferencing OFF on input line 4560.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4793.
+\c@Hy@tempcnt=\count443
+LaTeX Info: Redefining \url on input line 5152.
+\XeTeXLinkMargin=\dimen265
+\Fld@menulength=\count444
+\Field@Width=\dimen266
+\Fld@charsize=\dimen267
+Package hyperref Info: Hyper figures OFF on input line 6423.
+Package hyperref Info: Link nesting OFF on input line 6428.
+Package hyperref Info: Hyper index ON on input line 6431.
+Package hyperref Info: backreferencing OFF on input line 6438.
+Package hyperref Info: Link coloring OFF on input line 6443.
+Package hyperref Info: Link coloring with OCG OFF on input line 6448.
+Package hyperref Info: PDF/A mode OFF on input line 6453.
+LaTeX Info: Redefining \ref on input line 6493.
+LaTeX Info: Redefining \pageref on input line 6497.
+\Hy@abspage=\count445
+\c@Item=\count446
+\c@Hfootnote=\count447
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.d
+ef"
+File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
+\Fld@listcount=\count448
+\c@bookmark@seq@number=\count449
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfile
+check.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip71
+)
+\Size=\skip72
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count437
-\@quotereset=\count438
-(./rapport.aux)
+\@quotelevel=\count450
+\@quotereset=\count451
+(rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Info: Redefining \degres on input line 76.
-LaTeX Info: Redefining \dots on input line 76.
-LaTeX Info: Redefining \up on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Info: Redefining \degres on input line 77.
+LaTeX Info: Redefining \dots on input line 77.
+LaTeX Info: Redefining \up on input line 77.
 
-(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count439
-\scratchdimen=\dimen260
+\scratchcounter=\count452
+\scratchdimen=\dimen268
 \scratchbox=\box81
-\nofMPsegments=\count440
-\nofMParguments=\count441
+\nofMPsegments=\count453
+\nofMParguments=\count454
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count442
-\MPscratchDim=\dimen261
-\MPnumerator=\count443
-\makeMPintoPDFobject=\count444
+\MPscratchCnt=\count455
+\MPscratchDim=\dimen269
+\MPnumerator=\count456
+\makeMPintoPDFobject=\count457
 \everyMPtoPDFconversion=\toks48
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
+base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package biblatex Info: Trying to load language 'french'...
+Package biblatex Info: ... file 'french.lbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\frenc
+h.lbx"
+File: french.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1091,57 +1290,80 @@ Package biblatex Info: Data encoding 'utf8' specified.
 \openout3 = `rapport-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-
-
-Package biblatex Warning: File 'rapport.bbl' is wrong format version - expected
- 3.0.
-
 Package biblatex Info: ... file 'rapport.bbl' found.
-(./rapport.bbl)
-Package biblatex Info: Reference section=0 on input line 76.
-Package biblatex Info: Reference segment=0 on input line 76.
-\c@lstlisting=\count445
+ (rapport.bbl)
+Package biblatex Info: Reference section=0 on input line 77.
+Package biblatex Info: Reference segment=0 on input line 77.
+\c@lstlisting=\count458
  ABD: EveryShipout initializing macros
-<images/logounicaen.png, id=4, 88.1694pt x 132.2541pt>
+\AtBeginShipoutBox=\box82
+Package hyperref Info: Link coloring OFF on input line 77.
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
+ty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitl
+estring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count459
+)
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
+ (rapport.out) (rapport.out)
+\@outlinefile=\write6
+\openout6 = `rapport.out'.
+
+<images/logounicaen.png, id=126, 88.1694pt x 132.2541pt>
 File: images/logounicaen.png Graphic file (type png)
 <use images/logounicaen.png>
-Package pdftex.def Info: images/logounicaen.png  used on input line 80.
+Package pdftex.def Info: images/logounicaen.png  used on input line 81.
 (pdftex.def)             Requested size: 88.16917pt x 132.25377pt.
  [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
-s/logounicaen.png>]
-(./rapport.toc
+{C:/Users/romua/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/lo
+gounicaen.png>] (rapport.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 6.
 )
-\tf@toc=\write6
-\openout6 = `rapport.toc'.
+\tf@toc=\write7
+\openout7 = `rapport.toc'.
 
- [1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.97 \newpage
+              [1
 
 ] [2] [3
 
 ]
-<images/jeuxPublie1.png, id=29, 464.73625pt x 658.46pt>
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 99.
+
+<images/jeuxPublie1.png, id=184, 464.73625pt x 658.46pt>
 File: images/jeuxPublie1.png Graphic file (type png)
 <use images/jeuxPublie1.png>
-Package pdftex.def Info: images/jeuxPublie1.png  used on input line 115.
+Package pdftex.def Info: images/jeuxPublie1.png  used on input line 119.
 (pdftex.def)             Requested size: 127.51566pt x 180.67566pt.
-<images/jeuxPublie2.png, id=30, 339.2675pt x 603.25375pt>
+<images/jeuxPublie2.png, id=185, 339.2675pt x 603.25375pt>
 File: images/jeuxPublie2.png Graphic file (type png)
 <use images/jeuxPublie2.png>
-Package pdftex.def Info: images/jeuxPublie2.png  used on input line 116.
+Package pdftex.def Info: images/jeuxPublie2.png  used on input line 120.
 (pdftex.def)             Requested size: 101.6102pt x 180.67566pt.
-<images/jeuxPublie3.png, id=31, 339.2675pt x 603.25375pt>
+<images/jeuxPublie3.png, id=186, 339.2675pt x 603.25375pt>
 File: images/jeuxPublie3.png Graphic file (type png)
 <use images/jeuxPublie3.png>
-Package pdftex.def Info: images/jeuxPublie3.png  used on input line 117.
+Package pdftex.def Info: images/jeuxPublie3.png  used on input line 121.
 (pdftex.def)             Requested size: 101.6102pt x 180.67566pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
@@ -1149,276 +1371,255 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--118
 ie3.png>] [6
 
 ]
-<images/3-ingame.png, id=46, 340.27126pt x 551.05875pt>
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 125.
+
+<images/3-ingame.png, id=204, 340.27126pt x 551.05875pt>
 File: images/3-ingame.png Graphic file (type png)
 <use images/3-ingame.png>
-Package pdftex.def Info: images/3-ingame.png  used on input line 124.
+Package pdftex.def Info: images/3-ingame.png  used on input line 128.
 (pdftex.def)             Requested size: 103.50105pt x 158.48936pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
-
-
-Underfull \hbox (badness 2689) in paragraph at lines 129--130
-\T1/cmr/m/n/10 la fe-nêtre qui pos-sède une taille fixe. Au-
- []
-
-
-Underfull \hbox (badness 3690) in paragraph at lines 129--130
-\T1/cmr/m/n/10 de la fe-nêtre. À droite, va se trou-ver le
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 129--130
-\T1/cmr/m/n/10 va re-trou-ver les 3 pièces que le joueur de-
- []
-
-
-Underfull \hbox (badness 1454) in paragraph at lines 129--130
-\T1/cmr/m/n/10 vra pla-cer sur la grille. En-fin, tout en bas
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-<images/4-end.png, id=47, 340.27126pt x 551.05875pt>
+
+Underfull \hbox (badness 2689) in paragraph at lines 133--134
+\T1/cmr/m/n/10 la fe-nêtre qui pos-sède une taille fixe. Au-
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 133--134
+\T1/cmr/m/n/10 de la fe-nêtre. À droite, va se trou-ver le
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 133--134
+\T1/cmr/m/n/10 va re-trou-ver les 3 pièces que le joueur de-
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 133--134
+\T1/cmr/m/n/10 vra pla-cer sur la grille. En-fin, tout en bas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+<images/4-end.png, id=205, 340.27126pt x 551.05875pt>
 File: images/4-end.png Graphic file (type png)
 <use images/4-end.png>
-Package pdftex.def Info: images/4-end.png  used on input line 135.
+Package pdftex.def Info: images/4-end.png  used on input line 139.
 (pdftex.def)             Requested size: 103.50105pt x 152.406pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 [7 <./images/3-ingame.png> <./images/4-end.png>]
-<images/2-menumulti.png, id=54, 340.27126pt x 551.05875pt>
+<images/2-menumulti.png, id=215, 340.27126pt x 551.05875pt>
 File: images/2-menumulti.png Graphic file (type png)
 <use images/2-menumulti.png>
-Package pdftex.def Info: images/2-menumulti.png  used on input line 149.
+Package pdftex.def Info: images/2-menumulti.png  used on input line 153.
 (pdftex.def)             Requested size: 103.50105pt x 121.98921pt.
 
-Underfull \hbox (badness 2237) in paragraph at lines 153--154
-\T1/cmr/m/n/10 sents dans ce pro-jet. On peut y re-trou-ver
+Underfull \hbox (badness 1635) in paragraph at lines 157--158
+\T1/cmr/m/n/10 ci-pal dans le menu si le joueur veut jouer
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 153--154
-\T1/cmr/m/n/10 un mul-ti-joueur où un joueur réel va jouer
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 153--154
-\T1/cmr/m/n/10 contre une in-tel-li-gence ar-ti-fi-cielle, un mul-ti-
- []
-
-
-Underfull \hbox (badness 2035) in paragraph at lines 153--154
-\T1/cmr/m/n/10 joueur où deux joueurs vont s'af-fron-ter sur
- []
-
-
-Underfull \hbox (badness 1694) in paragraph at lines 153--154
-\T1/cmr/m/n/10 ter sur deux écrans sé-pa-rés. En des-sous se
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 153--154
-\T1/cmr/m/n/10 trouve une image re-pré-sen-tant le menu du
- []
-
-
-Underfull \hbox (badness 1895) in paragraph at lines 153--154
-\T1/cmr/m/n/10 mul-ti-joueur. On peut éga-le-ment y re-trou-ver
- []
-
-
-Underfull \hbox (badness 3954) in paragraph at lines 153--154
-\T1/cmr/m/n/10 la pos-si-bi-lité d'un re-tour au menu prin-ci-
- []
-
-
-Underfull \hbox (badness 2922) in paragraph at lines 153--154
-\T1/cmr/m/n/10 pal dans le menu si le joueur veut jouer
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-<images/3-playwithai.png, id=55, 340.27126pt x 551.05875pt>
+<images/3-playwithai.png, id=216, 340.27126pt x 551.05875pt>
 File: images/3-playwithai.png Graphic file (type png)
 <use images/3-playwithai.png>
-Package pdftex.def Info: images/3-playwithai.png  used on input line 159.
+Package pdftex.def Info: images/3-playwithai.png  used on input line 163.
 (pdftex.def)             Requested size: 103.50105pt x 158.48936pt.
 
-Underfull \hbox (badness 1721) in paragraph at lines 163--164
-\T1/cmr/m/n/10 ar-ti-fi-cielle se joue comme le mode solo. Le
+Underfull \hbox (badness 1888) in paragraph at lines 167--168
+\T1/cmr/m/n/10 pas ac-cès à la grille de l'in-tel-li-gence ar-ti-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 1975) in paragraph at lines 167--168
+\T1/cmr/m/n/10 les mêmes blocs pour que la dif-fi-culté soit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<images/4-endmulti.png, id=56, 340.27126pt x 551.05875pt>
+<images/4-endmulti.png, id=217, 340.27126pt x 551.05875pt>
 File: images/4-endmulti.png Graphic file (type png)
 <use images/4-endmulti.png>
-Package pdftex.def Info: images/4-endmulti.png  used on input line 167.
+Package pdftex.def Info: images/4-endmulti.png  used on input line 171.
 (pdftex.def)             Requested size: 103.50105pt x 158.48936pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 [8 <./images/2-menumulti.png> <./images/3-playwithai.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 [9 <./images/4-endmulti.png>] [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 190.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-<images/schema_piece.png, id=69, 337.26pt x 96.36pt>
+<images/schema_piece.png, id=236, 337.26pt x 96.36pt>
 File: images/schema_piece.png Graphic file (type png)
 <use images/schema_piece.png>
-Package pdftex.def Info: images/schema_piece.png  used on input line 191.
+Package pdftex.def Info: images/schema_piece.png  used on input line 195.
 (pdftex.def)             Requested size: 337.25917pt x 96.35974pt.
 
-Overfull \hbox (7.25917pt too wide) in paragraph at lines 191--192
+Overfull \hbox (7.25917pt too wide) in paragraph at lines 195--196
 [][] 
  []
 
 [11 <./images/schema_piece.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 247.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
+Underfull \hbox (badness 10000) in paragraph at lines 231--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+55.
+("C:\Users\romua\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [13]
-Overfull \hbox (57.45245pt too wide) in paragraph at lines 322--324
-[]\T1/cmr/m/n/10 Pour les sons, on uti-lise \T1/cmr/bx/it/10 py-game.mixer \T1/
-cmr/m/n/10 avec les sous-éléments \T1/cmr/bx/it/10 py-game.mixer.Sound()\T1/cmr
-/m/n/10 ,
+)
+[13] [14]
+Overfull \hbox (53.50897pt too wide) in paragraph at lines 330--332
+[]\T1/cmr/m/n/10 Pour les son, on uti-lise \T1/cmr/bx/it/10 py-game.mixer \T1/c
+mr/m/n/10 avec les sous-éléments \T1/cmr/bx/it/10 py-game.mixer.Sound()\T1/cmr/
+m/n/10 ,
  []
 
-[14] [15] [16
+[15] [16
 
 ]
-<images/1-menu.png, id=93, 340.27126pt x 551.05875pt>
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 356.
+
+<images/1-menu.png, id=329, 340.27126pt x 551.05875pt>
 File: images/1-menu.png Graphic file (type png)
 <use images/1-menu.png>
-Package pdftex.def Info: images/1-menu.png  used on input line 352.
+Package pdftex.def Info: images/1-menu.png  used on input line 360.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/1-ani.png, id=94, 340.27126pt x 551.05875pt>
+<images/1-ani.png, id=330, 340.27126pt x 551.05875pt>
 File: images/1-ani.png Graphic file (type png)
 <use images/1-ani.png>
-Package pdftex.def Info: images/1-ani.png  used on input line 353.
+Package pdftex.def Info: images/1-ani.png  used on input line 361.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/2-menumulti.png Graphic file (type png)
 <use images/2-menumulti.png>
-Package pdftex.def Info: images/2-menumulti.png  used on input line 355.
+Package pdftex.def Info: images/2-menumulti.png  used on input line 363.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/2-ani.png, id=95, 340.27126pt x 551.05875pt>
+<images/2-ani.png, id=331, 340.27126pt x 551.05875pt>
 File: images/2-ani.png Graphic file (type png)
 <use images/2-ani.png>
-Package pdftex.def Info: images/2-ani.png  used on input line 356.
+Package pdftex.def Info: images/2-ani.png  used on input line 364.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/3-ingamestart.png, id=96, 340.27126pt x 551.05875pt>
+<images/3-ingamestart.png, id=332, 340.27126pt x 551.05875pt>
 File: images/3-ingamestart.png Graphic file (type png)
 <use images/3-ingamestart.png>
-Package pdftex.def Info: images/3-ingamestart.png  used on input line 358.
+Package pdftex.def Info: images/3-ingamestart.png  used on input line 366.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/3-ingame.png Graphic file (type png)
 <use images/3-ingame.png>
-Package pdftex.def Info: images/3-ingame.png  used on input line 359.
+Package pdftex.def Info: images/3-ingame.png  used on input line 367.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/3-playwithai.png Graphic file (type png)
 <use images/3-playwithai.png>
-Package pdftex.def Info: images/3-playwithai.png  used on input line 360.
+Package pdftex.def Info: images/3-playwithai.png  used on input line 368.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/4-end.png Graphic file (type png)
 <use images/4-end.png>
-Package pdftex.def Info: images/4-end.png  used on input line 362.
+Package pdftex.def Info: images/4-end.png  used on input line 370.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
-<images/4-endani.png, id=97, 340.27126pt x 551.05875pt>
+<images/4-endani.png, id=333, 340.27126pt x 551.05875pt>
 File: images/4-endani.png Graphic file (type png)
 <use images/4-endani.png>
-Package pdftex.def Info: images/4-endani.png  used on input line 363.
+Package pdftex.def Info: images/4-endani.png  used on input line 371.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
 File: images/4-endmulti.png Graphic file (type png)
 <use images/4-endmulti.png>
-Package pdftex.def Info: images/4-endmulti.png  used on input line 364.
+Package pdftex.def Info: images/4-endmulti.png  used on input line 372.
 (pdftex.def)             Requested size: 102.08215pt x 165.3189pt.
- [17 <./images/1-menu.png> <./images/1-ani.png> <./images/2-ani.png> <./images/
-3-ingamestart.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 371--375
+[17 <./images/1-menu.png> <./images/1-ani.png> <./images/2-ani.png> <./images/3
+-ingamestart.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 379--383
 
  []
 
-<images/palette1.png, id=105, 982.872pt x 150.5625pt>
+<images/palette1.png, id=345, 982.872pt x 150.5625pt>
 File: images/palette1.png Graphic file (type png)
 <use images/palette1.png>
-Package pdftex.def Info: images/palette1.png  used on input line 380.
+Package pdftex.def Info: images/palette1.png  used on input line 388.
 (pdftex.def)             Requested size: 196.5709pt x 30.11195pt.
-<images/palette2.png, id=106, 1260.1479pt x 150.5625pt>
+<images/palette2.png, id=346, 1260.1479pt x 150.5625pt>
 File: images/palette2.png Graphic file (type png)
 <use images/palette2.png>
-Package pdftex.def Info: images/palette2.png  used on input line 382.
+Package pdftex.def Info: images/palette2.png  used on input line 390.
 (pdftex.def)             Requested size: 252.02512pt x 30.11195pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--389
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
 
  []
 
@@ -1426,74 +1627,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--389
 [19] [20
 
 ]
-<images/classes.png, id=120, 864.22874pt x 647.41875pt>
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 404.
+
+<images/classes.png, id=364, 864.22874pt x 647.41875pt>
 File: images/classes.png Graphic file (type png)
 <use images/classes.png>
-Package pdftex.def Info: images/classes.png  used on input line 399.
+Package pdftex.def Info: images/classes.png  used on input line 407.
 (pdftex.def)             Requested size: 345.68536pt x 258.9629pt.
 
-Overfull \hbox (0.68536pt too wide) in paragraph at lines 399--400
+Overfull \hbox (0.68536pt too wide) in paragraph at lines 407--408
  [][] 
  []
 
-
-! LaTeX Error: Unknown graphics extension: .server.png.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.402 ...ics[scale=0.5]{images/classes.server.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[21 <./images/classes.png>] [22] [23
+<images/classes_server.png, id=365, 232.87pt x 164.615pt>
+File: images/classes_server.png Graphic file (type png)
+<use images/classes_server.png>
+Package pdftex.def Info: images/classes_server.png  used on input line 410.
+(pdftex.def)             Requested size: 116.43471pt x 82.3073pt.
+[21 <./images/classes.png> <./images/classes_server.png>] [22] [23
 
 ]
-Overfull \hbox (56.82733pt too wide) in paragraph at lines 471--504
+Overfull \hbox (56.82738pt too wide) in paragraph at lines 479--512
  [] 
  []
 
 [24] [25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-[26] (./rapport.aux)
+[26]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
+ (rapport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 524.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 524.
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: FA4C7B7D42160E7CCDA7EAE9C0BF6DCF;1989.
 Package logreq Info: Writing requests to 'rapport.run.xml'.
 \openout1 = `rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43568 strings out of 492616
- 933281 string characters out of 6129481
- 1480549 words of memory out of 5000000
- 47046 multiletter control sequences out of 15000+600000
- 544170 words of font info for 41 fonts, out of 8000000 for 9000
+ 49027 strings out of 492452
+ 1037407 string characters out of 3120063
+ 1581459 words of memory out of 3000000
+ 52757 multiletter control sequences out of 15000+200000
+ 544170 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 135i,8n,177p,1583b,2651s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
-cal/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
-texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on rapport.pdf (27 pages, 3241700 bytes).
+ 135i,8n,177p,1606b,2654s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+ectt1000.pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecbx1000.pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbi1000.pk> <C:\Users\romua\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\romua\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\romua\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Us
+ers\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.
+pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecbx1200.pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecbx2488.pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\romua\AppData\Local\MiKTeX\2.9\font
+s/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\romua\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\romua\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk>
+Output written on rapport.pdf (27 pages, 3185397 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 945 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
+ 360 words of extra memory for PDF output out of 10000 (max. 10000000)
 
