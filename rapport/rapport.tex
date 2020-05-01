@@ -210,11 +210,11 @@ L'objet \textbf{\textit{Grid}} contient également des méthodes permettant de l
 \end{itemize}
 
 \section{L'aléatoire}
-nous avons implémenté un algorithme pseudo aléatoire vers la fin du projet afin d'avoir une difficulté plus maîtrisée. L'aléatoire n'est pas le plus compliqué. Tout est basé sur un tableau de liste textbf{textit{Probe}} qui pour chaque ligne à une suite de nombres répartis entre 0 et 100. Chaque nombre a pour signification la probabilité d'une certaine pièce. Par exemple avec le premier nombre de la première ligne : nous avons 8.5 qui est la probabilité d'avoir une pièce de 1x1, ensuite nous avons 15.5 qui, suite à une simple soustraction 15.5 – 8.5, nous donne une probabilité de 7 d'avoir une ligne 2x1 et ainsi de suite.
+Nous avons implémenté un algorithme pseudo aléatoire vers la fin du projet afin d'avoir une difficulté plus maîtrisée. L'aléatoire n'est pas le plus compliqué. Tout est basé sur un tableau de liste \textbf{\textit{probs}} qui pour chaque ligne à une suite de nombres répartis entre 0 et 100. Chaque nombre a pour signification la probabilité d'une certaine pièce. Par exemple avec le premier nombre de la première ligne : nous avons 8.5 qui est la probabilité d'avoir une pièce de 1x1, ensuite nous avons 15.5 qui, suite à une simple soustraction 15.5 – 8.5, nous donne une probabilité de 7 d'avoir une ligne 2x1 et ainsi de suite. \\
 
-Le système d’aléatoire utilise une boucle qui prend chaque nombre en premier et celui qui le suit, tout en faisant attention au step de la partie, et regarde si le nombre aléatoire est dans cet intervalle, si le nombre est dedans il renvoie le numéro de la figure à mettre, si ce n’est pas le cas il passe au nombre suivant.
+Le système d’aléatoire utilise une boucle qui prend chaque nombre en premier et celui qui le suit, tout en faisant attention au step de la partie, et regarde si le nombre aléatoire est dans cet intervalle, si le nombre est dedans il renvoie le numéro de la figure à mettre, si ce n’est pas le cas il passe au nombre suivant. \\
 
-Nous avons implémenté un système de step qui nous permet d'avoir des pièces de plus en plus difficiles à placer plus notre score augmente. Pour ceci nous avons utilisé la méthode textbf{textit{update}} de textbf{textit{Pieces}} mais il fallait aussi refaire une liste de proba pour chaque pièce lorsque nous augmentation de step. C'est pour cela que dans la première liste nous avons des nombres qui vont jusqu'à 200 pour que ces pièces ne tombent jamais vu que nous avons un random qui va de 0 à 100.
+Nous avons implémenté un système de step qui nous permet d'avoir des pièces de plus en plus difficiles à placer plus notre score augmente. Pour ceci nous avons utilisé la méthode \textbf{\textit{update}} de \textbf{\textit{Pieces}} mais il fallait aussi refaire une liste de proba pour chaque pièce lorsque nous augmentation de step. C'est pour cela que dans la première liste nous avons des nombres qui vont jusqu'à 200 pour que ces pièces ne tombent jamais vu que nous avons un random qui va de 0 à 100.
 
 \section{L'intelligence artificielle}
 L'intelligence artificielle se présente comme une dérivée de la classe \textbf{\textit{Player}} car elle a les mêmes priorités qu'un joueur comme ses points ou un tirage, le changement se fait avec la méthode \textbf{\textit{determineWhatToPlay}} qui retourne le placement le plus judicieux à effectuer sous la forme d'un tableau contenant le poids attribué au mouvement, les coordonnées ou il doit se faire et la pièce à jouer. \\
@@ -353,6 +353,10 @@ pour déterminer les positions de la souris.
 
 
 \part{Expérimentations et usages}
+\section{Manuel d'utilisation}
+Lors de l'ouverture du jeu, vous tomberez directement sur le menu principal, où trois possibilités s'offrent à vous, il y a tout d'abord le bouton permettant de jouer au mode solo de PyPuzzle, le second va sur un autre menu où sont disposés les trois modes multijoueurs du jeu: le premier contre une intelligence artificielle, le second à deux joueurs sur une même machine et le dernier à deux joueurs en ligne. Le dernier bouton du menu principal permet de quitter le jeu. \\
+
+En jeu, le principe est de placer les pièces situées sous la grille sur cette dernière afin de gagner le plus de points possibles en complétant des lignes et des colonnes. Le jeu s'arrête quand les pièces dont vous disposez ne peuvent plus être placée sur la grille, est alors affiché sur l'écran un menu de fin de jeu où vous pouvez choisir entre quitter le jeu ou rejouer. 
 \section{Capture écrans}
 Les captures ci-dessous rendront le joueur passionné de jouer au jeu.
 \begin{enumerate}
@@ -515,7 +519,7 @@ Numéros de téléphone: \\
 Romuald GAFFE: 06 52 19 12 28\\
 Yanis COSNEFROY: 07 60 68 78 78\\
 Nguyen Phuong Vy VU: 06 65 77 58 80\\
-Alexandre BOURGOIN: \
+Alexandre BOURGOIN: 06 19 51 82 60\
 
 
 \part{Conclusion}

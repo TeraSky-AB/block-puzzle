@@ -591,7 +591,7 @@ def multiOnlineClient():
 
         # HOVER
         pos = pg.mouse.get_pos()
-        if currentDisplay == "game":
+        if currentDisplay == "game" or currentDisplay == "wait":
             if 340 + 85 > pos[0] > 340 and 615 + 30 > pos[1] > 615:
                 pg.draw.rect(screen, dsp.YELLOW, (340, 615, 85, 30))
                 screen.blit(dsp.returnMenuText, (354, 617))
