@@ -168,7 +168,7 @@ Tout d'abord, il faut savoir que le mode multijoueur avec le joueur contre l'int
 
 \begin{wrapfigure}{R}{0.35\textwidth}
     \centering
-    \includegraphics[width=0.3\textwidth, trim=0pt 0pt 0pt 30pt]{images/4-endmulti.png}
+    \includegraphics[width=0.3\textwidth, trim=0pt 0pt 0pt 130pt]{images/4-endmulti.png}
     \caption{Fin du jeu multi}
 \end{wrapfigure}
 Ensuite les règles du jeu sont les mêmes que pour le solo. Il n'y a pas de mise difficultés pour qui que ce soit car si l'un rempli une ligne ou une colonne, l'autre ne va pas recevoir de pièce qui peut le mettre en difficulté. Ici il y a juste une concurrence au niveau des points qui va justement permettre de départager la victoire entre le joueur et l'intelligence artificielle.\\
@@ -280,7 +280,7 @@ Pour commencer le jeu, on doit appeler la fonction \textbf{\textit{pygame.init()
     pg.@\color{blue}init()@
 \end{lstlisting}
 
-Ensuite, on doit construit un boucle pour tout le menu. Si une boucle est toujours vrai, alors elle fonctionne pour toujours.
+Ensuite, on doit construit une boucle pour tout le menu. Si une boucle est toujours vrai, alors elle fonctionne pour toujours.
 \begin{lstlisting}
     def menu():
     doContinue = True
@@ -303,7 +303,7 @@ Puis, on ajoute des boutons, on utilise \textbf{\textit{.collidepoint()}} pour d
 \end{lstlisting}
 
 Ensuite, on construit une interface d'affichage dans une autre fichier appelée \textbf{display.py}. 
-Pour les textes, on utilise \textbf{\textit{pygame.font}} avec les sous-éléments \textbf{\textit{pygame.font.Font()}}, \textbf{\textit{"nom".render()}} et l'élement \textbf{\textit{"screen".blit()}}. 
+Pour les textes, on utilise \textbf{\textit{pygame.font}} avec les sous-éléments \textbf{\textit{pygame.font.Font()}}, \textbf{\textit{"nom".render()}} et l'élement \textbf{\textit{"screen".blit()}} pour afficher dans la fenêtre de jeu. 
 Pour les rectangles (boutons), on utilise \textbf{\textit{pygame.draw.rect()}}.
 Et pour colorer le fond, on utilise \textbf{\textit{"screen".fill()}}.
 
@@ -350,6 +350,28 @@ pour déterminer les positions de la souris.
 \end{lstlisting}
 
 \subsection{Gameplay}
+On utilise également la boucle et l'élement \textbf{\textit{pygame.draw.rect()}} pour créer le tableau et les pièces.
+Ça fonctionne dans la fonction \textbf{\textit{displayBoard(win, blitCoord, grid)}}.
+\begin{lstlisting}
+  for i in range(0, grid.size - 2):
+      for j in range(0, grid.size - 2):
+          cell = grid.grid[1 + i][1 + j]
+          if cell != 0:
+              pg.draw.@\color{blue}rect@(win, piecescolors[cell % 8], (
+                  blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
+                  boxWidth, boxWidth))
+          else:
+              pg.draw.@\color{blue}rect@(win, BOARDCOLOR, (
+                  blitCoord[0] + (margin + boxWidth) * i + margin, blitCoord[1] + (margin + boxWidth) * j + margin,
+                  boxWidth, boxWidth))
+\end{lstlisting}
+Aussi dans la fonction \textbf{\textit{drawPiece(self, win)}}.
+\begin{lstlisting}
+  for i in range(5):
+      for j in range(5):
+          if int(self.figure[i][j]) != 0:
+              pg.draw.@\color{blue}rect@(win, dsp.piecescolors[self.color], (self.x + 32 * i + 2, self.y + 32 * j + 2, 30, 30))
+\end{lstlisting}
 
 
 \part{Expérimentations et usages}
