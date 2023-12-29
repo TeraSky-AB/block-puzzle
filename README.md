@@ -6,4 +6,7 @@ Block Puzzle implementation in Python with multiplayer features:
 
 Need pygame to run.
 
+Run this command to launch:
+<code>
 python3 pypuzzle.py
+</code>
